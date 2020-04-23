@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/UltimateGridsEngine/Demos/Main-Demo/Main-Demo.unity
+    guid: daa30aa787cfc1f4c98a5e012e74492e
   m_configObjects: {}

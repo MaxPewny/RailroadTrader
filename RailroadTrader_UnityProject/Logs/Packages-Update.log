@@ -43,3 +43,23 @@ The following packages were added:
   com.unity.textmeshpro@2.0.1
   com.unity.timeline@1.2.13
   com.unity.ugui@1.0.0
+
+=== Mon Apr 20 12:14:04 2020
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.test-framework from version 1.1.11 to 1.1.13
+
+=== Mon Apr 20 12:45:44 2020
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.2d.tilemap@1.0.0
+  com.unity.cinemachine@2.5.0
+  com.unity.ext.nunit@1.0.0
+  com.unity.package-manager-ui@2.2.0
+  com.unity.postprocessing@2.1.7
