@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8692571314610353810}
   - component: {fileID: 1097700374337696882}
   - component: {fileID: 1437609440678030952}
+  - component: {fileID: -2854167209462113566}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -47,7 +48,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Model: {fileID: 4134441130553008503}
-  m_BlockedTilesXZ: []
+  m_BlockedTilesXZ:
+  - {x: 1, y: 0}
+  - {x: 0, y: 1}
+  - {x: 1, y: 1}
 --- !u!114 &1097700374337696882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +81,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlocksMovement: 1
+--- !u!114 &-2854167209462113566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355206406345901541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f66118557d3db464eb389bddb1dda839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Model: {fileID: 4134441130553008503}
+  m_BlockedTilesXZ:
+  - {x: 1, y: 0}
+  - {x: 0, y: 1}
+  - {x: 1, y: 1}
 --- !u!1 &4134441130553008503
 GameObject:
   m_ObjectHideFlags: 0

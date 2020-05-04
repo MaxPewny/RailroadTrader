@@ -14,12 +14,12 @@ public class ObjectPlacement : MonoBehaviour
     public Material m_HighlightMat;
 
     [ReadOnly, SerializeField]
-    private bool _buildModeActivated;
+    private bool _buildModeActivated = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        ActivateBuildmode();
+        
     }
 
     // Update is called once per frame
@@ -46,7 +46,7 @@ public class ObjectPlacement : MonoBehaviour
         }
     }
 
-    protected virtual void ActivateBuildmode(/*GameObject pPrefab*/) 
+    public virtual void ActivateBuildmode(GameObject pPrefab) 
     {
         //m_ObjectPrefab = pPrefab;
         _buildModeActivated = true;

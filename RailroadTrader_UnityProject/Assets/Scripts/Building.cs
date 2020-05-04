@@ -12,7 +12,7 @@ public class Building : MonoBehaviour
 
     protected GridObject _gridObject;
 
-    protected virtual void Initialize() 
+    protected virtual void Initialize()
     {
         _gridObject = GetComponent<GridObject>();
 
@@ -22,16 +22,16 @@ public class Building : MonoBehaviour
         }
     }
 
-    protected virtual void DestroyBuilding() 
+    protected virtual void DestroyBuilding()
     {
     }
 
-    public virtual void Activate() 
+    public virtual void Activate()
     {
         m_IsActive = true;
     }
 
-    public virtual void Deactivate() 
+    public virtual void Deactivate()
     {
         m_IsActive = false;
     }
