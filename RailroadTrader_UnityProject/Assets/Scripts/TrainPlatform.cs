@@ -18,6 +18,23 @@ public class TrainPlatform : Building
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown("s"))
+        {
+            Debug.Log("S");
+            TrainArrived();
+        }
+    }
+
+    protected override void SetNpcMovePoints()
+    {
+        Debug.Log("SetTarget");
+        NpcMovement.Instance.AddTrainTargetPoint(transform.position + m_NpcMovePointOffset);
+        //NpcMovement.Instance.AddSpawnPoint(transform.position + m_NpcStartPointOffset);
+    }
+
+    void TrainArrived() 
+    {
+        Debug.Log("Arrived");
+        StartCoroutine(NpcMovement.Instance.SpawnNpcGroup(transform.position + m_NpcStartPointOffset, m_NpcAmount));
     }
 }

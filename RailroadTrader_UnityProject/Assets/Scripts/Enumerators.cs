@@ -5,3 +5,10 @@
     LEVEL_3,
     LEVEL_4,
 }
+
+public enum Resource
+{
+    FOOD,
+    BEVERAGE,
+    CARGO
+}
