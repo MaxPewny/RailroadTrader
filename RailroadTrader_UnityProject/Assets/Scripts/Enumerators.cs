@@ -10,5 +10,32 @@ public enum Resource
 {
     FOOD,
     BEVERAGE,
-    CARGO
+    CARGO,
+    STAFF
+}
+
+public enum Passanger
+{
+    TOURIST,
+    COMMUTER,
+    BUSINESS
+}
+
+public enum BuildingType
+{
+    BAKERY,
+    CAFE,
+    PUB,
+    BAR,
+    LOUNGE,
+    RESTAURANT,
+    HIGHCLASS_RESTAURANT,
+    BOOKSTORE,
+    FLOWERSTORE,
+    TRAVELINFO,
+    TRAVELAGENCY,
+    HAIRSALON,
+    BANK,
+    TRAINPLATFORM,
+
 }

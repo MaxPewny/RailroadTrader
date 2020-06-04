@@ -6,9 +6,7 @@ using UnityEngine.AI;
 public class NpcActor : MonoBehaviour
 {
     [SerializeField]
-    float _destinationReachedTreshold;
-    [SerializeField]
-    float _currencyGain;
+    float _destinationReachedTreshold = 0.5f;
     [ReadOnly, SerializeField]
     Vector3 _target;
     private NavMeshAgent _agent;
@@ -29,7 +27,6 @@ public class NpcActor : MonoBehaviour
             float distanceToTarget = Vector3.Distance(transform.position, _target);
             if (distanceToTarget < _destinationReachedTreshold)
             {
-                Resources.Instance.AddCurrency(_currencyGain);
                 Destroy(this.gameObject);
             }
         }

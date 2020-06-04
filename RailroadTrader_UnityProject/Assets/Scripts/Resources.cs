@@ -11,6 +11,7 @@ public class Resources : MonoBehaviour
 
 
     private Dictionary<Resource, float> _resources = new Dictionary<Resource, float>();
+    private Dictionary<Passanger, float> _passangersCount = new Dictionary<Passanger, float>();
 
     public float m_Currency { get; protected set;}
 
@@ -45,6 +46,11 @@ public class Resources : MonoBehaviour
     public void AddResource(Resource pType, float pAmount) 
     {
         _resources[pType] += pAmount;
+    }
+
+    public void AddPassangersCount(Passanger pType, float pAmount)
+    {
+        _passangersCount[pType] += pAmount;
     }
 
     public void AddCurrency(float pAmount) 
