@@ -18733,7 +18733,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _npcPrefabs:
   - {fileID: 4208682951318689384, guid: 53e3782a08c8ca84cac8e5cd8889587e, type: 3}
-  _movementProbabilities: []
+  _movementProbabilities:
+  - type: 0
+    eatProb: 0.6
+    drinkProb: 0
+    bakeryProb: 0.6
+    cafeProb: 0
+    pubProb: 0
+    barProb: 0
+    loungeProb: 0
+    restaurantProb: 0
+    highRestaurantProb: 0
+    shopProb: 0
+    bookstoreProb: 0
+    flowerstoreProb: 0
+    travelInfoProb: 0
+    travelAgencyProb: 0
+    hairSalonProb: 0
+    bankProb: 0
+  - type: 1
+    eatProb: 0.6
+    drinkProb: 0
+    bakeryProb: 0.6
+    cafeProb: 0
+    pubProb: 0
+    barProb: 0
+    loungeProb: 0
+    restaurantProb: 0
+    highRestaurantProb: 0
+    shopProb: 0
+    bookstoreProb: 0
+    flowerstoreProb: 0
+    travelInfoProb: 0
+    travelAgencyProb: 0
+    hairSalonProb: 0
+    bankProb: 0
+  - type: 2
+    eatProb: 0.6
+    drinkProb: 0
+    bakeryProb: 0.6
+    cafeProb: 0
+    pubProb: 0
+    barProb: 0
+    loungeProb: 0
+    restaurantProb: 0
+    highRestaurantProb: 0
+    shopProb: 0
+    bookstoreProb: 0
+    flowerstoreProb: 0
+    travelInfoProb: 0
+    travelAgencyProb: 0
+    hairSalonProb: 0
+    bankProb: 0
   _spawnFrequency: 1
   _exitPoint: {x: 0, y: 0, z: 0}
 --- !u!4 &819719266

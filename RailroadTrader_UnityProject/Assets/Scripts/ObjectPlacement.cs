@@ -52,7 +52,7 @@ public class ObjectPlacement : MonoBehaviour
         _buildModeActivated = true;
         m_HighlightCursor.SetActive(false);
         _modelHolder = Instantiate(m_ObjectPrefab.GetComponent<Building>().m_Model, transform);
-        _modelHolder.GetComponent<MeshRenderer>().material = m_HighlightMat;
+        //_modelHolder.GetComponent<MeshRenderer>().material = m_HighlightMat;
     }
 
     protected virtual void DeactivateBuildmode()
