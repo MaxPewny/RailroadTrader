@@ -74,3 +74,11 @@ The following packages were updated:
   com.unity.postprocessing from version 2.1.7 to 2.2.2
 The following packages were removed:
   com.unity.package-manager-ui@2.2.0
+
+=== Fri Jul  3 15:33:14 2020
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.test-framework from version 1.1.13 to 1.1.14
