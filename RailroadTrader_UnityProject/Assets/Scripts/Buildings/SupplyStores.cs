@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class SupplyStores : Building
 {
     [System.Serializable]
-    public class BuildingResource
+    public class BuildingRessource
     {
         public Resource type;
-        public float capacity;
-        public float amount;
+        public int maxCapacity;
+        public int curAmount;
     }
 
     [System.Serializable]
@@ -17,12 +18,12 @@ public class SupplyStores : Building
     {
         public Passanger type;
         public int maxCapacity;
-        public int capacity;
+        public int curAmount;
         public float earningGain;
         public float satisfactionGain;
     }
 
-    public List<BuildingResource> m_Resources;
+    public List<BuildingRessource> m_Ressources;
     public List<BuildingVisitorStats> m_VisitorStats;
 
     protected override void DestroyBuilding()
@@ -30,13 +31,11 @@ public class SupplyStores : Building
         throw new System.NotImplementedException();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        Initialize();
+        //Initialize();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -44,27 +43,60 @@ public class SupplyStores : Building
 
     public virtual bool GainCustomer(Passanger pPassanger) 
     {
-        for (int i = 0; i < m_VisitorStats.Count; i++)
+        if (!HasRessources())
+            return false;
+
+        BuildingVisitorStats visitor = VisitorStats(pPassanger);
+
+        if (visitor.curAmount < visitor.maxCapacity)
         {
-            if (m_VisitorStats[i].type == pPassanger)
-            {
-                if (m_VisitorStats[i].capacity < m_VisitorStats[i].maxCapacity)
-                {
-                    ++m_VisitorStats[i].capacity;
-                    Resources.Instance.AddCurrency(m_VisitorStats[i].earningGain);
-                    return true;
-                }
+            ++visitor.curAmount;
+            FC.AddCurrency(visitor.earningGain);
+            RefillRessources(1);
+            return true;
+        }
+        else
+            return false;
+
+    }
+
+    private BuildingVisitorStats VisitorStats(Passanger pType)
+    {
+       return m_VisitorStats.First(m_VisitorStats => m_VisitorStats.type == pType);
+    }
+
+    private bool HasRessources()
+    {        
+        foreach (BuildingRessource ressi in m_Ressources)
+        {
+            if (ressi.curAmount == 0)
                 return false;
+        }
+        return true;
+    }    
+
+    private void RefillRessources(int amount)
+    {
+        foreach(BuildingRessource ressi in m_Ressources)
+        {
+            if (RC.TakeRessourceFromCargo(ressi.type, amount) < amount)
+            {
+                ressi.curAmount += amount;
+                RC.SubtractFromShopRessis(ressi.type, ressi.curAmount);
             }
         }
-        return false;
     }
 
     protected virtual void ResetCapacity()
     {
         foreach (BuildingVisitorStats stats in m_VisitorStats)
         {
-            stats.capacity = 0;
+            stats.curAmount = 0;
         }
+    }
+
+    public virtual bool RessourceAtMaxCapacity()
+    {
+        return true;
     }
 }

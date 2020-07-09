@@ -11,33 +11,38 @@ public class BuildMenu : MonoBehaviour
     {
         public GameObject prefab;
         public Button button;
-
         public int cost;
     }
 
     [SerializeField]
     private ObjectPlacement _placement;
-
+    private FinanceController FC;
     public List<m_BuildOption> m_BuildOptions;
 
-
-    // Start is called before the first frame update
     void Start()
     {
+        FC = FindObjectOfType<FinanceController>();
+
         foreach (m_BuildOption option in m_BuildOptions)
         {
-            option.button.onClick.AddListener(delegate { StartBuildMode(option.prefab); });
+            option.button.onClick.AddListener(delegate { StartBuildMode(option.prefab, option.cost); });
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
-    protected virtual void StartBuildMode(GameObject pPrefab)
+    protected virtual void StartBuildMode(GameObject pPrefab, int pCost)
     {
-        _placement.ActivateBuildmode(pPrefab);
+        if (FC.SubtractCurrency(pCost))
+        {
+            _placement.ActivateBuildmode(pPrefab);
+        }    
+        else
+        {
+            print("not enough moneyz");
+        }
     }
 }

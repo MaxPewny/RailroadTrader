@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrainPlatform : Building
+public class PassengerTrack : Building
 {
+    private NpcMovement NPCs;
     public Passanger m_PassangerType = Passanger.COMMUTER;
+    public bool inStation { get; protected set; }
 
     protected override void DestroyBuilding()
     {
@@ -16,10 +18,19 @@ public class TrainPlatform : Building
     {
         m_Type = BuildingType.TRAINPLATFORM;
         Initialize();
+        NPCs = FindObjectOfType<NpcMovement>();
     }
-
-    // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("s"))
+        {
+            Debug.Log("S");
+            TrainArrived();
+        }
+    }
+
+    private void TrainArrived()
+    {
+        StartCoroutine(NPCs.SpawnNpcGroup(m_NpcAmount, m_PassangerType, m_NpcMovePoint));        
     }
 }

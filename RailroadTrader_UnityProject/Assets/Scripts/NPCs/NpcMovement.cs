@@ -73,26 +73,16 @@ public class NpcMovement: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _buildingManager = BuildingManager.Instance;
+        _buildingManager = FindObjectOfType<BuildingManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown("s"))
-        {
-            Debug.Log("S");
-            TrainArrived();
-        }
-    }
-
-    private void TrainArrived()
-    {
-        foreach (TrainPlatform platform in BuildingManager.Instance.m_Buildings.OfType<TrainPlatform>())
-        {
-            StartCoroutine(SpawnNpcGroup(platform.m_NpcAmount, platform.m_PassangerType, platform.m_NpcMovePoint));
-        }
-    }
+    //private void TrainArrived()
+    //{
+    //    foreach (PassengerTrack platform in _buildingManager.m_Buildings.OfType<PassengerTrack>())
+    //    {
+    //        StartCoroutine(SpawnNpcGroup(platform.m_NpcAmount, platform.m_PassangerType, platform.m_NpcMovePoint));
+    //    }
+    //}
 
     public virtual IEnumerator SpawnNpcGroup(int pNpcCount, Passanger pPassanger, Vector3 pSpawnPoint)
     {
@@ -131,7 +121,7 @@ public class NpcMovement: MonoBehaviour
         {
             if (UnityEngine.Random.Range(0.0f, 1.0f) <= probs.bakeryProb)
             {
-                foreach (Bakery bakery in BuildingManager.Instance.m_Buildings.OfType<Bakery>())
+                foreach (Bakery bakery in _buildingManager.m_Buildings.OfType<Bakery>())
                 {
                     if (bakery.GainCustomer(pPassanger))
                     {
@@ -144,7 +134,7 @@ public class NpcMovement: MonoBehaviour
             }
             else 
             {
-                foreach (Cafe cafe in BuildingManager.Instance.m_Buildings.OfType<Cafe>())
+                foreach (Cafe cafe in _buildingManager.m_Buildings.OfType<Cafe>())
                 {
                     if (cafe.GainCustomer(pPassanger))
                     {
@@ -159,7 +149,7 @@ public class NpcMovement: MonoBehaviour
         {
             if (UnityEngine.Random.Range(0.0f, 1.0f) <= probs.pubProb)
             {
-                foreach (Pub pub in BuildingManager.Instance.m_Buildings.OfType<Pub>())
+                foreach (Pub pub in _buildingManager.m_Buildings.OfType<Pub>())
                 {
                     if (pub.GainCustomer(pPassanger))
                     {
@@ -172,7 +162,7 @@ public class NpcMovement: MonoBehaviour
             }
             else if (UnityEngine.Random.Range(0.0f, 1.0f) <= probs.barProb)
             {
-                foreach (Bar bar in BuildingManager.Instance.m_Buildings.OfType<Bar>())
+                foreach (Bar bar in _buildingManager.m_Buildings.OfType<Bar>())
                 {
                     if (bar.GainCustomer(pPassanger))
                     {
@@ -184,7 +174,7 @@ public class NpcMovement: MonoBehaviour
             }
             else
             {
-                foreach (Lounge lounge in BuildingManager.Instance.m_Buildings.OfType<Lounge>())
+                foreach (Lounge lounge in _buildingManager.m_Buildings.OfType<Lounge>())
                 {
                     if (lounge.GainCustomer(pPassanger))
                     {
@@ -199,7 +189,7 @@ public class NpcMovement: MonoBehaviour
         {
             if (UnityEngine.Random.Range(0.0f, 1.0f) <= probs.restaurantProb)
             {
-                foreach (Restaurant restaurant in BuildingManager.Instance.m_Buildings.OfType<Restaurant>())
+                foreach (Restaurant restaurant in _buildingManager.m_Buildings.OfType<Restaurant>())
                 {
                     if (restaurant.GainCustomer(pPassanger))
                     {
@@ -212,7 +202,7 @@ public class NpcMovement: MonoBehaviour
             }
             else
             {
-                foreach (HighclassRestaurant restaurant in BuildingManager.Instance.m_Buildings.OfType<HighclassRestaurant>())
+                foreach (HighclassRestaurant restaurant in _buildingManager.m_Buildings.OfType<HighclassRestaurant>())
                 {
                     if (restaurant.GainCustomer(pPassanger))
                     {

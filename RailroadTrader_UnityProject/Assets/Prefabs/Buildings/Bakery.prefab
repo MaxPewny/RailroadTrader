@@ -95,31 +95,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Type: 0
   m_Model: {fileID: 3753584382547730434}
-  m_BuildCost: 0
+  m_BuildCost: 20
   m_NpcMovePointOffset: {x: 0, y: 0, z: 0}
   m_NpcAmount: 0
   m_BlockedTilesXZ:
   - {x: 1, y: 0}
   - {x: 0, y: 1}
   - {x: 1, y: 1}
-  m_Resources:
-  - type: 0
-    capacity: 0
-    amount: 0
+  m_Ressources: []
   m_VisitorStats:
   - type: 0
     maxCapacity: 10
-    capacity: 0
+    curAmount: 0
     earningGain: 0
     satisfactionGain: 0
   - type: 1
     maxCapacity: 10
-    capacity: 0
+    curAmount: 0
     earningGain: 0
     satisfactionGain: 0
   - type: 2
     maxCapacity: 10
-    capacity: 0
+    curAmount: 0
     earningGain: 0
     satisfactionGain: 0
 --- !u!1 &3753584382547730434
