@@ -28,6 +28,11 @@ public class ObjectPlacement : MonoBehaviour
         DetectMouse();
     }
 
+    protected virtual void SetBuildAreas()
+    {
+
+    }
+
     protected virtual void DetectMouse()
     {
         if (Input.GetMouseButtonDown(0) && _buildModeActivated)
