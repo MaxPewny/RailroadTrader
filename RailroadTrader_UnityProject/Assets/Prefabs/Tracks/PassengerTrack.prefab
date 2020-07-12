@@ -83,6 +83,7 @@ MonoBehaviour:
   m_NpcAmount: 5
   m_BlockedTilesXZ:
   - {x: 0, y: 0}
+  - {x: 1, y: 0}
   m_PassangerType: 1
 --- !u!1 &4134441130553008503
 GameObject:
