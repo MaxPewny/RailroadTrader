@@ -165,7 +165,9 @@ MonoBehaviour:
   m_BlockedTilesXZ:
   - {x: 1, y: 0}
   - {x: 2, y: 0}
-  - {x: -1, y: 0}
+  - {x: 3, y: 0}
+  - {x: 4, y: 0}
+  - {x: 0, y: 0}
   m_PassangerType: 1
 --- !u!1 &4134441130553008503
 GameObject:
@@ -193,8 +195,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4134441130553008503}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.2, z: 0}
-  m_LocalScale: {x: 2, y: 0.2, z: 1}
+  m_LocalPosition: {x: 2, y: 0.2, z: 0}
+  m_LocalScale: {x: 5, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 1482735826439733414}
   m_RootOrder: 0
