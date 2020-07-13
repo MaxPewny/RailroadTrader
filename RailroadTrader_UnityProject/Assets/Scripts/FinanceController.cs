@@ -17,19 +17,20 @@ public class FinanceController : MonoBehaviour
     private float _currency = 500.0f;
     //int is the number of the month, starting with 1 for the first obv
     private Dictionary<int, FinanceOverview> monthlyFinances = new Dictionary<int, FinanceOverview>();
-    private int curMonth = 0;
+    private int curFinanceID = 0;
 
     public static event System.Action<int> NewCurrencyValue = delegate { };
 
     private void Start()
     {
-        UpdateMonthCounter(1);
+        IncreaseMonthCounterByOne();
         AddCurrency(100);
+        TimeController.OnMonthEnd += IncreaseMonthCounterByOne;
     }
 
     private FinanceOverview GetFinances()
     {
-        return monthlyFinances[curMonth];
+        return monthlyFinances[curFinanceID];
     }
 
     public FinanceOverview GetFinances(int month)
@@ -37,10 +38,10 @@ public class FinanceController : MonoBehaviour
         return monthlyFinances[month];
     }
 
-    public void UpdateMonthCounter(int month)
+    public void IncreaseMonthCounterByOne()
     {
-        curMonth = month;
-        monthlyFinances.Add(curMonth, new FinanceOverview());
+        curFinanceID += 1;
+        monthlyFinances.Add(curFinanceID, new FinanceOverview());
     }
 
     public void AddCurrency(float valueToAdd)

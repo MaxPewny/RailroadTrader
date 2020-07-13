@@ -1,4 +1,11 @@
-﻿public enum BuildingLevel 
+﻿public enum GameState
+{
+    LOADING,
+    RUNNING,
+    PAUSED,
+}
+
+public enum BuildingLevel 
 {
     LEVEL_1,
     LEVEL_2,
