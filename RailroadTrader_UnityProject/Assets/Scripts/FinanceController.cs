@@ -92,7 +92,13 @@ public class FinanceController : MonoBehaviour
     public void UpdateMonthlySum()
     {
         FinanceOverview FO = GetFinances();
-        //calculate sum
+        FO.monthlySum = CalculateMonthlySum(curFinanceID);
+    }
+
+    public int CalculateMonthlySum(int financeID)
+    {
+        FinanceOverview FO = GetFinances(financeID);
+        return FO.monthlyBuildCosts + FO.monthlyIncome + FO.monthlyRevenue + FO.monthlyUpkeep;
     }
 
 }
