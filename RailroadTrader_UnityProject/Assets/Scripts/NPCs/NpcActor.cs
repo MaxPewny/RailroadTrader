@@ -14,9 +14,9 @@ public class NpcActor : MonoBehaviour
     bool hasTarget;
 
     // Start is called before the first frame update
-    void Awake()
-    {
+    void Awake() {
         _agent = GetComponent<NavMeshAgent>();
+        _agent.updateRotation = false;
     }
 
     // Update is called once per frame

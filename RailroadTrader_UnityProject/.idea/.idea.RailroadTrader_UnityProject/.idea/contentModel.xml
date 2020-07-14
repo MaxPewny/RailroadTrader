@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Janik\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Janik\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_RailroadTrader_UnityProject.1990730739.00" t="ExcludeRecursive" />
+    <e p="E:\git\RailroadTrader\RailroadTrader_UnityProject" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Buildings" t="Include">
+            <e p="Building.cs" t="Include" />
+            <e p="BuildingManager.cs" t="Include" />
+            <e p="SupplyShops" t="Include">
+              <e p="Bakery.cs" t="Include" />
+              <e p="Bar.cs" t="Include" />
+              <e p="Cafe.cs" t="Include" />
+              <e p="HighclassRestaurant.cs" t="Include" />
+              <e p="Lounge.cs" t="Include" />
+              <e p="Pub.cs" t="Include" />
+              <e p="Restaurant.cs" t="Include" />
+            </e>
+            <e p="SupplyStores.cs" t="Include" />
+            <e p="Tracks" t="Include">
+              <e p="CargoTrack.cs" t="Include" />
+              <e p="PassengerTrack.cs" t="Include" />
+            </e>
+          </e>
+          <e p="classes.cs" t="Include" />
+          <e p="enums.cs" t="Include" />
+          <e p="FinanceController.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
+          <e p="NPCs" t="Include">
+            <e p="NpcActor.cs" t="Include" />
+            <e p="NpcMovement.cs" t="Include" />
+          </e>
+          <e p="ObjectPlacement.cs" t="Include" />
+          <e p="RessourceController.cs" t="Include" />
+          <e p="Singleton.cs" t="Include" />
+          <e p="TimeController.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="BuildMenu.cs" t="Include" />
+            <e p="CargoOrderMenu.cs" t="Include" />
+            <e p="FinanceMenu.cs" t="Include" />
+            <e p="PassengerTrackInfoMenu.cs" t="Include" />
+            <e p="ShopInfoMenu.cs" t="Include" />
+            <e p="StatusBar.cs" t="Include" />
+          </e>
+        </e>
+        <e p="UltimateGridsEngine" t="Include">
+          <e p="Common" t="Include">
+            <e p="Editor" t="Include">
+              <e p="Brushes" t="Include">
+                <e p="GridObjectBrush" t="Include">
+                  <e p="GridObjectBrush.cs" t="Include" />
+                </e>
+                <e p="GridTileBrush" t="Include">
+                  <e p="GridTileBrush.cs" t="Include" />
+                </e>
+              </e>
+              <e p="ReadOnlyDrawer" t="Include">
+                <e p="ReadOnlyDrawer.cs" t="Include" />
+              </e>
+              <e p="uGridsEditor.asmdef" t="Include" />
+              <e p="WelcomeWindow" t="Include">
+                <e p="DependencyInstaller.cs" t="Include" />
+                <e p="WelcomeWindow.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Runtime" t="Include">
+              <e p="Controllers" t="Include">
+                <e p="KeyboardDrivenController.cs" t="Include" />
+                <e p="MouseDrivenController.cs" t="Include" />
+                <e p="RotatingCubeMovement.cs" t="Include" />
+              </e>
+              <e p="Core" t="Include">
+                <e p="GridManager.cs" t="Include" />
+                <e p="GridMovement.cs" t="Include" />
+                <e p="GridObject.cs" t="Include" />
+                <e p="GridTile.cs" t="Include" />
+                <e p="MovementBlocker.cs" t="Include" />
+                <e p="MovementResult.cs" t="Include" />
+              </e>
+              <e p="Extensions &amp; Utils" t="Include">
+                <e p="Attack &amp; Health" t="Include">
+                  <e p="Attack.cs" t="Include" />
+                  <e p="AttackResult.cs" t="Include" />
+                  <e p="AttackTrigger.cs" t="Include" />
+                  <e p="AttackTriggerDirectional.cs" t="Include" />
+                  <e p="AttackTriggerPosition.cs" t="Include" />
+                  <e p="Health.cs" t="Include" />
+                </e>
+                <e p="Cooldown.cs" t="Include" />
+                <e p="Floater.cs" t="Include" />
+                <e p="FPSCounter.cs" t="Include" />
+                <e p="FPSSet.cs" t="Include" />
+                <e p="GridObjectChaser.cs" t="Include" />
+                <e p="Helpers.cs" t="Include" />
+                <e p="PressRToReload.cs" t="Include" />
+                <e p="RangeVisualizer.cs" t="Include" />
+                <e p="ReadOnlyAttribute.cs" t="Include" />
+                <e p="Rotator.cs" t="Include" />
+                <e p="TileHighlighter.cs" t="Include" />
+                <e p="Vector2IntExtensions.cs" t="Include" />
+              </e>
+              <e p="Interactives" t="Include">
+                <e p="InteractiveObject.cs" t="Include" />
+                <e p="InteractOnGridObject.cs" t="Include" />
+                <e p="InteractOnTrigger.cs" t="Include" />
+                <e p="Teleport.cs" t="Include" />
+              </e>
+              <e p="Pathfinding &amp; Algos" t="Include">
+                <e p="AStar.cs" t="Include" />
+                <e p="GridPathfinder.cs" t="Include" />
+                <e p="PathfindingDemoGridTile.cs" t="Include" />
+                <e p="PathfindingDemoVisualizer.cs" t="Include" />
+                <e p="PathVisualizer3D.cs" t="Include" />
+                <e p="RangeAlgorithms.cs" t="Include" />
+              </e>
+              <e p="Third-Party" t="Include">
+                <e p="PriorityQueue" t="Include">
+                  <e p="GenericPriorityQueue.cs" t="Include" />
+                  <e p="GenericPriorityQueueNode.cs" t="Include" />
+                  <e p="IFixedSizePriorityQueue.cs" t="Include" />
+                  <e p="IPriorityQueue.cs" t="Include" />
+                  <e p="SimplePriorityQueue.cs" t="Include" />
+                </e>
+              </e>
+              <e p="UgridsRuntime.asmdef" t="Include" />
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="GridOverlay_Global.shader" t="Include" />
+              <e p="GridOverlay_Object.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Demos" t="Include">
+            <e p="Chess-Demo-2D" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="ChessBishop.cs" t="Include" />
+                <e p="ChessGameManager.cs" t="Include" />
+                <e p="ChessKing.cs" t="Include" />
+                <e p="ChessKnight.cs" t="Include" />
+                <e p="ChessMoveSelector.cs" t="Include" />
+                <e p="ChessPawn.cs" t="Include" />
+                <e p="ChessPiece.cs" t="Include" />
+                <e p="ChessPlayer.cs" t="Include" />
+                <e p="ChessQueen.cs" t="Include" />
+                <e p="ChessRook.cs" t="Include" />
+                <e p="ChessUnitSelector.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Dungeon-Demo" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="DungeonController.cs" t="Include" />
+                <e p="DungeonGameManager.cs" t="Include" />
+                <e p="DungeonRendererFlash.cs" t="Include" />
+              </e>
+            </e>
+            <e p="RoomGeneration" t="Include">
+              <e p="Editor" t="Include">
+                <e p="RoomGeneratorEditor.cs" t="Include" />
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="RoomGenerator.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="IMPORTANT-HOW-TO-INSTALL.txt" t="Include" />
+          <e p="license.txt" t="Include" />
+          <e p="readme.txt" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="RailroadTrader_UnityProject.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="uGridsEditor.csproj" t="IncludeRecursive" />
+      <e p="UgridsRuntime.csproj" t="IncludeRecursive" />
+    </e>
+  </component>
+</project>
