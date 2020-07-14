@@ -23,8 +23,6 @@ public class BuildMenu : MonoBehaviour
 
     void Start()
     {
-        FC = FindObjectOfType<FinanceController>();
-
         foreach (BuildOption option in TrackBuildOptions)
         {
             option.button.onClick.AddListener(delegate { StartBuildMode(option.prefab, option.cost); });
@@ -36,10 +34,7 @@ public class BuildMenu : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        
-    }
+
 
     protected virtual void StartBuildMode(GameObject pPrefab, int pCost)
     {
