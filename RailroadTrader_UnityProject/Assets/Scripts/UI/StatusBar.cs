@@ -26,7 +26,7 @@ public class StatusBar : MonoBehaviour
     void Start()
     {
         TimeController.OnHourChange += UpdateTime;
-        FinanceController.NewCurrencyValue += UpdateCurrency;
+        FinanceController.OnCurrencyValueChange += UpdateCurrency;
     }
 
     private void UpdateTime(IngameTime curTime)

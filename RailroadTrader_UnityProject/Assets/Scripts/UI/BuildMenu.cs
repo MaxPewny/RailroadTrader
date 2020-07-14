@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class BuildMenu : MonoBehaviour
 {
     [System.Serializable]
-    public struct m_BuildOption 
+    public struct BuildOption 
     {
         public GameObject prefab;
         public Button button;
@@ -16,14 +16,21 @@ public class BuildMenu : MonoBehaviour
 
     [SerializeField]
     private ObjectPlacement _placement;
+    [SerializeField]
     private FinanceController FC;
-    public List<m_BuildOption> m_BuildOptions;
+    public List<BuildOption> TrackBuildOptions;
+    public List<BuildOption> ShopBuildOptions;
 
     void Start()
     {
         FC = FindObjectOfType<FinanceController>();
 
-        foreach (m_BuildOption option in m_BuildOptions)
+        foreach (BuildOption option in TrackBuildOptions)
+        {
+            option.button.onClick.AddListener(delegate { StartBuildMode(option.prefab, option.cost); });
+        }
+
+        foreach (BuildOption option in ShopBuildOptions)
         {
             option.button.onClick.AddListener(delegate { StartBuildMode(option.prefab, option.cost); });
         }

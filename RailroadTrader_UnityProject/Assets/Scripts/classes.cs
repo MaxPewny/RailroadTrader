@@ -56,3 +56,12 @@
         return false;
     }
 }
+
+public class FinanceOverview
+{
+    public int monthlyIncome = 0;
+    public int monthlyUpkeep = 0;
+    public int monthlyRevenue = 0;
+    public int monthlyBuildCosts = 0;
+    public int monthlySum = 0;
+}

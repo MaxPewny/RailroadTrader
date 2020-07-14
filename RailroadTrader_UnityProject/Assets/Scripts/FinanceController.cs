@@ -1,41 +1,71 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 
 public class FinanceController : MonoBehaviour
 {
-    public class FinanceOverview
-    {
-        public int monthlyIncome = 0;
-        public int monthlyUpkeep = 0;
-        public int monthlyRevenue = 0;
-        public int monthlyBuildCosts = 0;
-        public int monthlySum = 0;
-    }
-
     public int Currency { get { return Mathf.FloorToInt(_currency); } }
     private float _currency = 500.0f;
     //int is the number of the month, starting with 1 for the first obv
     private Dictionary<int, FinanceOverview> monthlyFinances = new Dictionary<int, FinanceOverview>();
     private int curFinanceID = 0;
 
-    public static event System.Action<int> NewCurrencyValue = delegate { };
+    public static event System.Action<int> OnCurrencyValueChange = delegate { };
+
+    private void Awake()
+    {
+        IncreaseMonthCounterByOne();
+    }
 
     private void Start()
     {
-        IncreaseMonthCounterByOne();
         AddCurrency(100);
         TimeController.OnMonthEnd += IncreaseMonthCounterByOne;
     }
+
+    public FinanceOverview CurrentFO()
+    {
+        return GetFinances();
+    }
+
+    public FinanceOverview[] WholeOverview()
+    {
+        FinanceOverview[] FOs = new FinanceOverview[3];
+        FOs[0] = GetFinances();
+        FOs[1] = GetFinances(curFinanceID - 1);
+        FOs[2] = TotalFinances();
+        return FOs;
+    }    
 
     private FinanceOverview GetFinances()
     {
         return monthlyFinances[curFinanceID];
     }
 
-    public FinanceOverview GetFinances(int month)
+    private FinanceOverview GetFinances(int month)
     {
-        return monthlyFinances[month];
+        if (month <= curFinanceID && month > 0)
+            return monthlyFinances[month];
+        else
+        {
+            FinanceOverview fo = new FinanceOverview();
+            return fo;
+        }
+    }
+
+    private FinanceOverview TotalFinances()
+    {
+        FinanceOverview newFO = new FinanceOverview();
+        foreach(KeyValuePair<int, FinanceOverview> fo in monthlyFinances)
+        {
+            newFO.monthlyIncome += fo.Value.monthlyIncome;
+            newFO.monthlyUpkeep += fo.Value.monthlyUpkeep;
+            newFO.monthlyRevenue += fo.Value.monthlyRevenue;
+            newFO.monthlyBuildCosts += fo.Value.monthlyBuildCosts;
+            newFO.monthlySum += fo.Value.monthlySum;
+        }
+        return newFO;
     }
 
     public void IncreaseMonthCounterByOne()
@@ -47,7 +77,7 @@ public class FinanceController : MonoBehaviour
     public void AddCurrency(float valueToAdd)
     {
         _currency += valueToAdd;
-        NewCurrencyValue(Currency);
+        OnCurrencyValueChange(Currency);
     }
 
     public bool SubtractCurrency(float valueToSubtract)
@@ -55,7 +85,7 @@ public class FinanceController : MonoBehaviour
         if ( _currency >= valueToSubtract)
         {
             _currency += valueToSubtract;
-            NewCurrencyValue(Currency);
+            OnCurrencyValueChange(Currency);
             return true;
         }
         else
@@ -68,7 +98,6 @@ public class FinanceController : MonoBehaviour
     {
         FinanceOverview FO = GetFinances();
         FO.monthlyIncome += incomeGain;
-
     }
 
     public void UpdateMonthlyUpkeep(int curUpkeep)
@@ -100,5 +129,4 @@ public class FinanceController : MonoBehaviour
         FinanceOverview FO = GetFinances(financeID);
         return FO.monthlyBuildCosts + FO.monthlyIncome + FO.monthlyRevenue + FO.monthlyUpkeep;
     }
-
 }
