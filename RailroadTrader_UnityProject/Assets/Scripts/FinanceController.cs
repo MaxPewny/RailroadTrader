@@ -6,7 +6,7 @@ using UnityEngine;
 public class FinanceController : MonoBehaviour
 {
     public int Currency { get { return Mathf.FloorToInt(_currency); } }
-    private float _currency = 500.0f;
+    private int _currency;
     //int is the number of the month, starting with 1 for the first obv
     private Dictionary<int, FinanceOverview> monthlyFinances = new Dictionary<int, FinanceOverview>();
     private int curFinanceID = 0;
@@ -20,7 +20,6 @@ public class FinanceController : MonoBehaviour
 
     private void Start()
     {
-        AddCurrency(100);
         TimeController.OnMonthEnd += IncreaseMonthCounterByOne;
     }
 
@@ -74,17 +73,18 @@ public class FinanceController : MonoBehaviour
         monthlyFinances.Add(curFinanceID, new FinanceOverview());
     }
 
-    public void AddCurrency(float valueToAdd)
+    public void AddCurrency(int valueToAdd)
     {
         _currency += valueToAdd;
         OnCurrencyValueChange(Currency);
+        print("new currency: " + Currency);
     }
 
-    public bool SubtractCurrency(float valueToSubtract)
+    public bool SubtractCurrency(int valueToSubtract)
     {
         if ( _currency >= valueToSubtract)
         {
-            _currency += valueToSubtract;
+            _currency -= valueToSubtract;
             OnCurrencyValueChange(Currency);
             return true;
         }

@@ -19,7 +19,7 @@ public class SupplyStores : Building
         public Passanger type;
         public int maxCapacity;
         public int curAmount;
-        public float earningGain;
+        public int earningGain;
         public float satisfactionGain;
     }
 

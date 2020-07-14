@@ -40,7 +40,7 @@ public class StatusBar : MonoBehaviour
 
     private void UpdateCurrency(int newAmount)
     {
-        MoneyTxt.text = newAmount.ToString();
+        MoneyTxt.text = newAmount.ToString() + " €";
     }
 
     private void UpdateVisiterCount(int newAmount)

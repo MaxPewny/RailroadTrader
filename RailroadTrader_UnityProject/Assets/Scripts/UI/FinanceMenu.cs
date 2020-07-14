@@ -34,39 +34,51 @@ public class FinanceMenu : MonoBehaviour
     public Text BuildCostsTotal;
     public Text SumTotal;
 
+    [Header("Finance Overview: Tooltip")]
+    public Text ShopRevTT;
+    public Text UpkeepTT;
+    public Text SumTT;
+
+    public void WriteToolTipFinances(FinanceOverview FO)
+    {
+        ShopRevTT.text = FO.monthlyIncome.ToString() + " €";
+        UpkeepTT.text = FO.monthlyUpkeep.ToString() + " €";
+        SumTT.text = FO.monthlySum.ToString() + " €";
+    }
+
     public void WriteSmallOverview(FinanceOverview FO)
     {
-        ShopRev.text = FO.monthlyIncome.ToString() + "€";
-        Upkeep.text = FO.monthlyUpkeep.ToString() + "€";
-        Revenue.text = FO.monthlyRevenue.ToString() + "€";
-        BuildCosts.text = FO.monthlyBuildCosts.ToString() + "€";
-        Sum.text = FO.monthlySum.ToString() + "€";
+        ShopRev.text = FO.monthlyIncome.ToString() + " €";
+        Upkeep.text = FO.monthlyUpkeep.ToString() + " €";
+        Revenue.text = FO.monthlyRevenue.ToString() + " €";
+        BuildCosts.text = FO.monthlyBuildCosts.ToString() + " €";
+        Sum.text = FO.monthlySum.ToString() + " €";
     }
 
     public void WriteCurrentOverview(FinanceOverview FO)
     {
-        ShopRevCur.text = FO.monthlyIncome.ToString() + "€";
-        UpkeepCur.text = FO.monthlyUpkeep.ToString() + "€";
-        RevenueCur.text = FO.monthlyRevenue.ToString() + "€";
-        BuildCostsCur.text = FO.monthlyBuildCosts.ToString() + "€";
-        SumCur.text = FO.monthlySum.ToString() + "€";
+        ShopRevCur.text = FO.monthlyIncome.ToString() + " €";
+        UpkeepCur.text = FO.monthlyUpkeep.ToString() + " €";
+        RevenueCur.text = FO.monthlyRevenue.ToString() + " €";
+        BuildCostsCur.text = FO.monthlyBuildCosts.ToString() + " €";
+        SumCur.text = FO.monthlySum.ToString() + " €";
     }   
     
     public void WriteLastOverview(FinanceOverview FO)
     {
-        ShopRevLast.text = FO.monthlyIncome.ToString() + "€";
-        UpkeepLast.text = FO.monthlyUpkeep.ToString() + "€";
-        RevenueLast.text = FO.monthlyRevenue.ToString() + "€";
-        BuildCostsLast.text = FO.monthlyBuildCosts.ToString() + "€";
-        SumLast.text = FO.monthlySum.ToString() + "€";
+        ShopRevLast.text = FO.monthlyIncome.ToString() + " €";
+        UpkeepLast.text = FO.monthlyUpkeep.ToString() + " €";
+        RevenueLast.text = FO.monthlyRevenue.ToString() + " €";
+        BuildCostsLast.text = FO.monthlyBuildCosts.ToString() + " €";
+        SumLast.text = FO.monthlySum.ToString() + " €";
     }
 
     public void WriteTotalOverview(FinanceOverview FO)
     {
-        ShopRevTotal.text = FO.monthlyIncome.ToString() + "€";
-        UpkeepTotal.text = FO.monthlyUpkeep.ToString() + "€";
-        RevenueTotal.text = FO.monthlyRevenue.ToString() + "€";
-        BuildCostsTotal.text = FO.monthlyBuildCosts.ToString() + "€";
-        SumTotal.text = FO.monthlySum.ToString() + "€";
+        ShopRevTotal.text = FO.monthlyIncome.ToString() + " €";
+        UpkeepTotal.text = FO.monthlyUpkeep.ToString() + " €";
+        RevenueTotal.text = FO.monthlyRevenue.ToString() + " €";
+        BuildCostsTotal.text = FO.monthlyBuildCosts.ToString() + " €";
+        SumTotal.text = FO.monthlySum.ToString() + " €";
     }
 }

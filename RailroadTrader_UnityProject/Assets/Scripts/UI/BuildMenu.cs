@@ -10,7 +10,9 @@ public class BuildMenu : MonoBehaviour
     public struct BuildOption 
     {
         public GameObject prefab;
+        public Sprite picture;
         public Button button;
+        public Image image;
         public int cost;
     }
 
@@ -26,11 +28,13 @@ public class BuildMenu : MonoBehaviour
         foreach (BuildOption option in TrackBuildOptions)
         {
             option.button.onClick.AddListener(delegate { StartBuildMode(option.prefab, option.cost); });
+            option.image.sprite = option.picture;
         }
 
         foreach (BuildOption option in ShopBuildOptions)
         {
             option.button.onClick.AddListener(delegate { StartBuildMode(option.prefab, option.cost); });
+            option.image.sprite = option.picture;
         }
     }
 
