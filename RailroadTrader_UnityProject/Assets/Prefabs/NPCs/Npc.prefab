@@ -268,3 +268,4 @@ MonoBehaviour:
   _target: {x: 0, y: 0, z: 0}
   sprite: {fileID: 2985705826119400760}
   type: 0
+  anim: {fileID: 4106052837121617263}

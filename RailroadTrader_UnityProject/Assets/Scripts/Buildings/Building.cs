@@ -14,7 +14,7 @@ public class Building : MonoBehaviour
     public int m_BuildCost;
     public int UpkeepCost = 25;
     public Transform NPCEnterPoint;
-    public Vector3 m_NpcMovePointOffset { get { return new Vector3(NPCEnterPoint.position.x, NPCEnterPoint.position.y, NPCEnterPoint.position.z); } }
+    public Vector3 m_NpcMovePointOffset;
     public int m_NpcAmount;
     public int totalGuestCount;
     public List<Vector2Int> m_BlockedTilesXZ;

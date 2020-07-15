@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -14,8 +15,15 @@ public class NpcActor : MonoBehaviour
 
     [SerializeField]
     private GameObject sprite;
+    
     [SerializeField]
     private Passanger type;
+
+    [SerializeField]
+    private Animator anim;
+
+    private Vector3 savedDestination;
+    
     private SupplyStores targetStore;
 
     // Start is called before the first frame update
@@ -27,8 +35,12 @@ public class NpcActor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        anim.SetTrigger(GetAnimDirection());
+
         if (hasTarget)
         {
+            anim.SetTrigger(GetAnimDirection());
+
             float distanceToTarget = Vector3.Distance(transform.position, _target);
             if (distanceToTarget < _destinationReachedTreshold)
             {
@@ -36,6 +48,22 @@ public class NpcActor : MonoBehaviour
                 hasTarget = false;
             }
         }
+    }
+
+    String GetAnimDirection() {
+        if (_agent.destination.x > transform.position.x && _agent.destination.z > transform.position.z) {
+            if (_agent.destination.z - transform.position.z > _agent.destination.x - transform.position.x) {
+                return "Northwest";
+            } 
+            
+            return "Northeast";
+        }
+
+        if (_agent.destination.z - transform.position.z > _agent.destination.x - transform.position.x) {
+            return "Southwest";
+        }
+
+        return "Southeast";
     }
 
     private void EnterShop()
