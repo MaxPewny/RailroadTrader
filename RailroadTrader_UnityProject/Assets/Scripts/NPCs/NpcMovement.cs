@@ -53,8 +53,11 @@ public class NpcMovement: MonoBehaviour
     [SerializeField]
     private float _spawnFrequency = 1.0f;
 
+
     [SerializeField]
-    private Vector3 _exitPoint;
+    private Transform StationExit;
+    [SerializeField]
+    private Vector3 _exitPoint { get { return new Vector3(StationExit.position.x, StationExit.position.y, StationExit.position.z); } }
 
     private BuildingManager _buildingManager;
 

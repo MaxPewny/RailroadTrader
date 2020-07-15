@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class PassengerTrack : Building
 {
-    private NpcMovement NPCs;
     public Passanger m_PassangerType = Passanger.COMMUTER;
     public bool inStation { get; protected set; }
+
+    [SerializeField]
+    private float timeTilArrival = 45.0f;
+    [SerializeField]
+    private float passedTime = 0.0f;
+    [SerializeField]
+    private Animator anim;
+
+    private NpcMovement NPCs;
 
     protected override void DestroyBuilding()
     {
@@ -18,11 +26,17 @@ public class PassengerTrack : Building
         m_Type = BuildingType.TRAINPLATFORM;
         base.Start();
         NPCs = FindObjectOfType<NpcMovement>();
+        anim = GetComponentInChildren<Animator>();
+        inStation = false;
     }
 
     protected override void Update()
     {
         base.Update();
+        
+        if(!inStation)
+            Timer();
+
         if (Input.GetKeyDown("s"))
         {
             Debug.Log("S");
@@ -30,8 +44,33 @@ public class PassengerTrack : Building
         }
     }
 
-    private void TrainArrived()
+    private void Timer()
     {
-        StartCoroutine(NPCs.SpawnNpcGroup(m_NpcAmount, m_PassangerType, m_NpcMovePoint));        
+        passedTime += Time.deltaTime;
+        if (passedTime >= timeTilArrival)
+        {
+            inStation = true;
+            StartCoroutine(TrainArrived());
+            passedTime = 0.0f;
+        }
+    }    
+
+    private IEnumerator TrainArrived()
+    {
+        //start train enter anim
+        //wait for it to finish
+        anim.SetTrigger("enter");
+        yield return new WaitForSeconds(1.0f);        
+        //switch to open doors
+        //wait a moment
+        yield return new WaitForSeconds(0.25f);        
+        StartCoroutine(NPCs.SpawnNpcGroup(m_NpcAmount, m_PassangerType, m_NpcMovePoint));
+        yield return new WaitForSeconds(0.5f);        
+        //wait for the spawn to finish
+        //start train exit anim
+        //wait for it to finish
+        anim.SetTrigger("exit");
+        yield return new WaitForSeconds(1.0f);  
+        inStation = false;
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1984062750426119429}
   - component: {fileID: 5927973973429323060}
   - component: {fileID: 1235488840518472249}
-  - component: {fileID: 432999826976918365}
+  - component: {fileID: 131586408838570923}
   m_Layer: 0
   m_Name: Train_sBahn
   m_TagString: Untagged
@@ -81,20 +81,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &432999826976918365
-MeshCollider:
+--- !u!95 &131586408838570923
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5698390814539359522}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2697299897695665470, guid: 302199d0e54e264468ff9a6f5c725767, type: 3}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c11be1cd6890884292f434c8008dafc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5866336220679714936
 GameObject:
   m_ObjectHideFlags: 0
