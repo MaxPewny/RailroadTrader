@@ -9,6 +9,21 @@ public class StationManagementMenu : MonoBehaviour
     [SerializeField]
     private FinanceMenu FM;
 
+    private void Start()
+    {
+        TimeController.OnHourEnd += UpdateAllFinanceMenus;
+        TimeController.OnDayEnd += UpdateAllFinanceMenus;
+        TimeController.OnMonthEnd += UpdateAllFinanceMenus;
+        TimeController.OnYearEnd += UpdateAllFinanceMenus;
+    }
+
+    private void UpdateAllFinanceMenus()
+    {
+        OnFinanceToolTip();
+        OnOverviewOpened();
+        OnFinanceOverviewOpened();
+    }
+
     public void OnFinanceToolTip()
     {
         FM.WriteToolTipFinances(FC.CurrentFO());

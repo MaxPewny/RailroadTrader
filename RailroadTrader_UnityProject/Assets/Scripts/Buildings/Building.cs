@@ -11,10 +11,12 @@ public class Building : MonoBehaviour
 
     public BuildingType m_Type;
     public GameObject m_Model;
-    public float m_BuildCost;
+    public int m_BuildCost;
+    public int UpkeepCost = 25;
     public Transform NPCEnterPoint;
     public Vector3 m_NpcMovePointOffset { get { return new Vector3(NPCEnterPoint.position.x, NPCEnterPoint.position.y, NPCEnterPoint.position.z); } }
     public int m_NpcAmount;
+    public int totalGuestCount;
     public List<Vector2Int> m_BlockedTilesXZ;
     public int BlockedXTiles;
     public int BlockedZTiles;
@@ -27,10 +29,13 @@ public class Building : MonoBehaviour
         WriteBlockedVectors(BlockedXTiles, BlockedZTiles);
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         Initialize();
     }
+
+    protected virtual void Update()
+    { }
 
     protected virtual void Initialize()
     {

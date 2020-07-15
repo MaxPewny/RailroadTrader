@@ -21,6 +21,8 @@ public class FinanceController : MonoBehaviour
     private void Start()
     {
         TimeController.OnMonthEnd += IncreaseMonthCounterByOne;
+        BuildingManager.OnUpkeepDue += UpdateMonthlyUpkeep;
+        BuildingManager.OnUpkeepDue += SubtractUpkeep;
     }
 
     public FinanceOverview CurrentFO()
@@ -80,11 +82,18 @@ public class FinanceController : MonoBehaviour
         print("new currency: " + Currency);
     }
 
-    public bool SubtractCurrency(int valueToSubtract)
+    public void SubtractUpkeep(int upKeep)
+    {
+        _currency -= upKeep;
+        OnCurrencyValueChange(Currency);
+    }
+
+    public bool PayBuildingCost(int valueToSubtract)
     {
         if ( _currency >= valueToSubtract)
         {
             _currency -= valueToSubtract;
+            UpdateMonthlyBuildCosts(valueToSubtract);
             OnCurrencyValueChange(Currency);
             return true;
         }
@@ -100,10 +109,10 @@ public class FinanceController : MonoBehaviour
         FO.monthlyIncome += incomeGain;
     }
 
-    public void UpdateMonthlyUpkeep(int upkeepGain)
+    public void UpdateMonthlyUpkeep(int upkeep)
     {
         FinanceOverview FO = GetFinances();
-        FO.monthlyUpkeep += upkeepGain;
+        FO.monthlyUpkeep -= upkeep;
     }
 
     public void UpdateMonthlyRevenue(int curRevenue)
@@ -112,10 +121,10 @@ public class FinanceController : MonoBehaviour
         FO.monthlyRevenue += curRevenue;
     }
 
-    public void UpdateMonthlyBuildCosts(int buildCostGain)
+    public void UpdateMonthlyBuildCosts(int buildCost)
     {
         FinanceOverview FO = GetFinances();
-        FO.monthlyBuildCosts += buildCostGain;
+        FO.monthlyBuildCosts -= buildCost;
     }
 
     public void UpdateMonthlySum()

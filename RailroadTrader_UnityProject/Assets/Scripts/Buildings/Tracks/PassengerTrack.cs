@@ -13,15 +13,16 @@ public class PassengerTrack : Building
         throw new System.NotImplementedException();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
         m_Type = BuildingType.TRAINPLATFORM;
-        Initialize();
+        base.Start();
         NPCs = FindObjectOfType<NpcMovement>();
     }
-    void Update()
+
+    protected override void Update()
     {
+        base.Update();
         if (Input.GetKeyDown("s"))
         {
             Debug.Log("S");

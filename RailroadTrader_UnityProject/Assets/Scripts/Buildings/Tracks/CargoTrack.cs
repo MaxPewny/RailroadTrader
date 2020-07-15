@@ -21,15 +21,14 @@ public class CargoTrack : Building
         throw new System.NotImplementedException();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        m_Type = BuildingType.TRAINPLATFORM;
-        Initialize();
+        //m_Type = BuildingType.TRAINPLATFORM;
+        base.Start();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
+
     }
 }

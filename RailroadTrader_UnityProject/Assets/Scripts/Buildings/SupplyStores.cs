@@ -21,20 +21,20 @@ public class SupplyStores : Building
     private float secondsSpendByNPC = 30.0f;
     [SerializeField]
     private float passedTime;
-    private int totalGuestCount;
 
     protected override void DestroyBuilding()
     {
         throw new System.NotImplementedException();
     }
 
-    protected void Start()
+    protected override void Start()
     {
-        //Initialize();
+        base.Start();
     }
 
-    protected void Update()
+    protected override void Update()
     {
+        base.Update();
         if (totalGuestCount > 0)
             RunLeaveTimer();
     }
@@ -42,7 +42,7 @@ public class SupplyStores : Building
     protected void RunLeaveTimer()
     {     
         passedTime += Time.deltaTime;
-        if (passedTime >= (secondsSpendByNPC))
+        if (passedTime >= secondsSpendByNPC)
         {
             passedTime = 0.0f;
             GuestLeaves();
@@ -95,6 +95,7 @@ public class SupplyStores : Building
     {
         VisitorStats visitor = VisitorStats(passanger);
         FC.AddCurrency(visitor.earningGain);
+        FC.UpdateMonthlyRevenue(visitor.earningGain);
         RefillRessources(1);
     }
 

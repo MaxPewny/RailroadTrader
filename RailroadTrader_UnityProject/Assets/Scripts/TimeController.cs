@@ -14,6 +14,7 @@ public class TimeController : MonoBehaviour
     private float passedTime = 0.0f;
 
     public static event System.Action<IngameTime> OnHourChange = delegate { };
+    public static event System.Action OnHourEnd = delegate { };
     public static event System.Action OnDayEnd = delegate { };
     public static event System.Action OnMonthEnd = delegate { };
     public static event System.Action OnYearEnd = delegate { };

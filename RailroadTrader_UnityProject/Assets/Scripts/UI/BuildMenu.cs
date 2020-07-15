@@ -42,7 +42,7 @@ public class BuildMenu : MonoBehaviour
 
     protected virtual void StartBuildMode(GameObject pPrefab, int pCost)
     {
-        if (FC.SubtractCurrency(pCost))
+        if (FC.PayBuildingCost(pCost))
         {
             _placement.ActivateBuildmode(pPrefab);
         }    

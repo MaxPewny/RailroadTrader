@@ -8,24 +8,27 @@ public class BuildingManager : MonoBehaviour
     [ReadOnly]
     public List<Building> m_Buildings;
 
-    //// Singleton
-    //protected static BuildingManager _instance = null;
-    //public static BuildingManager Instance
-    //{
-    //    get
-    //    {
-    //        if (_instance == null) { _instance = FindObjectOfType<BuildingManager>(); }
-    //        return _instance;
-    //    }
-    //    protected set { _instance = value; }
-    //}
+    public static event System.Action<int> OnUpkeepDue = delegate { };
 
-    void TrainArrived() 
+    private void Start()
     {
-        foreach(PassengerTrack platform in m_Buildings.OfType<PassengerTrack>())
+        TimeController.OnDayEnd += PayUpkeepCosts;
+    }
+
+    public void PayUpkeepCosts()
+    {
+        OnUpkeepDue(UpkeepAllBuildings());
+    }
+
+    private int UpkeepAllBuildings()
+    {
+        int sum = 0;
+        foreach(Building b in m_Buildings)
         {
-            //StartCoroutine(NpcMovement.Instance.SpawnNpcGroup(platform.m_NpcMovePoint, platform.m_NpcAmount));
+            sum += b.UpkeepCost;
         }
+        print("pay upkeep for this day: "+sum);
+        return sum;
     }
 
     public List<SupplyStores> AllSupplyStores()
