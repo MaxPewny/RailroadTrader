@@ -32,6 +32,18 @@ public class NpcMovement: MonoBehaviour
         public float bankProb;
     }
 
+    public class StoreInfo
+    {
+        public SupplyStores building;
+        public Vector3 position;
+
+        public StoreInfo(SupplyStores building, Vector3 position)
+        {
+            this.building = building;
+            this.position = position;
+        }
+    }
+
     [SerializeField]
     private List<GameObject> _npcPrefabs;
 
@@ -88,24 +100,22 @@ public class NpcMovement: MonoBehaviour
     {
         for (int i = 0; i <= pNpcCount; i++)
         {
-           Debug.Log("Iterate");
+           //Debug.Log("Iterate");
             SpawnNpcAndMove(pSpawnPoint, CalculateGoToStore(pPassanger)); 
            yield return new WaitForSeconds(_spawnFrequency);
         }
     }
 
-    protected virtual void SpawnNpcAndMove(Vector3 pSpawnPoint, Vector3 pMoveTarget) 
+    protected virtual void SpawnNpcAndMove(Vector3 pSpawnPoint, StoreInfo store) 
     {
-        Debug.Log("Spawn");
         GameObject prefab = _npcPrefabs[UnityEngine.Random.Range(0, _npcPrefabs.Count)];
         GameObject npc = Instantiate(prefab ,pSpawnPoint, prefab.transform.rotation);
+        Debug.Log("Spawn");
         NpcActor actor = npc.GetComponent<NpcActor>();
-        actor.SetTarget(pMoveTarget);
-        //_npcAgents.Add(agent);
-
+        actor.SetTarget(store.position, store.building);
     }
 
-    protected virtual Vector3 CalculateGoToStore(Passanger pPassanger) 
+    protected virtual StoreInfo CalculateGoToStore(Passanger pPassanger) 
     {
         MovementProbabilities probs = new MovementProbabilities();
         foreach (MovementProbabilities prob in _movementProbabilities)
@@ -125,11 +135,11 @@ public class NpcMovement: MonoBehaviour
                 {
                     if (bakery.GainCustomer(pPassanger))
                     {
-                        return bakery.m_NpcMovePoint;
+                        return new StoreInfo(bakery, bakery.m_NpcMovePoint);
                     }
                 }
 
-                return _exitPoint;
+                return new StoreInfo(null, _exitPoint);
 
             }
             else 
@@ -138,11 +148,11 @@ public class NpcMovement: MonoBehaviour
                 {
                     if (cafe.GainCustomer(pPassanger))
                     {
-                        return cafe.m_NpcMovePoint;
+                        return new StoreInfo(cafe, cafe.m_NpcMovePoint);
                     }
                 }
 
-                return _exitPoint;
+                return new StoreInfo(null, _exitPoint);
             }
          }
         else if(UnityEngine.Random.Range(0.0f, 1.0f) <= probs.drinkProb)
@@ -153,11 +163,11 @@ public class NpcMovement: MonoBehaviour
                 {
                     if (pub.GainCustomer(pPassanger))
                     {
-                        return pub.m_NpcMovePoint;
+                        return new StoreInfo(pub, pub.m_NpcMovePoint);
                     }
                 }
 
-                return _exitPoint;
+                return new StoreInfo(null, _exitPoint);
 
             }
             else if (UnityEngine.Random.Range(0.0f, 1.0f) <= probs.barProb)
@@ -166,11 +176,11 @@ public class NpcMovement: MonoBehaviour
                 {
                     if (bar.GainCustomer(pPassanger))
                     {
-                        return bar.m_NpcMovePoint;
+                        return new StoreInfo(bar, bar.m_NpcMovePoint);
                     }
                 }
 
-                return _exitPoint;
+                return new StoreInfo(null, _exitPoint);
             }
             else
             {
@@ -178,11 +188,11 @@ public class NpcMovement: MonoBehaviour
                 {
                     if (lounge.GainCustomer(pPassanger))
                     {
-                        return lounge.m_NpcMovePoint;
+                        return new StoreInfo(lounge, lounge.m_NpcMovePoint);
                     }
                 }
 
-                return _exitPoint;
+                return new StoreInfo(null, _exitPoint);
             }
         }
         else 
@@ -193,11 +203,11 @@ public class NpcMovement: MonoBehaviour
                 {
                     if (restaurant.GainCustomer(pPassanger))
                     {
-                        return restaurant.m_NpcMovePoint;
+                        return new StoreInfo(restaurant, restaurant.m_NpcMovePoint);
                     }
                 }
 
-                return _exitPoint;
+                return new StoreInfo(null, _exitPoint);
 
             }
             else
@@ -206,11 +216,11 @@ public class NpcMovement: MonoBehaviour
                 {
                     if (restaurant.GainCustomer(pPassanger))
                     {
-                        return restaurant.m_NpcMovePoint;
+                        return new StoreInfo(restaurant, restaurant.m_NpcMovePoint);
                     }
                 }
 
-                return _exitPoint;
+                return new StoreInfo(null, _exitPoint);
             }
         }
     }

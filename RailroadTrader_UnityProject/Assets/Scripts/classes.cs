@@ -65,3 +65,13 @@ public class FinanceOverview
     public int monthlyBuildCosts = 0;
     public int monthlySum = 0;
 }
+
+[System.Serializable]
+public class VisitorStats
+{
+    public Passanger type;
+    public int maxCapacity;
+    public int curAmount;
+    public int earningGain;
+    public float satisfactionGain;
+}

@@ -12,7 +12,8 @@ public class Building : MonoBehaviour
     public BuildingType m_Type;
     public GameObject m_Model;
     public float m_BuildCost;
-    public Vector3 m_NpcMovePointOffset;
+    public Transform NPCEnterPoint;
+    public Vector3 m_NpcMovePointOffset { get { return new Vector3(NPCEnterPoint.position.x, NPCEnterPoint.position.y, NPCEnterPoint.position.z); } }
     public int m_NpcAmount;
     public List<Vector2Int> m_BlockedTilesXZ;
     public int BlockedXTiles;

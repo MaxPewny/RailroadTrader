@@ -10,8 +10,13 @@ public class NpcActor : MonoBehaviour
     [ReadOnly, SerializeField]
     Vector3 _target;
     private NavMeshAgent _agent;
-
     bool hasTarget;
+
+    [SerializeField]
+    private GameObject sprite;
+    [SerializeField]
+    private Passanger type;
+    private SupplyStores targetStore;
 
     // Start is called before the first frame update
     void Awake() {
@@ -27,13 +32,27 @@ public class NpcActor : MonoBehaviour
             float distanceToTarget = Vector3.Distance(transform.position, _target);
             if (distanceToTarget < _destinationReachedTreshold)
             {
-                Destroy(this.gameObject);
+                EnterShop();
+                hasTarget = false;
             }
         }
     }
 
-    public void SetTarget(Vector3 pTarget) 
+    private void EnterShop()
     {
+        if (targetStore == null)
+            Destroy(this.gameObject);
+        else
+        {
+            Destroy(this.gameObject);
+            //sprite.SetActive(false);
+            targetStore.NPCEnters(type);
+        }
+    }
+
+    public void SetTarget(Vector3 pTarget, SupplyStores store = null) 
+    {
+        targetStore = store;
         _target = pTarget;
         _agent.SetDestination(_target);
         hasTarget = true;

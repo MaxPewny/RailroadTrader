@@ -13,32 +13,65 @@ public class SupplyStores : Building
         public int curAmount;
     }
 
-    [System.Serializable]
-    public class BuildingVisitorStats
-    {
-        public Passanger type;
-        public int maxCapacity;
-        public int curAmount;
-        public int earningGain;
-        public float satisfactionGain;
-    }
-
     public List<BuildingRessource> m_Ressources;
-    public List<BuildingVisitorStats> m_VisitorStats;
+    public List<VisitorStats> m_VisitorStats;
+
+    [SerializeField]
+    [Tooltip("Seconds til 1 NPC leaves the shop")]
+    private float secondsSpendByNPC = 30.0f;
+    [SerializeField]
+    private float passedTime;
+    private int totalGuestCount;
 
     protected override void DestroyBuilding()
     {
         throw new System.NotImplementedException();
     }
 
-    void Start()
+    protected void Start()
     {
         //Initialize();
     }
 
-    void Update()
+    protected void Update()
     {
+        if (totalGuestCount > 0)
+            RunLeaveTimer();
+    }
 
+    protected void RunLeaveTimer()
+    {     
+        passedTime += Time.deltaTime;
+        if (passedTime >= (secondsSpendByNPC))
+        {
+            passedTime = 0.0f;
+            GuestLeaves();
+        }
+    }
+
+    //protected virtual bool HasGuests()
+    //{
+    //    foreach(BuildingVisitorStats guest in m_VisitorStats)
+    //    {
+    //        if (guest.curAmount > 0)
+    //            return true;
+    //    }
+    //    return false;
+    //} 
+
+    protected virtual void GuestLeaves()
+    {
+        print("a guest leaves");
+        foreach (VisitorStats guest in m_VisitorStats)
+        {
+            if (guest.curAmount > 0)
+            {
+                --guest.curAmount;
+                --totalGuestCount;
+                print(guest.type.ToString() + " has left");
+                return;
+            }
+        }
     }
 
     public virtual bool GainCustomer(Passanger pPassanger) 
@@ -46,21 +79,26 @@ public class SupplyStores : Building
         if (!HasRessources())
             return false;
 
-        BuildingVisitorStats visitor = VisitorStats(pPassanger);
+        VisitorStats visitor = VisitorStats(pPassanger);
 
         if (visitor.curAmount < visitor.maxCapacity)
         {
             ++visitor.curAmount;
-            FC.AddCurrency(visitor.earningGain);
-            RefillRessources(1);
+            ++totalGuestCount;
             return true;
         }
         else
             return false;
-
     }
 
-    private BuildingVisitorStats VisitorStats(Passanger pType)
+    public virtual void NPCEnters(Passanger passanger)
+    {
+        VisitorStats visitor = VisitorStats(passanger);
+        FC.AddCurrency(visitor.earningGain);
+        RefillRessources(1);
+    }
+
+    private VisitorStats VisitorStats(Passanger pType)
     {
        return m_VisitorStats.First(m_VisitorStats => m_VisitorStats.type == pType);
     }
@@ -89,7 +127,7 @@ public class SupplyStores : Building
 
     protected virtual void ResetCapacity()
     {
-        foreach (BuildingVisitorStats stats in m_VisitorStats)
+        foreach (VisitorStats stats in m_VisitorStats)
         {
             stats.curAmount = 0;
         }

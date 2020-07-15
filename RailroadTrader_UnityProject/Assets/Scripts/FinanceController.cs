@@ -100,10 +100,10 @@ public class FinanceController : MonoBehaviour
         FO.monthlyIncome += incomeGain;
     }
 
-    public void UpdateMonthlyUpkeep(int curUpkeep)
+    public void UpdateMonthlyUpkeep(int upkeepGain)
     {
         FinanceOverview FO = GetFinances();
-        FO.monthlyUpkeep = curUpkeep;
+        FO.monthlyUpkeep += upkeepGain;
     }
 
     public void UpdateMonthlyRevenue(int curRevenue)
