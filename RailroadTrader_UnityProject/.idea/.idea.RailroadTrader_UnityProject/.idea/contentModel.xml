@@ -26,6 +26,7 @@
               <e p="PassengerTrack.cs" t="Include" />
             </e>
           </e>
+          <e p="CameraMovement.cs" t="Include" />
           <e p="classes.cs" t="Include" />
           <e p="enums.cs" t="Include" />
           <e p="FinanceController.cs" t="Include" />
@@ -43,8 +44,11 @@
             <e p="CargoOrderMenu.cs" t="Include" />
             <e p="FinanceMenu.cs" t="Include" />
             <e p="PassengerTrackInfoMenu.cs" t="Include" />
+            <e p="ShopBuildMenu.cs" t="Include" />
             <e p="ShopInfoMenu.cs" t="Include" />
+            <e p="StationManagementMenu.cs" t="Include" />
             <e p="StatusBar.cs" t="Include" />
+            <e p="TrackBuildMenu.cs" t="Include" />
           </e>
         </e>
         <e p="UltimateGridsEngine" t="Include">

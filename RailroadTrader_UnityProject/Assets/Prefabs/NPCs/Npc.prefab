@@ -104,6 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2898865336769279495}
   - component: {fileID: 5089721925774504351}
+  - component: {fileID: 4106052837121617263}
   m_Layer: 0
   m_Name: NPCSprite
   m_TagString: Untagged
@@ -164,7 +165,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dc92992c1f2eb7f478dd4f6631446792, type: 3}
+  m_Sprite: {fileID: 5555764040868264720, guid: 1ffea50ca3fc5a44b9523aa53ac5c091,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -175,6 +177,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4106052837121617263
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2985705826119400760}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8bfdeef91ca952b4aba0f352e439dc01, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4208682951318689384
 GameObject:
   m_ObjectHideFlags: 0

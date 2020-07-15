@@ -1,0 +1,1304 @@
+fileFormatVersion: 2
+guid: 1ffea50ca3fc5a44b9523aa53ac5c091
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5555764040868264720
+    second: Spritesheet_Pendler_Animationen_0
+  - first:
+      213: 8428531994803761211
+    second: Spritesheet_Pendler_Animationen_1
+  - first:
+      213: 6486225323525978920
+    second: Spritesheet_Pendler_Animationen_2
+  - first:
+      213: 239661814244730196
+    second: Spritesheet_Pendler_Animationen_3
+  - first:
+      213: 3116489845398676977
+    second: Spritesheet_Pendler_Animationen_4
+  - first:
+      213: 8933407467409252237
+    second: Spritesheet_Pendler_Animationen_5
+  - first:
+      213: -5436122383375391783
+    second: Spritesheet_Pendler_Animationen_6
+  - first:
+      213: -8084329057357610531
+    second: Spritesheet_Pendler_Animationen_7
+  - first:
+      213: 2103697563166885231
+    second: Spritesheet_Pendler_Animationen_8
+  - first:
+      213: 4156178347013996081
+    second: Spritesheet_Pendler_Animationen_9
+  - first:
+      213: -3391384625149126243
+    second: Spritesheet_Pendler_Animationen_10
+  - first:
+      213: -8998110455622262769
+    second: Spritesheet_Pendler_Animationen_11
+  - first:
+      213: -5876037773058219081
+    second: Spritesheet_Pendler_Animationen_12
+  - first:
+      213: 3325033230428570064
+    second: Spritesheet_Pendler_Animationen_13
+  - first:
+      213: 1462813567608659
+    second: Spritesheet_Pendler_Animationen_14
+  - first:
+      213: 9171447574060769786
+    second: Spritesheet_Pendler_Animationen_15
+  - first:
+      213: 1680136958930856041
+    second: Spritesheet_Pendler_Animationen_16
+  - first:
+      213: -1033618055030378891
+    second: Spritesheet_Pendler_Animationen_17
+  - first:
+      213: -2381225555225891001
+    second: Spritesheet_Pendler_Animationen_18
+  - first:
+      213: 8846610341108261242
+    second: Spritesheet_Pendler_Animationen_19
+  - first:
+      213: -7943882725986017038
+    second: Spritesheet_Pendler_Animationen_20
+  - first:
+      213: -4122363996453096881
+    second: Spritesheet_Pendler_Animationen_21
+  - first:
+      213: -5049996932084726826
+    second: Spritesheet_Pendler_Animationen_22
+  - first:
+      213: -8901222691397634509
+    second: Spritesheet_Pendler_Animationen_23
+  - first:
+      213: -2232635359318196325
+    second: Spritesheet_Pendler_Animationen_24
+  - first:
+      213: 964673779418765117
+    second: Spritesheet_Pendler_Animationen_25
+  - first:
+      213: 7646016374288602827
+    second: Spritesheet_Pendler_Animationen_26
+  - first:
+      213: 4018179687885434334
+    second: Spritesheet_Pendler_Animationen_27
+  - first:
+      213: 5333401920823805559
+    second: Spritesheet_Pendler_Animationen_28
+  - first:
+      213: -9076156027527918377
+    second: Spritesheet_Pendler_Animationen_29
+  - first:
+      213: 9007476598354571911
+    second: Spritesheet_Pendler_Animationen_30
+  - first:
+      213: 1083523750019415271
+    second: Spritesheet_Pendler_Animationen_31
+  - first:
+      213: 3014402523742390773
+    second: Spritesheet_Pendler_Animationen_32
+  - first:
+      213: -1419727756635053293
+    second: Spritesheet_Pendler_Animationen_33
+  - first:
+      213: -8486516543334277757
+    second: Spritesheet_Pendler_Animationen_34
+  - first:
+      213: 1774682860267857262
+    second: Spritesheet_Pendler_Animationen_35
+  - first:
+      213: -2494694665803787584
+    second: Spritesheet_Pendler_Animationen_36
+  - first:
+      213: -5983197928008207863
+    second: Spritesheet_Pendler_Animationen_37
+  - first:
+      213: 3805544588745207297
+    second: Spritesheet_Pendler_Animationen_38
+  - first:
+      213: 3570696673325906997
+    second: Spritesheet_Pendler_Animationen_39
+  - first:
+      213: 8385527400900406019
+    second: Spritesheet_Pendler_Animationen_40
+  - first:
+      213: -8319257870450484539
+    second: Spritesheet_Pendler_Animationen_41
+  - first:
+      213: -4913909917309800174
+    second: Spritesheet_Pendler_Animationen_42
+  - first:
+      213: 7228379403573911228
+    second: Spritesheet_Pendler_Animationen_43
+  - first:
+      213: 1620095874875962380
+    second: Spritesheet_Pendler_Animationen_44
+  - first:
+      213: -480797089649332205
+    second: Spritesheet_Pendler_Animationen_45
+  - first:
+      213: 5417933002354625491
+    second: Spritesheet_Pendler_Animationen_46
+  - first:
+      213: -1369522984874379289
+    second: Spritesheet_Pendler_Animationen_47
+  - first:
+      213: -7220664059107777138
+    second: Spritesheet_Pendler_Animationen_48
+  - first:
+      213: -2970504728381679369
+    second: Spritesheet_Pendler_Animationen_49
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1710
+        width: 149
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b77df95f90a1d40800000000000000
+      internalID: 5555764040868264720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1714
+        width: 140
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30fa48613928f470800000000000000
+      internalID: 8428531994803761211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_2
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1722
+        width: 123
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bb8e5f093b30a50800000000000000
+      internalID: 6486225323525978920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_3
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 1723
+        width: 109
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45568487623735300800000000000000
+      internalID: 239661814244730196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_4
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1727
+        width: 140
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5a915a00fff3b20800000000000000
+      internalID: 3116489845398676977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_5
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 1730
+        width: 149
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f10c8a2c6d9fb70800000000000000
+      internalID: 8933407467409252237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_6
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1734
+        width: 139
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d32c5f7e730f84b0800000000000000
+      internalID: -5436122383375391783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_7
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 1738
+        width: 123
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1c4d01e81becf80800000000000000
+      internalID: -8084329057357610531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_8
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 1729
+        width: 108
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65ca6fa9c5d13d10800000000000000
+      internalID: 2103697563166885231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_9
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 1728
+        width: 140
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e70fcaf26bda930800000000000000
+      internalID: 4156178347013996081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1363
+        width: 167
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99d349d6a16fe0d0800000000000000
+      internalID: -3391384625149126243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_11
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1385
+        width: 173
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0028e2f63a402380800000000000000
+      internalID: -8998110455622262769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_12
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1398
+        width: 181
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3661a27ce147ea0800000000000000
+      internalID: -5876037773058219081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_13
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 1408
+        width: 163
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d180163b14e42e20800000000000000
+      internalID: 3325033230428570064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_14
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 1416
+        width: 133
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357e113db62350000800000000000000
+      internalID: 1462813567608659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_15
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1390
+        width: 166
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1a208e9f6874f70800000000000000
+      internalID: 9171447574060769786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_16
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1406
+        width: 171
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968241399ab015710800000000000000
+      internalID: 1680136958930856041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_17
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 1411
+        width: 181
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57eeb74fad9d7a1f0800000000000000
+      internalID: -1033618055030378891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_18
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 1423
+        width: 162
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74fadaa49ff24fed0800000000000000
+      internalID: -2381225555225891001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_19
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 1422
+        width: 132
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a712e00eb3975ca70800000000000000
+      internalID: 8846610341108261242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_20
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1043
+        width: 94
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0ed3ccfb8a1c190800000000000000
+      internalID: -7943882725986017038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_21
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1042
+        width: 97
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42bd8459cb6ac6c0800000000000000
+      internalID: -4122363996453096881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_22
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1057
+        width: 108
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3074adb8ecae9b0800000000000000
+      internalID: -5049996932084726826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_23
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 1074
+        width: 94
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336f8947f11887480800000000000000
+      internalID: -8901222691397634509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_24
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1070
+        width: 96
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fbcde38f51401e0800000000000000
+      internalID: -2232635359318196325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_25
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 1075
+        width: 107
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37936af0b5336d00800000000000000
+      internalID: 964673779418765117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_26
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 687
+        width: 180
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6da40d16b1c1a60800000000000000
+      internalID: 7646016374288602827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_27
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 683
+        width: 161
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edde91c032173c730800000000000000
+      internalID: 4018179687885434334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_28
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 675
+        width: 139
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776c6171acc040a40800000000000000
+      internalID: 5333401920823805559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_29
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 667
+        width: 128
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc8d253e240b0280800000000000000
+      internalID: -9076156027527918377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_30
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 671
+        width: 135
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78271971e3cf00d70800000000000000
+      internalID: 9007476598354571911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_31
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 675
+        width: 171
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec3b912c13790f00800000000000000
+      internalID: 1083523750019415271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_32
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 675
+        width: 171
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9c4b5df1f45d920800000000000000
+      internalID: 3014402523742390773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_33
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 671
+        width: 135
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313610c902d1c4ce0800000000000000
+      internalID: -1419727756635053293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_34
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 667
+        width: 128
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d9516da26d93a80800000000000000
+      internalID: -8486516543334277757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_35
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 675
+        width: 139
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e656d33a8a0f0a810800000000000000
+      internalID: 1774682860267857262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_36
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 683
+        width: 161
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c214bd3b60116dd0800000000000000
+      internalID: -2494694665803787584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_37
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 687
+        width: 180
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902b7305f2967fca0800000000000000
+      internalID: -5983197928008207863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_38
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 242
+        width: 155
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e611d04a200d430800000000000000
+      internalID: 3805544588745207297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_39
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 237
+        width: 140
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c724eb4b9ad8130800000000000000
+      internalID: 3570696673325906997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_40
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 242
+        width: 109
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b29f02eb06f5470800000000000000
+      internalID: 8385527400900406019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_41
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 248
+        width: 95
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca1dec4b0f0c8c80800000000000000
+      internalID: -8319257870450484539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_42
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 242
+        width: 126
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211fa7817f84ecbb0800000000000000
+      internalID: -4913909917309800174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_43
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 258
+        width: 150
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbed5cb15cc505460800000000000000
+      internalID: 7228379403573911228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_44
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 258
+        width: 150
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04be045d9cbb7610800000000000000
+      internalID: 1620095874875962380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_45
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 242
+        width: 126
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310f866289dd359f0800000000000000
+      internalID: -480797089649332205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_46
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 248
+        width: 95
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db86363c5d503b40800000000000000
+      internalID: 5417933002354625491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_47
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 242
+        width: 109
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e774dee91a7efce0800000000000000
+      internalID: -1369522984874379289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_48
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 237
+        width: 140
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8563728b4c0bcb90800000000000000
+      internalID: -7220664059107777138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Pendler_Animationen_49
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 242
+        width: 155
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f8113d10b5a6c6d0800000000000000
+      internalID: -2970504728381679369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c65b8d7fc32416249bcb89c223a959fb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
