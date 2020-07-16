@@ -190,7 +190,7 @@ MonoBehaviour:
   BlockedXTiles: 0
   BlockedZTiles: 0
   m_PassangerType: 0
-  timeTilArrival: 45
+  timeTilArrival: 5
   passedTime: 0
   anim: {fileID: 0}
 --- !u!1 &4134441130553008503

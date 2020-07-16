@@ -5,8 +5,8 @@ using UnityEngine;
 public class TimeController : MonoBehaviour
 {
 
-    [Tooltip("How many minutes in real time is 1 ingame hour")]
-    public float realTimeMinPerHour = 2.0f;
+    [Tooltip("How many secs in real time is 1 ingame hour")]
+    public float realTimePerHour = 120.0f;
     [Tooltip("Order: paused, normal, fast, super fast")]
     public float[] ingameSpeed = new float[4];
 
@@ -37,7 +37,7 @@ public class TimeController : MonoBehaviour
     private void CountMinutes()
     {
         passedTime += Time.deltaTime;
-        if (passedTime >= (realTimeMinPerHour * 60))
+        if (passedTime >= (realTimePerHour))
         {
             passedTime = 0.0f;
             AddHours();           
