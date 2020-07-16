@@ -268,10 +268,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f2f28cf2199d247aa7b288a0ccc676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoreType: 0
   m_Type: 0
   m_Model: {fileID: 754147544423908417}
-  m_BuildCost: 20
-  UpkeepCost: 25
+  m_BuildCost: 500
+  UpkeepCost: 7
   NPCEnterPoint: {fileID: 1640274203365521360}
   m_NpcMovePointOffset: {x: 0, y: 0, z: 0}
   m_NpcAmount: 0
@@ -281,22 +282,25 @@ MonoBehaviour:
   BlockedZTiles: 5
   m_Ressources: []
   m_VisitorStats:
-  - type: 0
+  - building: 0
+    type: 0
+    maxCapacity: 10
+    curAmount: 0
+    earningGain: 3
+    satisfactionGain: 2
+  - building: 0
+    type: 1
     maxCapacity: 10
     curAmount: 0
     earningGain: 5
     satisfactionGain: 2
-  - type: 1
+  - building: 0
+    type: 2
     maxCapacity: 10
     curAmount: 0
-    earningGain: 5
+    earningGain: 0
     satisfactionGain: 2
-  - type: 2
-    maxCapacity: 10
-    curAmount: 0
-    earningGain: 5
-    satisfactionGain: 2
-  secondsSpendByNPC: 30
+  secondsSpendByNPC: 2
   passedTime: 0
 --- !u!1 &4134441130553008503
 GameObject:

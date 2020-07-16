@@ -9,7 +9,7 @@ public class GameManager : Singleton<GameManager>
     protected GameManager() { }
 
     public GameState State { get; protected set; }
-    public int StartMoney = 500;
+    public int StartMoney = 1000;
 
     private void Awake()
     {
