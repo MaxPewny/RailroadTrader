@@ -43,7 +43,8 @@ public class FinanceMenu : MonoBehaviour
     {
         ShopRevTT.text = FO.monthlyIncome.ToString() + " €";
         UpkeepTT.text = FO.monthlyUpkeep.ToString() + " €";
-        SumTT.text = FO.monthlySum.ToString() + " €";
+        int profit = FO.monthlyIncome + FO.monthlyUpkeep;
+        SumTT.text = profit + " €";
     }
 
     public void WriteSmallOverview(FinanceOverview FO)

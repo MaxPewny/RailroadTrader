@@ -234,6 +234,6 @@ public class NpcMovement: MonoBehaviour
 
     protected virtual void CalculateGoToShop(Passanger pPassanger)
     {
-        float random = 0.0f;
+        //float random = 0.0f;
     }
 }

@@ -34,6 +34,7 @@ public class FinanceController : MonoBehaviour
     public FinanceOverview[] WholeOverview()
     {
         FinanceOverview[] FOs = new FinanceOverview[3];
+        UpdateMonthlySum();
         FOs[0] = GetFinances();
         FOs[1] = GetFinances(curFinanceID - 1);
         FOs[2] = TotalFinances();
@@ -65,7 +66,8 @@ public class FinanceController : MonoBehaviour
             newFO.monthlyUpkeep += fo.Value.monthlyUpkeep;
             newFO.monthlyRevenue += fo.Value.monthlyRevenue;
             newFO.monthlyBuildCosts += fo.Value.monthlyBuildCosts;
-            newFO.monthlySum += fo.Value.monthlySum;
+            newFO.monthlySum = CalculateMonthlySum(curFinanceID);
+            //newFO.monthlySum += fo.Value.monthlySum;
         }
         return newFO;
     }
@@ -74,6 +76,7 @@ public class FinanceController : MonoBehaviour
     {
         curFinanceID += 1;
         monthlyFinances.Add(curFinanceID, new FinanceOverview());
+        UpdateMonthlySum();
     }
 
     public void AddCurrency(int valueToAdd)
@@ -85,6 +88,7 @@ public class FinanceController : MonoBehaviour
     public void AddShopIncome(Passanger pType, int valueToAdd)
     {
         AddCurrency(valueToAdd);
+        UpdateMonthlyIncome(valueToAdd);
         OnPassangerSpendMoney(pType, valueToAdd);
     }
 
@@ -113,24 +117,28 @@ public void SubtractUpkeep(int upKeep)
     {
         FinanceOverview FO = GetFinances();
         FO.monthlyIncome += incomeGain;
+        UpdateMonthlySum();
     }
 
     public void UpdateMonthlyUpkeep(int upkeep)
     {
         FinanceOverview FO = GetFinances();
         FO.monthlyUpkeep -= upkeep;
+        UpdateMonthlySum();
     }
 
     public void UpdateMonthlyRevenue(int curRevenue)
     {
         FinanceOverview FO = GetFinances();
         FO.monthlyRevenue += curRevenue;
+        UpdateMonthlySum();
     }
 
     public void UpdateMonthlyBuildCosts(int buildCost)
     {
         FinanceOverview FO = GetFinances();
         FO.monthlyBuildCosts -= buildCost;
+        UpdateMonthlySum();
     }
 
     public void UpdateMonthlySum()
