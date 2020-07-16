@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/UltimateGridsEngine/Demos/Main-Demo/Main-Demo.unity
-    guid: daa30aa787cfc1f4c98a5e012e74492e
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: e7893aa7cf7e20a43869da73e6f3fd3a

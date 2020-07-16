@@ -9,7 +9,7 @@ public class GameManager : Singleton<GameManager>
     protected GameManager() { }
 
     public GameState State { get; protected set; }
-    public int StartMoney = 1000;
+    private int startMoney = 1000;
 
     private void Awake()
     {
@@ -28,8 +28,8 @@ public class GameManager : Singleton<GameManager>
     private void StartForGate2()
     {
         FinanceController FC = FindObjectOfType<FinanceController>();
-        FC.AddCurrency(StartMoney);
-        FC.UpdateMonthlyRevenue(StartMoney);
+        FC.AddCurrency(startMoney);
+        FC.UpdateMonthlyRevenue(startMoney);
     }
 
     public void SetGameState(GameState newState)

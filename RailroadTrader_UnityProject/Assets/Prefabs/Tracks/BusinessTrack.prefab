@@ -175,11 +175,11 @@ MonoBehaviour:
   m_StoreType: 0
   m_Type: 13
   m_Model: {fileID: 1120086702812736846}
-  m_BuildCost: 60
-  UpkeepCost: 20
+  m_BuildCost: 90
+  UpkeepCost: 30
   NPCEnterPoint: {fileID: 8247989852759442592}
   m_NpcMovePointOffset: {x: 0, y: 0, z: 0}
-  m_NpcAmount: 2
+  m_NpcAmount: 5
   totalGuestCount: 0
   m_BlockedTilesXZ:
   - {x: 0, y: 0}

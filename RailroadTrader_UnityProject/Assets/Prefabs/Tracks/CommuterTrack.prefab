@@ -179,7 +179,7 @@ MonoBehaviour:
   UpkeepCost: 10
   NPCEnterPoint: {fileID: 5384868337621706794}
   m_NpcMovePointOffset: {x: 0, y: 0, z: 0}
-  m_NpcAmount: 5
+  m_NpcAmount: 10
   totalGuestCount: 0
   m_BlockedTilesXZ:
   - {x: 0, y: 0}
