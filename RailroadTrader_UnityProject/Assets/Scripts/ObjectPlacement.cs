@@ -16,6 +16,8 @@ public class ObjectPlacement : MonoBehaviour
     [ReadOnly, SerializeField]
     private bool _buildModeActivated = false;
 
+    private List<Vector2Int> _blockedTiles = new List<Vector2Int>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +41,7 @@ public class ObjectPlacement : MonoBehaviour
         {
             if (GridManager.Instance.m_HoveredGridTile != null && !GridManager.Instance.m_HoveredGridTile.IsTileOccupied())
             {
-                foreach (GridTile tile in GridManager.Instance.Neighbors(GridManager.Instance.m_HoveredGridTile, true, m_ObjectPrefab.GetComponent<Building>().m_BlockedTilesXZ))
+                foreach (GridTile tile in GridManager.Instance.Neighbors(GridManager.Instance.m_HoveredGridTile, true, _blockedTiles))
                 {
                     if (tile.IsTileOccupied()) 
                     {
@@ -57,6 +59,14 @@ public class ObjectPlacement : MonoBehaviour
         _buildModeActivated = true;
         m_HighlightCursor.SetActive(false);
         _modelHolder = Instantiate(m_ObjectPrefab.GetComponent<Building>().m_Model, transform);
+
+        for (int i = 0; i <= m_ObjectPrefab.GetComponent<Building>().BlockedXTiles; i++)
+        {
+            for (int j = 0; j < m_ObjectPrefab.GetComponent<Building>().BlockedZTiles; j++)
+            {
+                _blockedTiles.Add(new Vector2Int(i, j));
+            }
+        }
         //_modelHolder.GetComponent<MeshRenderer>().material = m_HighlightMat;
     }
 
@@ -65,6 +75,7 @@ public class ObjectPlacement : MonoBehaviour
         Destroy(_modelHolder);
         _buildModeActivated = false;
         m_HighlightCursor.SetActive(true);
+        _blockedTiles.Clear();
         
     }
 
