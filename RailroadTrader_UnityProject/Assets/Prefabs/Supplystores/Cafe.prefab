@@ -272,7 +272,7 @@ MonoBehaviour:
   m_BuildCost: 700
   UpkeepCost: 20
   NPCEnterPoint: {fileID: 4814570535728479057}
-  m_NpcMovePointOffset: {x: 0, y: 0, z: 0}
+  m_NpcMovePointOffset: {x: 5, y: 0, z: 0}
   m_NpcAmount: 0
   totalGuestCount: 0
   m_BlockedTilesXZ:
