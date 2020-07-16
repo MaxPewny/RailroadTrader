@@ -26,6 +26,8 @@ public class NpcActor : MonoBehaviour
     
     private SupplyStores targetStore;
 
+    private bool animSet = false;
+
     public static event System.Action<Passanger> OnLeftStation = delegate { };
 
 
@@ -38,12 +40,13 @@ public class NpcActor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        anim.SetTrigger(GetAnimDirection());
+        if (!animSet) {
+            anim.SetTrigger(GetAnimDirection());
+            animSet = true;
+        }
 
         if (hasTarget)
         {
-            anim.SetTrigger(GetAnimDirection());
-
             float distanceToTarget = Vector3.Distance(transform.position, _target);
             if (distanceToTarget < _destinationReachedTreshold)
             {
