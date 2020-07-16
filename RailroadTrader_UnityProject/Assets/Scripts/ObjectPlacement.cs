@@ -55,6 +55,11 @@ public class ObjectPlacement : MonoBehaviour
 
     public virtual void ActivateBuildmode(GameObject pPrefab) 
     {
+        if(_buildModeActivated)
+        {
+            DeactivateBuildmode();
+        }
+
         m_ObjectPrefab = pPrefab;
         _buildModeActivated = true;
         m_HighlightCursor.SetActive(false);
