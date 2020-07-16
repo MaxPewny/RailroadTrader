@@ -23,9 +23,9 @@ public enum Resource
 
 public enum Passanger
 {
-    TOURIST,
-    COMMUTER,
-    BUSINESS
+    COMMUTER = 0,
+    TOURIST = 1,
+    BUSINESS = 2
 }
 
 public enum BuildingType
@@ -43,6 +43,13 @@ public enum BuildingType
     TRAVELAGENCY,
     HAIRSALON,
     BANK,
-    TRAINPLATFORM,
+    PASSENGERTRAIN,
+    CARGOTRAIN
+}
 
+public enum StoreType
+{
+    PLATFORM,
+    SUPPLYSTORE,
+    DINGSSTORE
 }

@@ -17,7 +17,7 @@ public class NpcActor : MonoBehaviour
     private GameObject sprite;
     
     [SerializeField]
-    private Passanger type;
+    private Passanger pType;
 
     [SerializeField]
     private Animator anim;
@@ -25,6 +25,9 @@ public class NpcActor : MonoBehaviour
     private Vector3 savedDestination;
     
     private SupplyStores targetStore;
+
+    public static event System.Action<Passanger> OnLeftStation = delegate { };
+
 
     // Start is called before the first frame update
     void Awake() {
@@ -69,12 +72,15 @@ public class NpcActor : MonoBehaviour
     private void EnterShop()
     {
         if (targetStore == null)
+        { 
             Destroy(this.gameObject);
+            OnLeftStation(pType);
+        }    
         else
         {
             Destroy(this.gameObject);
             //sprite.SetActive(false);
-            targetStore.NPCEnters(type);
+            targetStore.NPCEnters(pType);
         }
     }
 

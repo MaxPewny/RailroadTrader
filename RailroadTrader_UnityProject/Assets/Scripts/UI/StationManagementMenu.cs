@@ -8,6 +8,11 @@ public class StationManagementMenu : MonoBehaviour
     private FinanceController FC;
     [SerializeField]
     private FinanceMenu FM;
+    [SerializeField]
+    private GuestController GC;
+    [SerializeField]
+    private GuestUI guestUI;
+
 
     private void Start()
     {
@@ -44,7 +49,17 @@ public class StationManagementMenu : MonoBehaviour
 
     public void OnGuestOverview()
     {
+        guestUI.WriteGuestOverview(
+            GC.Stats(Passanger.COMMUTER), 
+            GC.Stats(Passanger.TOURIST), 
+            GC.Stats(Passanger.BUSINESS));
+    }
 
+    public void OnGuestTooltip()
+    {
+        guestUI.WriteGuestToolTip(GC.Stats(Passanger.COMMUTER),
+            GC.Stats(Passanger.TOURIST),
+            GC.Stats(Passanger.BUSINESS));
     }
 
     public void OnBuildingOverview()

@@ -12,6 +12,7 @@ public class FinanceController : MonoBehaviour
     private int curFinanceID = 0;
 
     public static event System.Action<int> OnCurrencyValueChange = delegate { };
+    public static event System.Action<Passanger, int> OnPassangerSpendMoney = delegate { };
 
     private void Awake()
     {
@@ -81,8 +82,13 @@ public class FinanceController : MonoBehaviour
         OnCurrencyValueChange(Currency);
         print("new currency: " + Currency);
     }
+    public void AddCurrency(Passanger pType, int valueToAdd)
+    {
+        AddCurrency(valueToAdd);
+        OnPassangerSpendMoney(pType, valueToAdd);
+    }
 
-    public void SubtractUpkeep(int upKeep)
+public void SubtractUpkeep(int upKeep)
     {
         _currency -= upKeep;
         OnCurrencyValueChange(Currency);

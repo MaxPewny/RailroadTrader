@@ -51,7 +51,7 @@ public class NpcMovement: MonoBehaviour
     private List<MovementProbabilities> _movementProbabilities;
 
     [SerializeField]
-    private float _spawnFrequency = 1.0f;
+    private float _spawnFrequency = 0.2f;
 
 
     [SerializeField]
@@ -60,6 +60,8 @@ public class NpcMovement: MonoBehaviour
     private Vector3 _exitPoint { get { return new Vector3(StationExit.position.x, StationExit.position.y, StationExit.position.z); } }
 
     private BuildingManager _buildingManager;
+
+    public event System.Action<Passanger, int> OnVisitorSpawn = delegate { };
 
     //[ReadOnly, SerializeField]
     //private List<Vector3> _spawnPoints;
@@ -101,17 +103,19 @@ public class NpcMovement: MonoBehaviour
 
     public virtual IEnumerator SpawnNpcGroup(int pNpcCount, Passanger pPassanger, Vector3 pSpawnPoint)
     {
-        for (int i = 0; i <= pNpcCount; i++)
+        OnVisitorSpawn(pPassanger, pNpcCount);
+
+        for (int i = 0; i < pNpcCount; i++)
         {
            //Debug.Log("Iterate");
-            SpawnNpcAndMove(pSpawnPoint, CalculateGoToStore(pPassanger)); 
+            SpawnNpcAndMove(pSpawnPoint, CalculateGoToStore(pPassanger), (int)pPassanger); 
            yield return new WaitForSeconds(_spawnFrequency);
         }
     }
 
-    protected virtual void SpawnNpcAndMove(Vector3 pSpawnPoint, StoreInfo store) 
+    protected virtual void SpawnNpcAndMove(Vector3 pSpawnPoint, StoreInfo store, int type) 
     {
-        GameObject prefab = _npcPrefabs[UnityEngine.Random.Range(0, _npcPrefabs.Count)];
+        GameObject prefab = _npcPrefabs[type];
         GameObject npc = Instantiate(prefab ,pSpawnPoint, prefab.transform.rotation);
         Debug.Log("Spawn");
         NpcActor actor = npc.GetComponent<NpcActor>();

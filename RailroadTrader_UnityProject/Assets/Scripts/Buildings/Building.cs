@@ -5,10 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(GridObject))]
 public class Building : MonoBehaviour
 {
-    protected BuildingManager BM;
     protected FinanceController FC;
     protected RessourceController RC;
 
+    public StoreType m_StoreType;
     public BuildingType m_Type;
     public GameObject m_Model;
     public int m_BuildCost;
@@ -42,10 +42,8 @@ public class Building : MonoBehaviour
         _gridObject = GetComponent<GridObject>();
         m_NpcMovePoint = transform.position + m_NpcMovePointOffset;
         FC = FindObjectOfType<FinanceController>();
-        BM = FindObjectOfType<BuildingManager>();
         RC = FindObjectOfType<RessourceController>();
-        BM.m_Buildings.Add(this);
-
+        FindObjectOfType<BuildingManager>().m_Buildings.Add(this);
         SetTileStatus();
     }
 
@@ -92,5 +90,15 @@ public class Building : MonoBehaviour
     public virtual void Deactivate()
     {
         m_IsActive = false;
+    }
+
+    public virtual int CurGuestCountOf(Passanger pType)
+    {
+        return 0;
+    }
+
+    public virtual int CurTotalGuests()
+    {
+        return 0;
     }
 }

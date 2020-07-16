@@ -57,6 +57,7 @@
     }
 }
 
+[System.Serializable]
 public class FinanceOverview
 {
     public int monthlyIncome = 0;
@@ -69,9 +70,23 @@ public class FinanceOverview
 [System.Serializable]
 public class VisitorStats
 {
+    public BuildingType building;
     public Passanger type;
     public int maxCapacity;
     public int curAmount;
     public int earningGain;
     public float satisfactionGain;
+}
+
+public class PassengerStats
+{
+    public Passanger passenger;
+    public int totalAmount = 0;
+    public int curAmount = 0;
+    public int totalSpendings = 0;
+
+    public PassengerStats(Passanger pType)
+    {
+        passenger = pType;
+    }
 }

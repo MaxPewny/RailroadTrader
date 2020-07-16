@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ca75447b65ee54fbc5c0aa0c187772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoreType: 0
   m_Type: 13
   m_Model: {fileID: 6128762502482886497}
   m_BuildCost: 5

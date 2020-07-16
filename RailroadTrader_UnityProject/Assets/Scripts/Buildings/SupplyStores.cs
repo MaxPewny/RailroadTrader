@@ -30,6 +30,10 @@ public class SupplyStores : Building
     protected override void Start()
     {
         base.Start();
+        foreach (VisitorStats vs in m_VisitorStats)
+        {
+            vs.building = m_Type;
+        }
     }
 
     protected override void Update()
@@ -94,9 +98,10 @@ public class SupplyStores : Building
     public virtual void NPCEnters(Passanger passanger)
     {
         VisitorStats visitor = VisitorStats(passanger);
-        FC.AddCurrency(visitor.earningGain);
+        FC.AddCurrency(visitor.type, visitor.earningGain);
         FC.UpdateMonthlyRevenue(visitor.earningGain);
-        RefillRessources(1);
+        //TODO reaktivieren wenn Cargo implemented ist
+        //RefillRessources(1);
     }
 
     private VisitorStats VisitorStats(Passanger pType)
@@ -137,5 +142,27 @@ public class SupplyStores : Building
     public virtual bool RessourceAtMaxCapacity()
     {
         return true;
+    }
+
+    public override int CurGuestCountOf(Passanger pType)
+    {
+        foreach(VisitorStats vs in m_VisitorStats)
+        {
+            if (vs.type == pType)
+            {
+                return vs.curAmount;
+            }
+        }
+        return 0;
+    }
+
+    public override int CurTotalGuests()
+    {
+        int count = 0;
+        foreach (VisitorStats vs in m_VisitorStats)
+        {
+            count += vs.curAmount;
+        }
+        return count;
     }
 }

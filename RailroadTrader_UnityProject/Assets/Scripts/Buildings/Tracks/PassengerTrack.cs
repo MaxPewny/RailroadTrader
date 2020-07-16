@@ -23,7 +23,7 @@ public class PassengerTrack : Building
 
     protected override void Start()
     {
-        m_Type = BuildingType.TRAINPLATFORM;
+        m_Type = BuildingType.PASSENGERTRAIN;
         base.Start();
         NPCs = FindObjectOfType<NpcMovement>();
         anim = GetComponentInChildren<Animator>();
