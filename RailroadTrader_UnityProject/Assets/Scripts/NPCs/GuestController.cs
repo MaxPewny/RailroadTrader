@@ -11,13 +11,15 @@ public class GuestController : MonoBehaviour
     [SerializeField]
     private NpcMovement NM;
     [SerializeField]
-    private List<PassengerStats> pStats = new List<PassengerStats>();
+    private PassengerStats[] pStats = new PassengerStats[3];
+
+    public static event System.Action<int> OnCurVisiterCountChange = delegate { };
 
     private void Awake()
     {
-        pStats.Add(new PassengerStats(Passanger.COMMUTER));
-        pStats.Add(new PassengerStats(Passanger.TOURIST));
-        pStats.Add(new PassengerStats(Passanger.BUSINESS));
+        pStats[(int)Passanger.COMMUTER] =new PassengerStats(Passanger.COMMUTER);
+        pStats[(int)Passanger.TOURIST] =new PassengerStats(Passanger.TOURIST);
+        pStats[(int)Passanger.BUSINESS] =new PassengerStats(Passanger.BUSINESS);
     }
 
     private void Start()
@@ -30,6 +32,7 @@ public class GuestController : MonoBehaviour
     private void UpdateVisitorSpending(Passanger pType, int moneySpend)
     {
         Stats(pType).totalSpendings += moneySpend;
+        print(pStats[(int)pType].ToString() + " spend " + pStats[(int)pType].totalSpendings.ToString() + " € in shops");
     }
 
     private void UpdateVisitorAmount(Passanger pType, int newVisitorCount)
@@ -37,11 +40,14 @@ public class GuestController : MonoBehaviour
         PassengerStats stat = Stats(pType);
         stat.curAmount += newVisitorCount;
         stat.totalAmount += newVisitorCount;
+
+        OnCurVisiterCountChange(CurGuestsInStation());
     }
 
     private void UpdateCurVisitorCount(Passanger pType)
     {
         --Stats(pType).curAmount;
+        OnCurVisiterCountChange(CurGuestsInStation());
     }
 
     //private int CurGuestsOf(Passanger pType)
@@ -56,7 +62,8 @@ public class GuestController : MonoBehaviour
 
     public PassengerStats Stats(Passanger pType)
     {
-        return pStats.SingleOrDefault(p => p.passenger == pType);
+        return pStats[(int)pType];
+        //return pStats.SingleOrDefault(p => p.passenger == pType);
     }
 
     public int CurGuestsIn(StoreType sType)
@@ -79,5 +86,4 @@ public class GuestController : MonoBehaviour
         }
         return count;
     }
-
 }

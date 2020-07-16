@@ -29,6 +29,15 @@ public class GuestUI : MonoBehaviour
     [SerializeField]
     private Text BusinessSpendings;
 
+    [Header("--- General Overview ---")]
+
+    [SerializeField]
+    private Text CommutersCurO;
+    [SerializeField]
+    private Text TouristsCurO;
+    [SerializeField]
+    private Text BusinessCurO;
+
     [Header("--- Tooltip ---")]
 
     [SerializeField]
@@ -36,7 +45,9 @@ public class GuestUI : MonoBehaviour
     [SerializeField]
     private Text TouristsCurTT;
     [SerializeField]
-    private Text BusinessCurTT;
+    private Text BusinessCurTT;   
+    [SerializeField]
+    private Text VisiterTotalTT;
 
 
     public void WriteGuestOverview(PassengerStats commuter, PassengerStats tourist, PassengerStats business)
@@ -56,11 +67,19 @@ public class GuestUI : MonoBehaviour
         BusinessSpendings.text = business.totalSpendings.ToString();
     }
 
+    public void WriteGuestSmallOverview(PassengerStats commuter, PassengerStats tourist, PassengerStats business)
+    {
+        CommutersCurO.text = commuter.curAmount.ToString();
+        TouristsCurO.text = tourist.curAmount.ToString();
+        BusinessCurO.text = business.curAmount.ToString();
+    }
+
     public void WriteGuestToolTip(PassengerStats commuter, PassengerStats tourist, PassengerStats business)
     {
         CommutersCurTT.text = commuter.curAmount.ToString();
         TouristsCurTT.text = tourist.curAmount.ToString();
         BusinessCurTT.text = business.curAmount.ToString();
+        int total = commuter.curAmount + tourist.curAmount + business.curAmount;
+        VisiterTotalTT.text = total.ToString();
     }
-
 }

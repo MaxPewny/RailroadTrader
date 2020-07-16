@@ -614,7 +614,7 @@ PrefabInstance:
     - target: {fileID: 5698390814539359522, guid: 325ddf8bfa75ee948ab6f273fe218025,
         type: 3}
       propertyPath: m_Name
-      value: Train_sBahn
+      value: Train
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 325ddf8bfa75ee948ab6f273fe218025, type: 3}

@@ -50,4 +50,14 @@ public class BuildingManager : MonoBehaviour
         }
         return cts;
     }
+
+    public int AllBuildings()
+    {
+        int count = 0;
+        foreach(Building b in m_Buildings)
+        {
+            ++count;
+        }
+        return count;
+    }
 }

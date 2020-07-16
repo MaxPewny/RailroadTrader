@@ -82,7 +82,7 @@ public class FinanceController : MonoBehaviour
         OnCurrencyValueChange(Currency);
         print("new currency: " + Currency);
     }
-    public void AddCurrency(Passanger pType, int valueToAdd)
+    public void AddShopIncome(Passanger pType, int valueToAdd)
     {
         AddCurrency(valueToAdd);
         OnPassangerSpendMoney(pType, valueToAdd);

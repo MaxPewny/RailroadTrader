@@ -27,6 +27,7 @@ public class StatusBar : MonoBehaviour
     {
         TimeController.OnHourChange += UpdateTime;
         FinanceController.OnCurrencyValueChange += UpdateCurrency;
+        GuestController.OnCurVisiterCountChange += UpdateVisiterCount;
     }
 
     private void UpdateTime(IngameTime curTime)
@@ -46,5 +47,10 @@ public class StatusBar : MonoBehaviour
     private void UpdateVisiterCount(int newAmount)
     {
         VisitorCountTxt.text = newAmount.ToString();
+    }
+
+    private void UpdateSatisfaction(int percentage)
+    {
+        SatisfactionTxt.text = percentage + "%";
     }
 }

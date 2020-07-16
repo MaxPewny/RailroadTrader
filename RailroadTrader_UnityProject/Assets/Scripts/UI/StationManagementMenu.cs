@@ -12,6 +12,10 @@ public class StationManagementMenu : MonoBehaviour
     private GuestController GC;
     [SerializeField]
     private GuestUI guestUI;
+    [SerializeField]
+    private BuildingOverview BO;
+    [SerializeField]
+    private BuildingManager BM;
 
 
     private void Start()
@@ -37,6 +41,11 @@ public class StationManagementMenu : MonoBehaviour
     public void OnOverviewOpened()
     {
         FM.WriteSmallOverview(FC.CurrentFO());
+        guestUI.WriteGuestSmallOverview(
+            GC.Stats(Passanger.COMMUTER),
+            GC.Stats(Passanger.TOURIST),
+            GC.Stats(Passanger.BUSINESS));
+        BO.WriteTotalBuildingCount(BM.AllBuildings());
     }
 
     public void OnFinanceOverviewOpened()
@@ -64,6 +73,6 @@ public class StationManagementMenu : MonoBehaviour
 
     public void OnBuildingOverview()
     {
-
+        //BO.WriteTotalBuildingCount(BM.AllBuildings());
     }
 }

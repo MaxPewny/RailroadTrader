@@ -98,7 +98,7 @@ public class SupplyStores : Building
     public virtual void NPCEnters(Passanger passanger)
     {
         VisitorStats visitor = VisitorStats(passanger);
-        FC.AddCurrency(visitor.type, visitor.earningGain);
+        FC.AddShopIncome(visitor.type, visitor.earningGain);
         FC.UpdateMonthlyRevenue(visitor.earningGain);
         //TODO reaktivieren wenn Cargo implemented ist
         //RefillRessources(1);
