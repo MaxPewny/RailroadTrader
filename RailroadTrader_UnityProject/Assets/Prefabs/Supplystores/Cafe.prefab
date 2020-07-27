@@ -283,19 +283,19 @@ MonoBehaviour:
   BlockedZTiles: 7
   m_Ressources: []
   m_VisitorStats:
-  - building: 0
+  - building: 1
     type: 0
     maxCapacity: 10
     curAmount: 0
     earningGain: 5
-    satisfactionGain: 0
-  - building: 0
+    satisfactionGain: 1
+  - building: 1
     type: 1
     maxCapacity: 10
     curAmount: 0
     earningGain: 8
-    satisfactionGain: 0
-  - building: 0
+    satisfactionGain: 2
+  - building: 1
     type: 2
     maxCapacity: 10
     curAmount: 0

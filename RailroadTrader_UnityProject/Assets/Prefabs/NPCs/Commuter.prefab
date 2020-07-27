@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 3443171424266562861}
   - component: {fileID: 4951841986533028778}
   m_Layer: 0
-  m_Name: Npc
+  m_Name: Commuter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
   _destinationReachedTreshold: 2
   _target: {x: 0, y: 0, z: 0}
   sprite: {fileID: 2985705826119400760}
-  type: 0
+  pType: 0
   anim: {fileID: 4106052837121617263}
 --- !u!1 &5879610648749468291
 GameObject:

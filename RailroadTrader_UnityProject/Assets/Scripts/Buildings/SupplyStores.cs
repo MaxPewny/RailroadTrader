@@ -22,6 +22,7 @@ public class SupplyStores : Building
     [SerializeField]
     private float passedTime;
 
+    public event System.Action<int> OnSatisfactionGain = delegate { };
     protected override void DestroyBuilding()
     {
         throw new System.NotImplementedException();
@@ -30,6 +31,8 @@ public class SupplyStores : Building
     protected override void Start()
     {
         base.Start();
+        FindObjectOfType<SatisfactionController>().ShopBuild(this);
+
         foreach (VisitorStats vs in m_VisitorStats)
         {
             vs.building = m_Type;
@@ -99,7 +102,8 @@ public class SupplyStores : Building
     {
         VisitorStats visitor = VisitorStats(passanger);
         FC.AddShopIncome(visitor.type, visitor.earningGain);
-        FC.UpdateMonthlyRevenue(visitor.earningGain);
+        //FC.UpdateMonthlyRevenue(visitor.earningGain);
+        OnSatisfactionGain(visitor.satisfactionGain);
         //TODO reaktivieren wenn Cargo implemented ist
         //RefillRessources(1);
     }

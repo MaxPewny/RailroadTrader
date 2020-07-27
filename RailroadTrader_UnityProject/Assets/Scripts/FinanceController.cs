@@ -81,7 +81,7 @@ public class FinanceController : MonoBehaviour
     {
         _currency += valueToAdd;
         OnCurrencyValueChange(Currency);
-        print("new currency: " + Currency);
+        //print("new currency: " + Currency);
     }
     public void AddShopIncome(Passanger pType, int valueToAdd)
     {
@@ -115,6 +115,7 @@ public void SubtractUpkeep(int upKeep)
     {
         FinanceOverview FO = GetFinances();
         FO.monthlyIncome += incomeGain;
+        UpdateMonthlyRevenue();
         UpdateMonthlySum();
     }
 
@@ -122,13 +123,14 @@ public void SubtractUpkeep(int upKeep)
     {
         FinanceOverview FO = GetFinances();
         FO.monthlyUpkeep -= upkeep;
+        UpdateMonthlyRevenue();
         UpdateMonthlySum();
     }
 
-    public void UpdateMonthlyRevenue(int curRevenue)
+    public void UpdateMonthlyRevenue()
     {
         FinanceOverview FO = GetFinances();
-        FO.monthlyRevenue += curRevenue;
+        FO.monthlyRevenue = FO.monthlyIncome + FO.monthlyUpkeep;
         UpdateMonthlySum();
     }
 
@@ -148,6 +150,7 @@ public void SubtractUpkeep(int upKeep)
     public int CalculateMonthlySum(int financeID)
     {
         FinanceOverview FO = GetFinances(financeID);
-        return FO.monthlyBuildCosts + FO.monthlyIncome + FO.monthlyRevenue + FO.monthlyUpkeep;
+        return FO.monthlyRevenue + FO.monthlyBuildCosts;            
+        //FO.monthlyBuildCosts + FO.monthlyIncome + FO.monthlyRevenue + FO.monthlyUpkeep;
     }
 }

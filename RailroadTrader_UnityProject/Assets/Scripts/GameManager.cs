@@ -29,7 +29,7 @@ public class GameManager : Singleton<GameManager>
     {
         FinanceController FC = FindObjectOfType<FinanceController>();
         FC.AddCurrency(startMoney);
-        FC.UpdateMonthlyRevenue(startMoney);
+        //FC.UpdateMonthlyIncome(startMoney);
     }
 
     public void SetGameState(GameState newState)

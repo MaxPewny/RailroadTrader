@@ -192,26 +192,26 @@ MonoBehaviour:
   BlockedZTiles: 12
   m_Ressources: []
   m_VisitorStats:
-  - building: 0
+  - building: 5
     type: 0
     maxCapacity: 10
     curAmount: 0
     earningGain: 13
-    satisfactionGain: 0
-  - building: 0
+    satisfactionGain: 1
+  - building: 5
     type: 1
     maxCapacity: 10
     curAmount: 0
     earningGain: 18
-    satisfactionGain: 0
-  - building: 0
+    satisfactionGain: 3
+  - building: 5
     type: 2
     maxCapacity: 10
     curAmount: 0
     earningGain: 23
     satisfactionGain: 0
   secondsSpendByNPC: 2
-  passedTime: 0
+  passedTime: 1
 --- !u!1 &3596075956694030070
 GameObject:
   m_ObjectHideFlags: 0

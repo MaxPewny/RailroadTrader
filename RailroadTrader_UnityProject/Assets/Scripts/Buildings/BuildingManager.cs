@@ -20,6 +20,24 @@ public class BuildingManager : MonoBehaviour
         OnUpkeepDue(UpkeepAllBuildings());
     }
 
+    //public void ResetSatisfaction()
+    //{
+    //    foreach (Building b in m_Buildings)
+    //    {
+    //        b.ResetSatisfactionCount();
+    //    }
+    //}
+
+    //public int CurrentSatisfaction()
+    //{
+    //    int value = 0;
+    //    foreach (Building b in m_Buildings)
+    //    {
+    //        value += b.curSatisfation;
+    //    }
+    //    return value;
+    //}
+
     private int UpkeepAllBuildings()
     {
         int sum = 0;

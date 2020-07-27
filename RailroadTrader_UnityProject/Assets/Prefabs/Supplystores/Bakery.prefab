@@ -287,19 +287,19 @@ MonoBehaviour:
     maxCapacity: 10
     curAmount: 0
     earningGain: 3
-    satisfactionGain: 2
+    satisfactionGain: 3
   - building: 0
     type: 1
     maxCapacity: 10
     curAmount: 0
     earningGain: 5
-    satisfactionGain: 2
+    satisfactionGain: 1
   - building: 0
     type: 2
     maxCapacity: 10
     curAmount: 0
     earningGain: 0
-    satisfactionGain: 2
+    satisfactionGain: 0
   secondsSpendByNPC: 2
   passedTime: 0
 --- !u!1 &4134441130553008503

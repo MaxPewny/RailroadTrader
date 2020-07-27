@@ -16,6 +16,8 @@ public class StationManagementMenu : MonoBehaviour
     private BuildingOverview BO;
     [SerializeField]
     private BuildingManager BM;
+    [SerializeField]
+    private SatisfactionController SC;
 
 
     private void Start()
@@ -24,6 +26,12 @@ public class StationManagementMenu : MonoBehaviour
         TimeController.OnDayEnd += UpdateAllFinanceMenus;
         TimeController.OnMonthEnd += UpdateAllFinanceMenus;
         TimeController.OnYearEnd += UpdateAllFinanceMenus;
+        SatisfactionController.OnSatisfactionPercentageChange += UpdateSatisfactionSliders;
+    }
+
+    private void UpdateSatisfactionSliders(int percentage)
+    {
+        guestUI.WriteSatisfactionSlider(percentage);
     }
 
     private void UpdateAllFinanceMenus()
@@ -45,7 +53,7 @@ public class StationManagementMenu : MonoBehaviour
             GC.Stats(Passanger.COMMUTER),
             GC.Stats(Passanger.TOURIST),
             GC.Stats(Passanger.BUSINESS));
-        BO.WriteTotalBuildingCount(BM.AllBuildings());
+        BO.WriteTotalBuildingCount(BM.AllBuildings());        
     }
 
     public void OnFinanceOverviewOpened()
@@ -66,7 +74,8 @@ public class StationManagementMenu : MonoBehaviour
 
     public void OnGuestTooltip()
     {
-        guestUI.WriteGuestToolTip(GC.Stats(Passanger.COMMUTER),
+        guestUI.WriteGuestToolTip(
+            GC.Stats(Passanger.COMMUTER),
             GC.Stats(Passanger.TOURIST),
             GC.Stats(Passanger.BUSINESS));
     }

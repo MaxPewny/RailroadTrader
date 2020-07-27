@@ -20,6 +20,7 @@ public class Building : MonoBehaviour
     public List<Vector2Int> m_BlockedTilesXZ;
     public int BlockedXTiles;
     public int BlockedZTiles;
+    //public int curSatisfation { get; protected set; }
     public Vector3 m_NpcMovePoint { get; protected set; }
     public bool m_IsActive { get; protected set; }
     protected GridObject _gridObject;
