@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 4236627138288288619}
   - component: {fileID: 5488928583225170637}
   - component: {fileID: 7394281447404989231}
-  - component: {fileID: 7631995315156794639}
   m_Layer: 0
   m_Name: EntryPoint
   m_TagString: Untagged
@@ -161,19 +160,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7631995315156794639
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074318955669588756}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4450201018836418944
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +173,7 @@ GameObject:
   - component: {fileID: 8091194418397748815}
   - component: {fileID: 4524591626069161390}
   - component: {fileID: 3236100188040578765}
+  - component: {fileID: 6681700873872432828}
   m_Layer: 0
   m_Name: Bar
   m_TagString: Untagged
@@ -305,6 +292,18 @@ MonoBehaviour:
     satisfactionGain: 0
   secondsSpendByNPC: 2
   passedTime: 0
+--- !u!114 &6681700873872432828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450201018836418944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f77ceb3174d5b64089ec63d7636b64f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6862305037019882014
 GameObject:
   m_ObjectHideFlags: 0

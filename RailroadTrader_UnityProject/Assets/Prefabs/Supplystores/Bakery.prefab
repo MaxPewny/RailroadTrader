@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 1640274203365521360}
   - component: {fileID: 1561129275457010839}
   - component: {fileID: 376235131036035227}
-  - component: {fileID: 9076139969177997659}
   m_Layer: 0
   m_Name: EntryPoint
   m_TagString: Untagged
@@ -161,19 +160,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &9076139969177997659
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3217286320137450520}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3355206406345901541
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +173,7 @@ GameObject:
   - component: {fileID: 1437609440678030952}
   - component: {fileID: 3595150353728186064}
   - component: {fileID: -1968892186820261510}
+  - component: {fileID: 8143775953552085211}
   m_Layer: 0
   m_Name: Bakery
   m_TagString: Untagged
@@ -302,6 +289,18 @@ MonoBehaviour:
     satisfactionGain: 0
   secondsSpendByNPC: 2
   passedTime: 0
+--- !u!114 &8143775953552085211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355206406345901541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f77ceb3174d5b64089ec63d7636b64f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4134441130553008503
 GameObject:
   m_ObjectHideFlags: 0
