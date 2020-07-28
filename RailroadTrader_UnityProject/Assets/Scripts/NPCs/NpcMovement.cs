@@ -117,7 +117,7 @@ public class NpcMovement: MonoBehaviour
     {
         GameObject prefab = _npcPrefabs[type];
         GameObject npc = Instantiate(prefab ,pSpawnPoint, prefab.transform.rotation);
-        Debug.Log("Spawn");
+        //Debug.Log("Spawn");
         NpcActor actor = npc.GetComponent<NpcActor>();
         actor.SetTarget(store.position, store.building);
     }

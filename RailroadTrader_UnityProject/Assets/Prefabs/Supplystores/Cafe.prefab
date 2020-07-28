@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4814570535728479057}
   - component: {fileID: 7207120803370337832}
   - component: {fileID: 5652297773815559820}
-  - component: {fileID: 1114346982648198573}
   m_Layer: 0
   m_Name: EntryPoint
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181787837588152726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.58, y: 1, z: -1}
+  m_LocalPosition: {x: 3, y: 0.5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1482735826439733414}
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1114346982648198573
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181787837588152726}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2857126376886643462
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,13 +90,14 @@ GameObject:
   - component: {fileID: 3998775827216348283}
   - component: {fileID: 4501638542000055989}
   - component: {fileID: 8694336873460501456}
+  - component: {fileID: 7511584845586829806}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Collider
   m_TagString: BuildingModel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3998775827216348283
 Transform:
   m_ObjectHideFlags: 0
@@ -119,7 +106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2857126376886643462}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.52, y: 3.12, z: -0.45}
+  m_LocalPosition: {x: 2.5, y: 1.5, z: 1.5}
   m_LocalScale: {x: 6, y: 3, z: 4}
   m_Children: []
   m_Father: {fileID: 1482735826439733414}
@@ -140,7 +127,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2857126376886643462}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -151,7 +138,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e7d0c8d488c605a4e80158924c4152c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -172,6 +159,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7511584845586829806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2857126376886643462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3355206406345901541
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 1437609440678030952}
   - component: {fileID: 3595150353728186064}
   - component: {fileID: -1968892186820261510}
+  - component: {fileID: 4815768820954270655}
   m_Layer: 0
   m_Name: Cafe
   m_TagString: Untagged
@@ -248,11 +249,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 3, y: 1.5, z: 2}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 2.5, y: 1.5, z: 1.5}
   m_TimeToStationary: 0.5
 --- !u!114 &-1968892186820261510
 MonoBehaviour:
@@ -272,7 +273,7 @@ MonoBehaviour:
   m_BuildCost: 700
   UpkeepCost: 20
   NPCEnterPoint: {fileID: 4814570535728479057}
-  m_NpcMovePointOffset: {x: 0, y: 0, z: 0}
+  m_NpcMovePointOffset: {x: 5, y: 0, z: 0}
   m_NpcAmount: 0
   totalGuestCount: 0
   m_BlockedTilesXZ:
@@ -283,19 +284,19 @@ MonoBehaviour:
   BlockedZTiles: 7
   m_Ressources: []
   m_VisitorStats:
-  - building: 0
+  - building: 1
     type: 0
     maxCapacity: 10
     curAmount: 0
     earningGain: 5
-    satisfactionGain: 0
-  - building: 0
+    satisfactionGain: 1
+  - building: 1
     type: 1
     maxCapacity: 10
     curAmount: 0
     earningGain: 8
-    satisfactionGain: 0
-  - building: 0
+    satisfactionGain: 2
+  - building: 1
     type: 2
     maxCapacity: 10
     curAmount: 0
@@ -303,6 +304,18 @@ MonoBehaviour:
     satisfactionGain: 0
   secondsSpendByNPC: 2
   passedTime: 0
+--- !u!114 &4815768820954270655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355206406345901541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f77ceb3174d5b64089ec63d7636b64f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7410959199154764456
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +341,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7410959199154764456}
   m_LocalRotation: {x: 0.46193978, y: 0.33141357, z: -0.19134171, w: 0.8001032}
-  m_LocalPosition: {x: -0.3, y: 3.84, z: -1.46}
+  m_LocalPosition: {x: 1.44, y: 2.5, z: 0.17}
   m_LocalScale: {x: 0.59999996, y: 0.59999996, z: 1}
   m_Children: []
   m_Father: {fileID: 1482735826439733414}

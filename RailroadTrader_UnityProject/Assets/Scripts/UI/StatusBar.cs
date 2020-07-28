@@ -28,6 +28,7 @@ public class StatusBar : MonoBehaviour
         TimeController.OnHourChange += UpdateTime;
         FinanceController.OnCurrencyValueChange += UpdateCurrency;
         GuestController.OnCurVisiterCountChange += UpdateVisiterCount;
+        SatisfactionController.OnSatisfactionPercentageChange += UpdateSatisfaction;
     }
 
     private void UpdateTime(IngameTime curTime)

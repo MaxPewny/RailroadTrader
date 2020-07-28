@@ -75,7 +75,7 @@ public class VisitorStats
     public int maxCapacity;
     public int curAmount;
     public int earningGain;
-    public float satisfactionGain;
+    public int satisfactionGain;
 }
 
 public class PassengerStats

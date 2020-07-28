@@ -8,10 +8,10 @@ public class NpcActor : MonoBehaviour
 {
     [SerializeField]
     float _destinationReachedTreshold = 0.5f;
-    [ReadOnly, SerializeField]
-    Vector3 _target;
+    //[ReadOnly, SerializeField]
+    public Vector3 _target { get; protected set; }
     private NavMeshAgent _agent;
-    bool hasTarget;
+    public bool hasTarget { get; protected set; }
 
     [SerializeField]
     private GameObject sprite;

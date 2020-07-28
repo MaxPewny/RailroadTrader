@@ -32,7 +32,7 @@ public class GuestController : MonoBehaviour
     private void UpdateVisitorSpending(Passanger pType, int moneySpend)
     {
         Stats(pType).totalSpendings += moneySpend;
-        print(pStats[(int)pType].ToString() + " spend " + pStats[(int)pType].totalSpendings.ToString() + " € in shops");
+        print(pStats[(int)pType].passenger.ToString() + "s spend " + pStats[(int)pType].totalSpendings.ToString() + " € in shops");
     }
 
     private void UpdateVisitorAmount(Passanger pType, int newVisitorCount)

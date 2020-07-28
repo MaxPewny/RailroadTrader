@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class GuestUI : MonoBehaviour
 {
-    [Header("--- Finance Overview ---")]
+    [Header("--- Guest Overview ---")]
 
     [SerializeField]
-    private Text SatisfactionPercent;
+    private Slider SatisfactionSlider;
+    [SerializeField]
+    private Text SatisfactionPercentage;
     [SerializeField]
     private Text CommutersTotal;
     [SerializeField]
@@ -37,6 +39,8 @@ public class GuestUI : MonoBehaviour
     private Text TouristsCurO;
     [SerializeField]
     private Text BusinessCurO;
+    [SerializeField]
+    private Slider SatisfactionSliderO;
 
     [Header("--- Tooltip ---")]
 
@@ -52,8 +56,6 @@ public class GuestUI : MonoBehaviour
 
     public void WriteGuestOverview(PassengerStats commuter, PassengerStats tourist, PassengerStats business)
     {
-        //SatisfactionPercent
-
         CommutersCur.text = commuter.curAmount.ToString();
         CommutersTotal.text = commuter.totalAmount.ToString();
         CommuterSpendings.text = commuter.totalSpendings.ToString();
@@ -72,6 +74,13 @@ public class GuestUI : MonoBehaviour
         CommutersCurO.text = commuter.curAmount.ToString();
         TouristsCurO.text = tourist.curAmount.ToString();
         BusinessCurO.text = business.curAmount.ToString();
+    }
+
+    public void WriteSatisfactionSlider(int percentage)
+    {
+        SatisfactionSlider.value = percentage;
+        SatisfactionSliderO.value = percentage;
+        SatisfactionPercentage.text = percentage.ToString()+"%";
     }
 
     public void WriteGuestToolTip(PassengerStats commuter, PassengerStats tourist, PassengerStats business)
