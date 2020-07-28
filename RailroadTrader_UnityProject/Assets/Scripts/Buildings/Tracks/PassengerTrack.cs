@@ -37,11 +37,11 @@ public class PassengerTrack : Building
         if(!inStation)
             Timer();
 
-        if (Input.GetKeyDown("s"))
-        {
-            Debug.Log("S");
-            TrainArrived();
-        }
+        //if (Input.GetKeyDown("s"))
+        //{
+        //    Debug.Log("S");
+        //    TrainArrived();
+        //}
     }
 
     private void Timer()
