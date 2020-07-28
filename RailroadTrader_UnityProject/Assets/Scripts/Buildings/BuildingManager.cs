@@ -5,38 +5,34 @@ using UnityEngine;
 
 public class BuildingManager : MonoBehaviour
 {
-    [ReadOnly]
-    public List<Building> m_Buildings;
+    public List<Building> m_Buildings { get; private set; }
 
     public static event System.Action<int> OnUpkeepDue = delegate { };
+    public static event System.Action<List<CargoTrack>> OnCargoTrackCountChange = delegate { };
 
     private void Start()
     {
         TimeController.OnDayEnd += PayUpkeepCosts;
     }
 
+    public void AddBuilding(Building building)
+    {
+        m_Buildings.Add(building);
+        if (building.m_Type == BuildingType.CARGOTRAIN)
+            OnCargoTrackCountChange(AllCargoTracks());
+    }
+
+    public void RemoveBuilding(Building building)
+    {
+        m_Buildings.Remove(building);
+        if (building.m_Type == BuildingType.CARGOTRAIN)
+            OnCargoTrackCountChange(AllCargoTracks());
+    }
+
     public void PayUpkeepCosts()
     {
         OnUpkeepDue(UpkeepAllBuildings());
     }
-
-    //public void ResetSatisfaction()
-    //{
-    //    foreach (Building b in m_Buildings)
-    //    {
-    //        b.ResetSatisfactionCount();
-    //    }
-    //}
-
-    //public int CurrentSatisfaction()
-    //{
-    //    int value = 0;
-    //    foreach (Building b in m_Buildings)
-    //    {
-    //        value += b.curSatisfation;
-    //    }
-    //    return value;
-    //}
 
     private int UpkeepAllBuildings()
     {

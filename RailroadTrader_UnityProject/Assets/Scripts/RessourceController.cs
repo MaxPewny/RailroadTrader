@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class RessourceController : MonoBehaviour
 {
-    public HashSet<CargoTrack> curCargoTracks { get; private set; }
     public Dictionary<Resource, int> _ressourcesInShops { get; private set; }
     public Dictionary<Resource, int> _ressourcesInTracks { get; private set; }
     public Dictionary<Passanger, int> _passangers { get; private set; }
@@ -29,7 +28,7 @@ public class RessourceController : MonoBehaviour
 
         foreach (Resource ressource in (Resource[])Enum.GetValues(typeof(Resource)))
         {
-            _ressourcesInShops.Add(ressource, 50);
+            _ressourcesInTracks.Add(ressource, 0);
         }
     }
 

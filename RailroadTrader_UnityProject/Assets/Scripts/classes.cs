@@ -91,3 +91,10 @@ public class PassengerStats
     }
 }
 
+public class Cargo
+{
+    public Resource type;
+    public float maxCapacity;
+    public float curAmount;
+}
+

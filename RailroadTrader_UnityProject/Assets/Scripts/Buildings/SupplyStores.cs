@@ -105,7 +105,7 @@ public class SupplyStores : Building
         //FC.UpdateMonthlyRevenue(visitor.earningGain);
         OnSatisfactionGain(visitor.satisfactionGain);
         //TODO reaktivieren wenn Cargo implemented ist
-        //RefillRessources(1);
+        RefillRessources(1);
     }
 
     private VisitorStats VisitorStats(Passanger pType)

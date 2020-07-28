@@ -44,7 +44,7 @@ public class Building : MonoBehaviour
         m_NpcMovePoint = NPCEnterPoint.position;
         FC = FindObjectOfType<FinanceController>();
         RC = FindObjectOfType<RessourceController>();
-        FindObjectOfType<BuildingManager>().m_Buildings.Add(this);
+        FindObjectOfType<BuildingManager>().AddBuilding(this);
         SetTileStatus();
     }
 

@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class CargoTrack : Building
 {
-    [SerializeField]
-    private float timeTilArrival = 45.0f;
-    [SerializeField]
-    private float passedTime = 0.0f;
+    //[SerializeField]
+    //private float timeTilArrival = 45.0f;
+    //[SerializeField]
+    //private float passedTime = 0.0f;
     [SerializeField]
     private Animator anim;
-    public bool inStation { get; protected set; }
+    //public bool inStation { get; protected set; }
 
-    public class Cargo
-    {
-        public Resource type;
-        public float maxCapacity;
-        public float curAmount;
-    }
+    //public class Cargo
+    //{
+    //    public Resource type;
+    //    public float maxCapacity;
+    //    public float curAmount;
+    //}
 
-    public HashSet<Cargo> loadedCargo;
-    public HashSet<Cargo> orderedCargo;
+    //public HashSet<Cargo> loadedCargo;
+    //public HashSet<Cargo> orderedCargo;
 
     protected override void DestroyBuilding()
     {
@@ -37,8 +37,8 @@ public class CargoTrack : Building
     {
         base.Update();
 
-        if (!inStation)
-            Timer();
+        //if (!inStation)
+        //    Timer();
 
         //if (Input.GetKeyDown("s"))
         //{
@@ -47,36 +47,37 @@ public class CargoTrack : Building
         //}
     }
 
-    private void Timer()
-    {
-        passedTime += Time.deltaTime;
-        if (passedTime >= timeTilArrival)
-        {
-            inStation = true;
-            StartCoroutine(TrainArrived());
-            passedTime = 0.0f;
-        }
-    }
-
-    private IEnumerator TrainArrived()
+    public IEnumerator TrainArrived()
     {
         //start train enter anim
         //wait for it to finish
         anim.SetTrigger("enter");
         yield return new WaitForSeconds(1.0f);
-        inStation = true;
+        //inStation = true;
         //switch to open doors
         //wait a moment
         yield return new WaitForSeconds(0.25f);
     }
 
-    private IEnumerator TrainLeaves()
+    public IEnumerator TrainLeaves()
     {
-        inStation = false;
+        //inStation = false;
         //wait for the spawn to finish
         //start train exit anim
         //wait for it to finish
         anim.SetTrigger("exit");
         yield return new WaitForSeconds(1.0f);
     }
+
+
+    //private void Timer()
+    //{
+    //    passedTime += Time.deltaTime;
+    //    if (passedTime >= timeTilArrival)
+    //    {
+    //        inStation = true;
+    //        StartCoroutine(TrainArrived());
+    //        passedTime = 0.0f;
+    //    }
+    //}
 }
