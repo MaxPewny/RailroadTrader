@@ -2,26 +2,27 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Gizmo_SupplyStoreColliders 
 {
     [DrawGizmo(GizmoType.NonSelected)]
-    static void DrawAreaOfEffectZone(GizmoShop store, GizmoType gizmoType)
+    static void DrawNonSelectedBuildings(GizmoShop store, GizmoType gizmoType)
     {
-        BoxCollider col = store.gameObject.GetComponentInChildren<BoxCollider>();
+        NavMeshObstacle col = store.gameObject.GetComponentInChildren<NavMeshObstacle>();
         Gizmos.color = Color.magenta;
-        Gizmos.DrawCube(col.center, col.size);
-        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(col.center+store.transform.position, col.size);
+        Gizmos.color = Color.cyan;
         //Gizmos.DrawWireSphere(store.transform.position, store.maxR);
     }
 
-    //[DrawGizmo(GizmoType.Selected)]
-    //static void DrawSelectedAreaOfEffectZone(ExpandingAOE zone, GizmoType gizmoType)
-    //{
-    //    SphereCollider col = zone.gameObject.GetComponent<SphereCollider>();
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawWireSphere(zone.transform.position, col.radius);
-    //    Gizmos.color = Color.blue;
-    //    Gizmos.DrawWireSphere(zone.transform.position, zone.maxR);
-    //}
+    [DrawGizmo(GizmoType.Selected)]
+    static void DrawSelectedBuildings(GizmoShop store, GizmoType gizmoType)
+    {
+        NavMeshObstacle col = store.gameObject.GetComponentInChildren<NavMeshObstacle>();
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(col.center + store.transform.position, col.size);
+        Gizmos.color = Color.magenta;
+    }
+
 }

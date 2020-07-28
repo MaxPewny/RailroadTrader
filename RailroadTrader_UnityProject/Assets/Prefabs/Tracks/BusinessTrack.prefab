@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 8247989852759442592}
   - component: {fileID: 4553535284368578940}
   - component: {fileID: 8049829598299521484}
-  - component: {fileID: 1861451787378227766}
   m_Layer: 0
-  m_Name: EntryPoint
+  m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2502635941548637954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 1.5, y: 0, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1482735826439733414}
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1861451787378227766
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2502635941548637954}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3355206406345901541
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +91,8 @@ GameObject:
   - component: {fileID: 1097700374337696882}
   - component: {fileID: 1437609440678030952}
   - component: {fileID: -4386067285775781083}
+  - component: {fileID: 7510412751743122159}
+  - component: {fileID: 7626069291904158172}
   m_Layer: 0
   m_Name: BusinessTrack
   m_TagString: Untagged
@@ -185,6 +173,34 @@ MonoBehaviour:
   timeTilArrival: 5
   passedTime: 0
   anim: {fileID: 8664095785461483842}
+--- !u!208 &7510412751743122159
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355206406345901541}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.5, y: 0.5, z: 5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 2.5, y: 0, z: -4}
+  m_TimeToStationary: 0.5
+--- !u!114 &7626069291904158172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355206406345901541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f77ceb3174d5b64089ec63d7636b64f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1586472621154058942
 PrefabInstance:
   m_ObjectHideFlags: 0
