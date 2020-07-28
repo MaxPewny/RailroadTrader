@@ -41,7 +41,7 @@ public class Building : MonoBehaviour
     protected virtual void Initialize()
     {
         _gridObject = GetComponent<GridObject>();
-        m_NpcMovePoint = transform.position + m_NpcMovePointOffset;
+        m_NpcMovePoint = NPCEnterPoint.position;
         FC = FindObjectOfType<FinanceController>();
         RC = FindObjectOfType<RessourceController>();
         FindObjectOfType<BuildingManager>().m_Buildings.Add(this);
