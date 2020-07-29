@@ -9,8 +9,8 @@ using UnityEngine.EventSystems;
 public class OnObjectClicked : MonoBehaviour
 {
 	public static event System.Action OnCargoTrackClicked = delegate { };
-	public static event System.Action<GameObject> OnShopClicked = delegate { };
-	public static event System.Action<GameObject> OnPassengerTrackClicked = delegate { };
+	public static event System.Action<SupplyStores> OnShopClicked = delegate { };
+	public static event System.Action<PassengerTrack> OnPassengerTrackClicked = delegate { };
 
 	private void Update()
 	{
@@ -20,17 +20,27 @@ public class OnObjectClicked : MonoBehaviour
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit))
 			{
-				GameObject clickedObject = hit.collider.gameObject;
-
-				if (clickedObject.GetComponentInChildren<CargoTrack>())
-					OnCargoTrackClicked();
-				else if (clickedObject.GetComponentInChildren<SupplyStores>())
-					OnShopClicked(clickedObject);
-				else if (clickedObject.GetComponentInChildren<PassengerTrack>())
-					OnPassengerTrackClicked(clickedObject);
-				else
+				Building clickedBuilding = hit.collider.GetComponentInParent<Building>();
+				if (clickedBuilding == null)
 					return;
-			}
+
+                print("clicked on object " + clickedBuilding.gameObject.name);
+
+                switch (clickedBuilding.m_StoreType)
+                {
+                    case StoreType.PLATFORM:
+                        OnCargoTrackClicked();
+                        break;
+                    case StoreType.SUPPLYSTORE:
+                        OnShopClicked(hit.collider.GetComponentInParent<SupplyStores>());
+                        break;
+                    case StoreType.DINGSSTORE:
+                        OnPassengerTrackClicked(hit.collider.GetComponentInParent<PassengerTrack>());
+                        break;
+                    default:
+                        break;
+                }
+            }
 		}
 	}
 }

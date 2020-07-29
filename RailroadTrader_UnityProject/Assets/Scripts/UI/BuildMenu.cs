@@ -14,12 +14,15 @@ public class BuildMenu : MonoBehaviour
         public Button button;
         public Image image;
         public int cost;
+        public StoreType type;
     }
 
     [SerializeField]
     private ObjectPlacement _placement;
     [SerializeField]
     private FinanceController FC;
+    [SerializeField]
+    private BuildingManager BM;
     public List<BuildOption> TrackBuildOptions;
     public List<BuildOption> ShopBuildOptions;
 
@@ -33,15 +36,19 @@ public class BuildMenu : MonoBehaviour
 
         foreach (BuildOption option in ShopBuildOptions)
         {
-            option.button.onClick.AddListener(delegate { StartBuildMode(option.prefab, option.cost); });
+            option.button.onClick.AddListener(delegate { StartBuildMode(option.prefab, option.cost, option.type); });
             option.image.sprite = option.picture;
         }
     }
 
-
-
-    protected virtual void StartBuildMode(GameObject pPrefab, int pCost)
+    protected virtual void StartBuildMode(GameObject pPrefab, int pCost, StoreType type = StoreType.PLATFORM)
     {
+        if (type == StoreType.SUPPLYSTORE && !BM.CanBuildMoreStores())
+        {
+            print("cannot build more stores");
+            return;
+        }
+
         if (FC.PayBuildingCost(pCost))
         {
             _placement.ActivateBuildmode(pPrefab);

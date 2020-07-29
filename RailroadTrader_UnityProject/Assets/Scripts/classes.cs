@@ -73,7 +73,7 @@ public class VisitorStats
     public BuildingType building;
     public Passanger type;
     public int maxCapacity;
-    public int curAmount { get; protected set; }
+    public int curAmount;
     public int earningGain;
     public int satisfactionGain;
 }
@@ -91,10 +91,13 @@ public class PassengerStats
     }
 }
 
-public class Cargo
-{
-    public Resource type;
-    public float maxCapacity;
-    public float curAmount;
-}
+
+//public class Cargo
+//{
+//    public Resource type;
+//    public int maxCapacity;
+//    public int curAmount;
+
+//    public Cargo(Resource type, )
+//}
 

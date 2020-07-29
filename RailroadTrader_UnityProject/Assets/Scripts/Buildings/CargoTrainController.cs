@@ -10,17 +10,22 @@ public class CargoTrainController : MonoBehaviour
     private float passedTime = 0.0f;
     [SerializeField]
     private List<CargoTrack> allTracks = new List<CargoTrack>();
+    [SerializeField]
+    private int cargoAmountPerTrack = 15;
+
+    public int MaxCargoCapacity { get { return CurCargoCapacity(); } }
 
     public bool inStation { get; protected set; }
 
     public static event System.Action OnCargoReset = delegate { };
-    public static event System.Action<HashSet<Cargo>> OnOrderArrived = delegate { };
-    public HashSet<Cargo> OrderedCargo { get; private set; }
+    public static event System.Action<Dictionary<Resource,int>> OnOrderArrived = delegate { };
+    public Dictionary<Resource, int> OrderedCargo { get; private set; }
 
     //public HashSet<Cargo> StoredCargo { get; private set; }
 
     void Start()
     {
+        OrderedCargo = new Dictionary<Resource, int>();
         BuildingManager.OnCargoTrackCountChange += UpdateTrackList;
     }
 
@@ -30,20 +35,32 @@ public class CargoTrainController : MonoBehaviour
             Timer();
     }
 
+    private int CurCargoCapacity()
+    {
+        return cargoAmountPerTrack * allTracks.Count;
+    }
+    
     private void UpdateTrackList(List<CargoTrack> tracks)
     {
         allTracks = tracks;
     }
 
-    //Called via button in the cargo ui
-    public void ConfirmOrder()
+    private void SendCargoTrains()
     {
         foreach(CargoTrack track in allTracks)
         {
             StartCoroutine( track.TrainLeaves());
         }
-        OnCargoReset();
         inStation = false;
+    }
+
+    public void SaveOrder(int foodAmount, int drinkAmount, int cargoAmount)
+    {
+        OrderedCargo.Add(Resource.FOOD, foodAmount);
+        OrderedCargo.Add(Resource.BEVERAGE, drinkAmount);
+        OrderedCargo.Add(Resource.CARGO, cargoAmount);
+        OnCargoReset();
+        SendCargoTrains();
     }
 
     private void Timer()

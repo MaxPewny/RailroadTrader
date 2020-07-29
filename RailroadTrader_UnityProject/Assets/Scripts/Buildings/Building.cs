@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,6 +26,8 @@ public class Building : MonoBehaviour
     public bool m_IsActive { get; protected set; }
     protected GridObject _gridObject;
 
+    public static event Action<Building> OnInitialize = delegate { };
+
     private void Awake()
     {
         WriteBlockedVectors(BlockedXTiles, BlockedZTiles);
@@ -44,7 +47,7 @@ public class Building : MonoBehaviour
         m_NpcMovePoint = NPCEnterPoint.position;
         FC = FindObjectOfType<FinanceController>();
         RC = FindObjectOfType<RessourceController>();
-        FindObjectOfType<BuildingManager>().AddBuilding(this);
+        OnInitialize(this);
         SetTileStatus();
     }
 

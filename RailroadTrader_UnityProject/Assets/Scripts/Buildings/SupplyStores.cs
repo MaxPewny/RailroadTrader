@@ -104,8 +104,7 @@ public class SupplyStores : Building
         FC.AddShopIncome(visitor.type, visitor.earningGain);
         //FC.UpdateMonthlyRevenue(visitor.earningGain);
         OnSatisfactionGain(visitor.satisfactionGain);
-        //TODO reaktivieren wenn Cargo implemented ist
-        RefillRessources(1);
+        ManageRessources(1);
     }
 
     private VisitorStats VisitorStats(Passanger pType)
@@ -121,19 +120,48 @@ public class SupplyStores : Building
                 return false;
         }
         return true;
-    }    
+    }
+
+    private void ManageRessources(int amount)
+    {
+        UseRessources(amount);
+        RefillRessources(amount);
+    }
+
+    private void UseRessources(int amount = 1)
+    {
+        foreach (BuildingRessource ressi in m_Ressources)
+        {
+            ressi.curAmount -= 1;
+            RC.SubtractFromShopRessis(ressi.type, amount);
+        }
+    }
 
     private void RefillRessources(int amount)
     {
-        foreach(BuildingRessource ressi in m_Ressources)
+        foreach (BuildingRessource ressi in m_Ressources)
         {
-            if (RC.TakeRessourceFromCargo(ressi.type, amount) < amount)
+            if (RC.TakeRessourceFromCargo(ressi.type, amount) == amount)
             {
                 ressi.curAmount += amount;
-                RC.SubtractFromShopRessis(ressi.type, ressi.curAmount);
+                //RC.SubtractFromShopRessis(ressi.type, ressi.curAmount);
             }
         }
     }
+
+    /// <summary>
+    /// Refills the whole inventory to max capacity
+    /// </summary>    
+    public void StockUpInventory()
+    {
+        foreach (BuildingRessource ressi in m_Ressources)
+        {
+            if (ressi.curAmount < ressi.maxCapacity)
+                RefillRessources(ressi.maxCapacity - ressi.curAmount);
+        }
+    }
+
+
 
     protected virtual void ResetCapacity()
     {
@@ -141,11 +169,6 @@ public class SupplyStores : Building
         {
             stats.curAmount = 0;
         }
-    }
-
-    public virtual bool RessourceAtMaxCapacity()
-    {
-        return true;
     }
 
     public override int CurGuestCountOf(Passanger pType)

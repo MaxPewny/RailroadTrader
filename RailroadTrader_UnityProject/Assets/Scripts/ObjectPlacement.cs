@@ -60,8 +60,8 @@ public class ObjectPlacement : MonoBehaviour
             DeactivateBuildmode();
         }
 
-        m_ObjectPrefab = pPrefab;
         _buildModeActivated = true;
+        m_ObjectPrefab = pPrefab;
         m_HighlightCursor.SetActive(false);
         _modelHolder = Instantiate(m_ObjectPrefab.GetComponent<Building>().m_Model, transform);
 
@@ -80,8 +80,7 @@ public class ObjectPlacement : MonoBehaviour
         Destroy(_modelHolder);
         _buildModeActivated = false;
         m_HighlightCursor.SetActive(true);
-        _blockedTiles.Clear();
-        
+        _blockedTiles.Clear();        
     }
 
     protected virtual void PlaceObject() 

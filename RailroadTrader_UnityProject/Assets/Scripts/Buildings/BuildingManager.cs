@@ -5,19 +5,37 @@ using UnityEngine;
 
 public class BuildingManager : MonoBehaviour
 {
-    public List<Building> m_Buildings { get; private set; }
+    public int MaxShopAmount = 10;
+    public List<Building> m_Buildings { get; protected set; }
 
     public static event System.Action<int> OnUpkeepDue = delegate { };
     public static event System.Action<List<CargoTrack>> OnCargoTrackCountChange = delegate { };
 
+    private void Awake()
+    {
+        m_Buildings = new List<Building>();
+    }
+
     private void Start()
     {
         TimeController.OnDayEnd += PayUpkeepCosts;
+        RessourceController.OnRefillStores += RefillAllStores;
+        Building.OnInitialize += AddBuilding;
+    }
+
+    private void RefillAllStores()
+    {
+        List<SupplyStores> stores = AllSupplyStores();
+        foreach(SupplyStores store in stores)
+        {
+
+        }
     }
 
     public void AddBuilding(Building building)
     {
         m_Buildings.Add(building);
+
         if (building.m_Type == BuildingType.CARGOTRAIN)
             OnCargoTrackCountChange(AllCargoTracks());
     }
@@ -43,6 +61,15 @@ public class BuildingManager : MonoBehaviour
         }
         print("pay upkeep for this day: "+sum);
         return sum;
+    }
+
+    public bool CanBuildMoreStores()
+    {
+        List<SupplyStores> stores = AllSupplyStores();
+        if (stores.Count < MaxShopAmount)
+            return true;
+        else
+            return false;
     }
 
     public List<SupplyStores> AllSupplyStores()

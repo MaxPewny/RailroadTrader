@@ -1,0 +1,36 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 16.07.2020 16:03:54
+
+mtllib Station_Wall_PillarL.mtl
+
+#
+# object Station_Wall_PillarL
+#
+
+v  3202.9233 -322.0522 0.0000
+v  3199.9387 565.4783 0.0001
+v  3131.9546 565.4783 0.0001
+v  2350.6489 112.1028 0.0000
+v  2347.7656 -732.5217 -0.0001
+v  2494.7583 -732.5217 -0.0001
+# 6 vertices
+
+vn -0.0000 -0.0000 1.0000
+vn 0.0000 -0.0000 1.0000
+# 2 vertex normals
+
+vt 0.9381 0.3162 0.0000
+vt 0.9349 1.0000 0.0000
+vt 0.8634 1.0000 0.0000
+vt 0.0409 0.6507 0.0000
+vt 0.0379 0.0000 0.0000
+vt 0.1926 0.0000 0.0000
+# 6 texture coords
+
+o Station_Wall_PillarL
+g Station_Wall_PillarL
+usemtl 19___Default
+f 1/1/1 2/2/2 3/3/2 4/4/1 
+f 4/4/1 5/5/2 6/6/2 1/1/1 
+# 2 polygons
+
