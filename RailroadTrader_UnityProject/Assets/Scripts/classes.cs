@@ -73,7 +73,7 @@ public class VisitorStats
     public BuildingType building;
     public Passanger type;
     public int maxCapacity;
-    public int curAmount;
+    public int curAmount { get; protected set; }
     public int earningGain;
     public int satisfactionGain;
 }

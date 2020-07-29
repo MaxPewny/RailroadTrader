@@ -19,7 +19,7 @@ public class SupplyStores : Building
     [SerializeField]
     [Tooltip("Seconds til 1 NPC leaves the shop")]
     private float secondsSpendByNPC = 30.0f;
-    [SerializeField]
+    //[SerializeField]
     private float passedTime;
 
     public event System.Action<int> OnSatisfactionGain = delegate { };
