@@ -90,12 +90,12 @@ public class CameraMovement : MonoBehaviour
     private void MoveHorizontal(bool pos)
     {
         float move = pos ? speed : -speed;
-        CameraRig.transform.Translate(move, 0, 0);
+        CameraRig.transform.Translate(move, 0, -move);
     }
 
     private void MoveVertical(bool pos)
     {
         float move = pos ? speed : -speed;
-        CameraRig.transform.Translate(0, 0, move);
+        CameraRig.transform.Translate(move, 0, move);
     }
 }
