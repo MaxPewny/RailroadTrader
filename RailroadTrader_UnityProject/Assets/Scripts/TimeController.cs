@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TimeController : MonoBehaviour
 {
+    public GenericValues values;
 
     [Tooltip("How many secs in real time is 1 ingame hour")]
     public float realTimePerHour = 120.0f;
@@ -24,6 +25,7 @@ public class TimeController : MonoBehaviour
     {
         curTime = new IngameTime(0, 1, 1, 1);
         OnHourChange(curTime);
+        realTimePerHour = values.RealTimeSecsPerHour;
     }
 
     private void Update()

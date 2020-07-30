@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class BuildingManager : MonoBehaviour
 {
-    public int MaxShopAmount = 10;
+    public GenericValues values;
+
+    private int maxShopAmount = 10;
+    private int waxTrackAmount = 6;
     public List<Building> m_Buildings { get; protected set; }
 
     public static event System.Action<int> OnUpkeepDue = delegate { };
@@ -15,6 +18,8 @@ public class BuildingManager : MonoBehaviour
     private void Awake()
     {
         m_Buildings = new List<Building>();
+        maxShopAmount = values.MaxShopAmount;
+        waxTrackAmount = values.MaxTrackAmount;
     }
 
     private void Start()
@@ -70,7 +75,14 @@ public class BuildingManager : MonoBehaviour
     public bool CanBuildMoreStores()
     {
         List<SupplyStores> stores = AllSupplyStores();
-        if (stores.Count < MaxShopAmount)
+        if (stores.Count < maxShopAmount)
+            return true;
+        else
+            return false;
+    }
+    public bool CanBuildMoreTracks()
+    {
+        if (TrackCount() < waxTrackAmount)
             return true;
         else
             return false;
@@ -84,6 +96,18 @@ public class BuildingManager : MonoBehaviour
             ss.Add(shop);
         }
         return ss;
+    }
+
+    public int TrackCount()
+    {
+        int count = 0;
+
+        foreach (Building b in m_Buildings)
+        {
+            if (b.m_Type == BuildingType.CARGOTRAIN || b.m_Type == BuildingType.PASSENGERTRAIN)
+                ++count;
+        }
+        return count;
     }
 
     public List<CargoTrack> AllCargoTracks()

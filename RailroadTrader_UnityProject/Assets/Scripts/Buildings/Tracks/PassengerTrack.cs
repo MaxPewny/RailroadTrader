@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PassengerTrack : Building
 {
+    public PassengerTrackValues values;
+
     public Passanger m_PassangerType = Passanger.COMMUTER;
     public bool inStation { get; protected set; }
 
@@ -24,7 +26,7 @@ public class PassengerTrack : Building
     protected override void Start()
     {
         m_Type = BuildingType.PASSENGERTRAIN;
-        base.Start();
+        base.Start();   
         NPCs = FindObjectOfType<NpcMovement>();
         anim = GetComponentInChildren<Animator>();
         inStation = false;
@@ -42,6 +44,14 @@ public class PassengerTrack : Building
         //    Debug.Log("S");
         //    TrainArrived();
         //}
+    }
+    protected override void WriteGDValues()
+    {
+        base.WriteGDValues();
+        m_BuildCost = values.BuildCost;
+        UpkeepCost = values.UpkeepCost;
+        m_PassangerType = values.PassangerType;
+        timeTilArrival = values.TimeTilArrival;
     }
 
     private void Timer()

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CargoTrainController : MonoBehaviour
 {
+    public GenericValues values;
+
     [SerializeField]
     private float timeTilArrival = 45.0f;
     [SerializeField]
@@ -25,6 +27,8 @@ public class CargoTrainController : MonoBehaviour
 
     void Start()
     {
+        timeTilArrival = values.CargoTimeTilArrival;
+        cargoAmountPerTrack = values.CargoAmountPerTrack;
         OrderedCargo = new Dictionary<Resource, int>();
         BuildingManager.OnCargoTrackCountChange += UpdateTrackList;
     }

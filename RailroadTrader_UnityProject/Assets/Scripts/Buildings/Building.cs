@@ -36,10 +36,16 @@ public class Building : MonoBehaviour
     protected virtual void Start()
     {
         Initialize();
+        WriteGDValues();
     }
 
     protected virtual void Update()
     { }
+
+    protected virtual void WriteGDValues()
+    {
+        print("writing from scriptable objects");
+    }
 
     protected virtual void Initialize()
     {

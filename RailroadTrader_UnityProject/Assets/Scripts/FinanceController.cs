@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class FinanceController : MonoBehaviour
 {
+    public GenericValues Values;
     public int Currency { get { return Mathf.FloorToInt(_currency); } }
     private int _currency;
     //int is the number of the month, starting with 1 for the first obv

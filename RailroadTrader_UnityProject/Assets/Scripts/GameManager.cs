@@ -7,9 +7,8 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     protected GameManager() { }
-
+    
     public GameState State { get; protected set; }
-    private int startMoney = 1000;
     public bool BuildModeActive = false;
 
     private void Awake()
@@ -21,16 +20,10 @@ public class GameManager : Singleton<GameManager>
     {
         SetGameState(GameState.LOADING);
         yield return new WaitForSeconds(1.0f);
-        StartForGate2();
+        FinanceController FC = FindObjectOfType<FinanceController>();
+        FC.AddCurrency(FC.Values.StartMoney);
         print("Game ready");
         SetGameState(GameState.RUNNING);
-    }
-
-    private void StartForGate2()
-    {
-        FinanceController FC = FindObjectOfType<FinanceController>();
-        FC.AddCurrency(startMoney);
-        //FC.UpdateMonthlyIncome(startMoney);
     }
 
     public void SetGameState(GameState newState)

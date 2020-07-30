@@ -281,26 +281,24 @@ MonoBehaviour:
   - {x: 1, y: 1}
   BlockedXTiles: 7
   BlockedZTiles: 4
+  values: {fileID: 11400000, guid: fe6cfd9c0d830e14c8cebc8237f99c8c, type: 2}
   m_Ressources: []
   m_VisitorStats:
-  - building: 1
-    type: 0
+  - type: 0
     maxCapacity: 10
-    curAmount: 0
     earningGain: 5
     satisfactionGain: 1
-  - building: 1
-    type: 1
-    maxCapacity: 10
     curAmount: 0
+  - type: 1
+    maxCapacity: 10
     earningGain: 8
     satisfactionGain: 2
-  - building: 1
-    type: 2
-    maxCapacity: 10
     curAmount: 0
+  - type: 2
+    maxCapacity: 10
     earningGain: 0
     satisfactionGain: 0
+    curAmount: 0
   secondsSpendByNPC: 2
 --- !u!114 &4815768820954270655
 MonoBehaviour:

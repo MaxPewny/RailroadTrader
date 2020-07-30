@@ -70,12 +70,18 @@ public class FinanceOverview
 [System.Serializable]
 public class VisitorStats
 {
-    public BuildingType building;
+    //public BuildingType building;
+    [UnityEngine.Tooltip("NPC type")]
     public Passanger type;
+    [UnityEngine.Tooltip("Maximum of these type allowed in building")]
     public int maxCapacity;
-    public int curAmount;
+    [UnityEngine.Tooltip("How much currency is earned if this NPC visits the store")]
     public int earningGain;
+    [UnityEngine.Tooltip("How much satisfaction is earned if this NPC visits the store")]
     public int satisfactionGain;
+    [UnityEngine.Tooltip("Currently in this building")]
+    [ReadOnly]
+    public int curAmount;
 }
 
 public class PassengerStats
@@ -91,6 +97,41 @@ public class PassengerStats
     }
 }
 
+[System.Serializable]
+public class BuildingRessource
+{
+    [UnityEngine.Tooltip("Resource type")]
+    public Resource type;
+    [UnityEngine.Tooltip("How much the building can hold at max")]
+    public int maxCapacity;
+    [UnityEngine.Tooltip("How much the building currently has")]
+    [ReadOnly]
+    public int curAmount;
+
+    public BuildingRessource(Resource type, int maxCapacity)
+    {
+        this.type = type;
+        this.maxCapacity = maxCapacity;
+    }
+}
+
+[System.Serializable]
+public class BuildOptionValues
+{
+    public UnityEngine.GameObject prefab;
+    public UnityEngine.Sprite picture;
+    public StoreType type;
+    public SupplystoreValues storeValues;
+    public PassengerTrackValues trackValues;
+}
+
+[System.Serializable]
+public class BuildButton
+{
+    public BuildOptionValues values;
+    public UnityEngine.UI.Button button;
+    public UnityEngine.UI.Image image;
+}
 
 //public class Cargo
 //{

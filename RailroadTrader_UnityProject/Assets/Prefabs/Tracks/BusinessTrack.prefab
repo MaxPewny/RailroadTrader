@@ -262,6 +262,7 @@ MonoBehaviour:
   m_BlockedTilesXZ: []
   BlockedXTiles: 0
   BlockedZTiles: 5
+  values: {fileID: 11400000, guid: f71d8532430b47140a9571586be1e64a, type: 2}
   m_PassangerType: 2
   timeTilArrival: 5
   passedTime: 0

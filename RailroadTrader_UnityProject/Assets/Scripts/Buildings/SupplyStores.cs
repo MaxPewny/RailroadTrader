@@ -5,19 +5,20 @@ using System.Linq;
 
 public class SupplyStores : Building
 {
-    [System.Serializable]
-    public class BuildingRessource
-    {
-        public Resource type;
-        public int maxCapacity;
-        public int curAmount;
+    //[System.Serializable]
+    //public class BuildingRessource
+    //{
+    //    public Resource type;
+    //    public int maxCapacity;
+    //    public int curAmount;
 
-        public BuildingRessource(Resource type, int maxCapacity)
-        {
-            this.type = type;
-            this.maxCapacity = maxCapacity;
-        }
-    }
+    //    public BuildingRessource(Resource type, int maxCapacity)
+    //    {
+    //        this.type = type;
+    //        this.maxCapacity = maxCapacity;
+    //    }
+    //}
+    public SupplystoreValues values;
 
     public List<BuildingRessource> m_Ressources;
     public List<VisitorStats> m_VisitorStats;
@@ -39,10 +40,10 @@ public class SupplyStores : Building
         base.Start();
         FindObjectOfType<SatisfactionController>().ShopBuild(this);
 
-        foreach (VisitorStats vs in m_VisitorStats)
-        {
-            vs.building = m_Type;
-        }
+        //foreach (VisitorStats vs in m_VisitorStats)
+        //{
+        //    vs.building = m_Type;
+        //}
         foreach(BuildingRessource r in m_Ressources)
         {
             r.curAmount = r.maxCapacity;
@@ -55,6 +56,15 @@ public class SupplyStores : Building
         base.Update();
         if (totalGuestCount > 0)
             RunLeaveTimer();
+    }
+
+    protected override void WriteGDValues()
+    {
+        m_BuildCost = values.BuildCost;
+        UpkeepCost = values.UpkeepCost;
+        m_Ressources = values.Resources;
+        m_VisitorStats = values.VisitorStats;
+        secondsSpendByNPC = values.SecondsSpendByNPC;
     }
 
     protected void RunLeaveTimer()
