@@ -60,7 +60,7 @@ public class SupplyStores : Building
 
     protected override void WriteGDValues()
     {
-        m_BuildCost = values.BuildCost;
+        //m_BuildCost = values.BuildCost;
         UpkeepCost = values.UpkeepCost;
         m_Ressources = values.Resources;
         m_VisitorStats = values.VisitorStats;

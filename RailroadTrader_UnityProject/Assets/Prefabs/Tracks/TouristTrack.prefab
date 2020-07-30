@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 1097700374337696882}
   - component: {fileID: 1437609440678030952}
   - component: {fileID: -4386067285775781083}
-  - component: {fileID: 4022804346866423257}
   - component: {fileID: 8183119797040130769}
   m_Layer: 0
   m_Name: TouristTrack
@@ -174,18 +173,6 @@ MonoBehaviour:
   timeTilArrival: 5
   passedTime: 0
   anim: {fileID: 765067014250229726}
---- !u!114 &4022804346866423257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3355206406345901541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f77ceb3174d5b64089ec63d7636b64f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!208 &8183119797040130769
 NavMeshObstacle:
   m_ObjectHideFlags: 0

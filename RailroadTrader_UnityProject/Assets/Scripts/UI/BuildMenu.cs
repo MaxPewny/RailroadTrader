@@ -12,21 +12,22 @@ public class BuildMenu : MonoBehaviour
     [SerializeField]
     private BuildingManager BM;
 
-    public List<BuildButton> TrackBuildOptions;
-    public List<BuildButton> ShopBuildOptions;
+    public BuildOptionValues[] TrackBuildOptions;
+    public BuildOptionValues[] ShopBuildOptions;
 
     void Start()
     {
-        foreach (BuildButton option in TrackBuildOptions)
+        for(int i = 0; i < TrackBuildOptions.Length; i++)
         {
-            option.button.onClick.AddListener(delegate { StartBuildMode(option.values.prefab, option.values.trackValues.BuildCost); });
-            option.image.sprite = option.values.picture;
+            BuildOptionValues option = TrackBuildOptions[i];
+            option.Button.onClick.AddListener(delegate { StartBuildMode(option.Prefab, option.Values.BuildCost); });
+            option.ImageUI.sprite = option.Preview;
         }
-
-        foreach (BuildButton option in ShopBuildOptions)
+        for (int i = 0; i < ShopBuildOptions.Length; i++)
         {
-            option.button.onClick.AddListener(delegate { StartBuildMode(option.values.prefab, option.values.storeValues.BuildCost, option.values.type); });
-            option.image.sprite = option.values.picture;
+            BuildOptionValues option = ShopBuildOptions[i];
+            option.Button.onClick.AddListener(delegate { StartBuildMode(option.Prefab, option.Values.BuildCost, option.Values.StoreType); });
+            option.ImageUI.sprite = option.Preview;
         }
     }
 

@@ -51,5 +51,5 @@ public enum StoreType
 {
     PLATFORM,
     SUPPLYSTORE,
-    DINGSSTORE
+    OTHER
 }

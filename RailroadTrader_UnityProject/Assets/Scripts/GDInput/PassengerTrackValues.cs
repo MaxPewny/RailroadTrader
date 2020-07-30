@@ -5,8 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PassengerTrack", menuName = "Scriptables/PassengerTrackValues")]
 public class PassengerTrackValues : ScriptableObject
 {
-    [Tooltip("How much building this costs")]
-    public int BuildCost;
+    //public int BuildCost;
     [Tooltip("How much this building costs per hour")]
     public int UpkeepCost = 25;
     [Tooltip("Type of NPC this track spawns")]

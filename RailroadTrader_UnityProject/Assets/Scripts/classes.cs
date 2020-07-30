@@ -115,22 +115,25 @@ public class BuildingRessource
     }
 }
 
+//[System.Serializable]
+//public class BuildOptionValues
+//{
+//    public UnityEngine.GameObject prefab;
+//    public UnityEngine.Sprite picture;
+
+//    public SupplystoreValues storeValues;
+//    public PassengerTrackValues trackValues;
+//    public GenericValues Values;
+//}
+
 [System.Serializable]
 public class BuildOptionValues
 {
-    public UnityEngine.GameObject prefab;
-    public UnityEngine.Sprite picture;
-    public StoreType type;
-    public SupplystoreValues storeValues;
-    public PassengerTrackValues trackValues;
-}
-
-[System.Serializable]
-public class BuildButton
-{
-    public BuildOptionValues values;
-    public UnityEngine.UI.Button button;
-    public UnityEngine.UI.Image image;
+    public UnityEngine.UI.Button Button;
+    public UnityEngine.UI.Image ImageUI;
+    public UnityEngine.GameObject Prefab;
+    public UnityEngine.Sprite Preview;
+    public BuildCostValues Values;
 }
 
 //public class Cargo

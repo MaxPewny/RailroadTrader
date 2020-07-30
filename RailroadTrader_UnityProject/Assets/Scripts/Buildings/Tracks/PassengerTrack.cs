@@ -48,7 +48,7 @@ public class PassengerTrack : Building
     protected override void WriteGDValues()
     {
         base.WriteGDValues();
-        m_BuildCost = values.BuildCost;
+        //m_BuildCost = values.BuildCost;
         UpkeepCost = values.UpkeepCost;
         m_PassangerType = values.PassangerType;
         timeTilArrival = values.TimeTilArrival;

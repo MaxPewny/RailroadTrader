@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 1437609440678030952}
   - component: {fileID: -4386067285775781083}
   - component: {fileID: 5194532433053472230}
-  - component: {fileID: 2389119296980916066}
   m_Layer: 0
   m_Name: CommuterTrack
   m_TagString: Untagged
@@ -190,18 +189,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 2.5, y: 0, z: -4}
   m_TimeToStationary: 0.5
---- !u!114 &2389119296980916066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3355206406345901541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f77ceb3174d5b64089ec63d7636b64f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3858298584840220051
 GameObject:
   m_ObjectHideFlags: 0

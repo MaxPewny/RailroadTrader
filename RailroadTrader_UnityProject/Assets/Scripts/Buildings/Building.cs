@@ -12,7 +12,7 @@ public class Building : MonoBehaviour
     public StoreType m_StoreType;
     public BuildingType m_Type;
     public GameObject m_Model;
-    public int m_BuildCost;
+    //public int m_BuildCost;
     public int UpkeepCost = 25;
     public Transform NPCEnterPoint;
     public Vector3 m_NpcMovePointOffset { get; protected set; }

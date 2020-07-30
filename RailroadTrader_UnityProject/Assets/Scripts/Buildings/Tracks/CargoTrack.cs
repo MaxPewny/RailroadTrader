@@ -31,6 +31,7 @@ public class CargoTrack : Building
     {
         //m_Type = BuildingType.TRAINPLATFORM;
         base.Start();
+        StartCoroutine(TrainArrived());
     }
 
     protected override void Update()
