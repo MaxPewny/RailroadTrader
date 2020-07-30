@@ -13,6 +13,7 @@ public class RessourceController : MonoBehaviour
     public static object mutex = new object();
 
     public static event System.Action OnRefillStores = delegate { };
+    public static event System.Action<Resource, int> OnShopStockChange = delegate { };
 
     void Awake()
     {
@@ -53,6 +54,10 @@ public class RessourceController : MonoBehaviour
         lock (mutex)
         {
             _ressourcesInTracks.Clear();
+            foreach (Resource ressource in (Resource[])Enum.GetValues(typeof(Resource)))
+            {
+                _ressourcesInTracks.Add(ressource, 0);
+            }
         }
     }
 
@@ -60,8 +65,10 @@ public class RessourceController : MonoBehaviour
     {
         lock (mutex)
         {
-            _ressourcesInTracks.Clear();
-            _ressourcesInTracks = newAmount;
+            foreach(KeyValuePair<Resource,int> pair in newAmount)
+            {
+                _ressourcesInTracks[pair.Key] = pair.Value;
+            }
             OnRefillStores();
         }
     }
@@ -117,6 +124,7 @@ public class RessourceController : MonoBehaviour
         lock (mutex)
         {
             _ressourcesInShops[pType] -= pAmount;
+            OnShopStockChange(pType, _ressourcesInShops[pType]);
         }
     }
 
@@ -125,6 +133,7 @@ public class RessourceController : MonoBehaviour
         lock (mutex)
         {
             _ressourcesInShops[pType] += pAmount;
+            OnShopStockChange(pType, _ressourcesInShops[pType]);
         }
     }
 }

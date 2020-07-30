@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ObjectPlacement : MonoBehaviour
 {
@@ -13,9 +14,8 @@ public class ObjectPlacement : MonoBehaviour
     public GameObject m_HighlightCursor;
     public Material m_HighlightMat;
 
-    [ReadOnly, SerializeField]
-    private bool _buildModeActivated = false;
-
+    [SerializeField]
+    public bool BuildModeActivated { get; protected set; }
     private List<Vector2Int> _blockedTiles = new List<Vector2Int>();
 
     // Start is called before the first frame update
@@ -37,13 +37,13 @@ public class ObjectPlacement : MonoBehaviour
 
     protected virtual void DetectMouse()
     {
-        if (Input.GetMouseButtonDown(0) && _buildModeActivated)
+        if (Input.GetMouseButtonDown(0) && BuildModeActivated)
         {
-            if (GridManager.Instance.m_HoveredGridTile != null && !GridManager.Instance.m_HoveredGridTile.IsTileOccupied())
+            if (GridManager.Instance.m_HoveredGridTile != null && !GridManager.Instance.m_HoveredGridTile.IsTileOccupied() && !EventSystem.current.IsPointerOverGameObject())
             {
                 foreach (GridTile tile in GridManager.Instance.Neighbors(GridManager.Instance.m_HoveredGridTile, true, _blockedTiles))
                 {
-                    if (tile.IsTileOccupied()) 
+                    if (tile.IsTileOccupied())
                     {
                         return;
                     }
@@ -55,12 +55,7 @@ public class ObjectPlacement : MonoBehaviour
 
     public virtual void ActivateBuildmode(GameObject pPrefab) 
     {
-        if(_buildModeActivated)
-        {
-            DeactivateBuildmode();
-        }
-
-        _buildModeActivated = true;
+        BuildModeActivated = true;
         m_ObjectPrefab = pPrefab;
         m_HighlightCursor.SetActive(false);
         _modelHolder = Instantiate(m_ObjectPrefab.GetComponent<Building>().m_Model, transform);
@@ -78,7 +73,7 @@ public class ObjectPlacement : MonoBehaviour
     protected virtual void DeactivateBuildmode()
     {
         Destroy(_modelHolder);
-        _buildModeActivated = false;
+        BuildModeActivated = false;
         m_HighlightCursor.SetActive(true);
         _blockedTiles.Clear();        
     }

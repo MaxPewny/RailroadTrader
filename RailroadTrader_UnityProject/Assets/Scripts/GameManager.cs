@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager>
 
     public GameState State { get; protected set; }
     private int startMoney = 1000;
+    public bool BuildModeActive = false;
 
     private void Awake()
     {

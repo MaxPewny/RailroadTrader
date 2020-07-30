@@ -15,7 +15,7 @@ public class OnObjectClicked : MonoBehaviour
 	private void Update()
 	{
 		if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
-		{
+		{         
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit))
@@ -26,21 +26,37 @@ public class OnObjectClicked : MonoBehaviour
 
                 print("clicked on object " + clickedBuilding.gameObject.name);
 
-                switch (clickedBuilding.m_StoreType)
+                if (clickedBuilding.m_StoreType == StoreType.SUPPLYSTORE)
                 {
-                    case StoreType.PLATFORM:
-                        OnCargoTrackClicked();
-                        break;
-                    case StoreType.SUPPLYSTORE:
-                        OnShopClicked(hit.collider.GetComponentInParent<SupplyStores>());
-                        break;
-                    case StoreType.DINGSSTORE:
+                    OnShopClicked(hit.collider.GetComponentInParent<SupplyStores>());
+                    return;
+                }
+                
+                switch (clickedBuilding.m_Type)
+                {                   
+                    case BuildingType.BOOKSTORE:
+                        return;
+                    case BuildingType.FLOWERSTORE:
+                        return;
+                    case BuildingType.TRAVELINFO:
+                        return;
+                    case BuildingType.TRAVELAGENCY:
+                        return;
+                    case BuildingType.HAIRSALON:
+                        return;
+                    case BuildingType.BANK:
+                        return;
+                    case BuildingType.PASSENGERTRAIN:
                         OnPassengerTrackClicked(hit.collider.GetComponentInParent<PassengerTrack>());
-                        break;
+                        return;
+                    case BuildingType.CARGOTRAIN:
+                        OnCargoTrackClicked();
+                        return;
                     default:
-                        break;
+                        Debug.LogError("building type not found: " + clickedBuilding.m_Type.ToString());
+                        return;
                 }
             }
-		}
-	}
+        }
+    }
 }

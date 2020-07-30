@@ -43,6 +43,9 @@ public class BuildMenu : MonoBehaviour
 
     protected virtual void StartBuildMode(GameObject pPrefab, int pCost, StoreType type = StoreType.PLATFORM)
     {
+        if (_placement.BuildModeActivated)
+            return;
+
         if (type == StoreType.SUPPLYSTORE && !BM.CanBuildMoreStores())
         {
             print("cannot build more stores");

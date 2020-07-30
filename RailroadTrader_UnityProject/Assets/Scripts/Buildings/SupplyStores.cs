@@ -11,6 +11,12 @@ public class SupplyStores : Building
         public Resource type;
         public int maxCapacity;
         public int curAmount;
+
+        public BuildingRessource(Resource type, int maxCapacity)
+        {
+            this.type = type;
+            this.maxCapacity = maxCapacity;
+        }
     }
 
     public List<BuildingRessource> m_Ressources;
@@ -36,6 +42,11 @@ public class SupplyStores : Building
         foreach (VisitorStats vs in m_VisitorStats)
         {
             vs.building = m_Type;
+        }
+        foreach(BuildingRessource r in m_Ressources)
+        {
+            r.curAmount = r.maxCapacity;
+            RC.AddToShopRessis(r.type, r.curAmount);
         }
     }
 
@@ -90,6 +101,7 @@ public class SupplyStores : Building
 
         if (visitor.curAmount < visitor.maxCapacity)
         {
+            ManageRessources(1);
             ++visitor.curAmount;
             ++totalGuestCount;
             return true;
@@ -104,7 +116,6 @@ public class SupplyStores : Building
         FC.AddShopIncome(visitor.type, visitor.earningGain);
         //FC.UpdateMonthlyRevenue(visitor.earningGain);
         OnSatisfactionGain(visitor.satisfactionGain);
-        ManageRessources(1);
     }
 
     private VisitorStats VisitorStats(Passanger pType)
@@ -117,7 +128,9 @@ public class SupplyStores : Building
         foreach (BuildingRessource ressi in m_Ressources)
         {
             if (ressi.curAmount == 0)
+            {
                 return false;
+            }
         }
         return true;
     }
@@ -136,6 +149,20 @@ public class SupplyStores : Building
             RC.SubtractFromShopRessis(ressi.type, amount);
         }
     }
+    public void RefillRessources()
+    {
+        foreach (BuildingRessource ressi in m_Ressources)
+        {
+            int amount = ressi.maxCapacity - ressi.curAmount;
+
+            if (RC.TakeRessourceFromCargo(ressi.type, amount) == amount)
+            {
+                ressi.curAmount += amount;
+                RC.AddToShopRessis(ressi.type, amount);
+                //RC.SubtractFromShopRessis(ressi.type, ressi.curAmount);
+            }
+        }
+    }
 
     private void RefillRessources(int amount)
     {
@@ -144,6 +171,7 @@ public class SupplyStores : Building
             if (RC.TakeRessourceFromCargo(ressi.type, amount) == amount)
             {
                 ressi.curAmount += amount;
+                RC.AddToShopRessis(ressi.type, amount);
                 //RC.SubtractFromShopRessis(ressi.type, ressi.curAmount);
             }
         }
@@ -160,8 +188,6 @@ public class SupplyStores : Building
                 RefillRessources(ressi.maxCapacity - ressi.curAmount);
         }
     }
-
-
 
     protected virtual void ResetCapacity()
     {
@@ -191,5 +217,63 @@ public class SupplyStores : Building
             count += vs.curAmount;
         }
         return count;
+    }
+
+    public bool ShopStocksThisResource(Resource type)
+    {
+        foreach(BuildingRessource r in m_Ressources)
+        {
+            if (r.type == type)
+                return true;
+        }
+        return false;
+    }
+
+    public int FoodInStock()
+    {
+        if (!ShopStocksThisResource(Resource.FOOD))
+            return 0;
+
+        return m_Ressources.SingleOrDefault(r => r.type == Resource.FOOD).curAmount;
+    }
+
+    public int FoodMaxCapacity()
+    {
+        if (!ShopStocksThisResource(Resource.FOOD))
+            return 0;
+
+        return m_Ressources.SingleOrDefault(r => r.type == Resource.FOOD).maxCapacity;
+    }
+
+    public int DrinksInStock()
+    {
+        if (!ShopStocksThisResource(Resource.BEVERAGE))
+            return 0;
+
+        return m_Ressources.SingleOrDefault(r => r.type == Resource.BEVERAGE).curAmount;
+    }
+
+    public int DrinksMaxCapacity()
+    {
+        if (!ShopStocksThisResource(Resource.BEVERAGE))
+            return 0;
+
+        return m_Ressources.SingleOrDefault(r => r.type == Resource.BEVERAGE).maxCapacity;
+    }
+
+    public int CargoInStock()
+    {
+        if (!ShopStocksThisResource(Resource.CARGO))
+            return 0;
+
+        return m_Ressources.SingleOrDefault(r => r.type == Resource.CARGO).curAmount;
+    }
+
+    public int CargoMaxCapacity()
+    {
+        if (!ShopStocksThisResource(Resource.CARGO))
+            return 0;
+
+        return m_Ressources.SingleOrDefault(r => r.type == Resource.CARGO).maxCapacity;
     }
 }

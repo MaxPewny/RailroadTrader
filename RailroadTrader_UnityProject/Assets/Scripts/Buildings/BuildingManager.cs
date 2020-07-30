@@ -10,6 +10,7 @@ public class BuildingManager : MonoBehaviour
 
     public static event System.Action<int> OnUpkeepDue = delegate { };
     public static event System.Action<List<CargoTrack>> OnCargoTrackCountChange = delegate { };
+    public static event System.Action<List<SupplyStores>> OnSupplyStoreCountChange = delegate { };
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class BuildingManager : MonoBehaviour
         List<SupplyStores> stores = AllSupplyStores();
         foreach(SupplyStores store in stores)
         {
-
+            store.RefillRessources();
         }
     }
 
@@ -38,6 +39,9 @@ public class BuildingManager : MonoBehaviour
 
         if (building.m_Type == BuildingType.CARGOTRAIN)
             OnCargoTrackCountChange(AllCargoTracks());
+        else if (building.m_StoreType == StoreType.SUPPLYSTORE)
+            OnSupplyStoreCountChange(AllSupplyStores());
+
     }
 
     public void RemoveBuilding(Building building)

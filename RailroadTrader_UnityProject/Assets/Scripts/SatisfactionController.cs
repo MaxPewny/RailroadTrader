@@ -8,13 +8,16 @@ public class SatisfactionController : MonoBehaviour
     private int curSatisfaction;
     [SerializeField]
     private int maxSatisfaction;
+    [SerializeField]
+    private int guestsInStationToday;
 
     public static event System.Action<int> OnSatisfactionPercentageChange = delegate { };
 
     private void Start()
     {
         TimeController.OnDayEnd += ResetSatisfaction;
-        GuestController.OnCurVisiterCountChange += CalculateMaxSatisfaction;
+        GuestController.OnNewVisitorsArrived += RecalculateMaxSatisfaction;
+        RecalculateMaxSatisfaction();
     }
 
     public void ShopBuild(SupplyStores store)
@@ -30,11 +33,14 @@ public class SatisfactionController : MonoBehaviour
     private void ResetSatisfaction()
     {
         curSatisfaction = 0;
+        guestsInStationToday = 0;
+        RecalculateMaxSatisfaction();
     }
 
-    private void CalculateMaxSatisfaction(int curGuestsInStation)
+    private void RecalculateMaxSatisfaction(int arrivingGuests = 0)
     {
-        maxSatisfaction = curGuestsInStation / 3;
+        guestsInStationToday += arrivingGuests;
+        maxSatisfaction = guestsInStationToday > 0 ? guestsInStationToday / 3 : 0;
         OnSatisfactionPercentageChange(SatisfactionPercentage());
     }
 

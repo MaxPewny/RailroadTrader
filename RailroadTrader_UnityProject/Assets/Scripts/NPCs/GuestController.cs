@@ -14,6 +14,7 @@ public class GuestController : MonoBehaviour
     private PassengerStats[] pStats = new PassengerStats[3];
 
     public static event System.Action<int> OnCurVisiterCountChange = delegate { };
+    public static event System.Action<int> OnNewVisitorsArrived = delegate { };
 
     private void Awake()
     {
@@ -41,7 +42,8 @@ public class GuestController : MonoBehaviour
         stat.curAmount += newVisitorCount;
         stat.totalAmount += newVisitorCount;
 
-        OnCurVisiterCountChange(CurGuestsInStation());
+        OnNewVisitorsArrived(newVisitorCount);
+        OnCurVisiterCountChange(newVisitorCount);
     }
 
     private void UpdateCurVisitorCount(Passanger pType)
