@@ -47,6 +47,10 @@ public class ObjectPlacement : MonoBehaviour
                     {
                         return;
                     }
+                    if (tile.gameObject.GetComponent<BuildSpace>().m_StoreType != m_ObjectPrefab.GetComponent<Building>().m_StoreType) 
+                    {
+                        return;
+                    }
                 }
                 PlaceObject();
             }
