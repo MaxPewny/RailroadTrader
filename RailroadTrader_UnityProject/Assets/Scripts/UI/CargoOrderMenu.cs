@@ -45,11 +45,11 @@ public class CargoOrderMenu : MonoBehaviour
         BuildingManager.OnSupplyStoreCountChange += UpdateStockInShop;
         RessourceController.OnShopStockChange += ChangeStockInShops;
         OrderButton.onClick.AddListener(delegate { CheckOrder(); });
-        foreach(ValueInput v in arrowButtons)
-        {
-                v.increaseButton.onClick.AddListener(delegate { ChangeAmountInTextfield(v.amountTxt, +1); });
-                v.decreaseButton.onClick.AddListener(delegate { ChangeAmountInTextfield(v.amountTxt, -1); });
-        }
+        //foreach(ValueInput v in arrowButtons)
+        //{
+        //        v.increaseButton.onClick.AddListener(delegate { ChangeAmountInTextfield(v.amountTxt, +1); });
+        //        v.decreaseButton.onClick.AddListener(delegate { ChangeAmountInTextfield(v.amountTxt, -1); });
+        //}
     }
 
     //Should add amount to the textfield value

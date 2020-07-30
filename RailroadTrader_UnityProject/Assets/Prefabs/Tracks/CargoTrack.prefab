@@ -80,7 +80,6 @@ MonoBehaviour:
   m_StoreType: 0
   m_Type: 14
   m_Model: {fileID: 1054028393516034646}
-  m_BuildCost: 5
   UpkeepCost: 20
   NPCEnterPoint: {fileID: 1482735826439733414}
   m_NpcAmount: 0
