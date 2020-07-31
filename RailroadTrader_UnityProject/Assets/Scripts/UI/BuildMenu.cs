@@ -17,7 +17,7 @@ public class BuildMenu : MonoBehaviour
 
     void Start()
     {
-        for(int i = 0; i < TrackBuildOptions.Length; i++)
+        for (int i = 0; i < TrackBuildOptions.Length; i++)
         {
             BuildOptionValues option = TrackBuildOptions[i];
             option.Button.onClick.AddListener(delegate { StartBuildMode(option.Prefab, option.Values.BuildCost); });
@@ -47,10 +47,11 @@ public class BuildMenu : MonoBehaviour
             return;
         }
 
+        //check if building can be paid for, but do not pay yet
         if (FC.PayBuildingCost(pCost))
         {
-            _placement.ActivateBuildmode(pPrefab);
-        }    
+            _placement.ActivateBuildmode(pPrefab, pCost);
+        }
         else
         {
             print("not enough moneyz");

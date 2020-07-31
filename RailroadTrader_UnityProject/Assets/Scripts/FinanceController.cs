@@ -23,6 +23,7 @@ public class FinanceController : MonoBehaviour
         TimeController.OnMonthEnd += IncreaseMonthCounterByOne;
         BuildingManager.OnUpkeepDue += UpdateMonthlyUpkeep;
         BuildingManager.OnUpkeepDue += SubtractUpkeep;
+        ObjectPlacement.OnBuildingCanceled += ReturnBuildingCosts;
     }
 
     public FinanceOverview CurrentFO()
@@ -91,7 +92,7 @@ public class FinanceController : MonoBehaviour
         OnPassangerSpendMoney(pType, valueToAdd);
     }
 
-public void SubtractUpkeep(int upKeep)
+    public void SubtractUpkeep(int upKeep)
     {
         _currency -= upKeep;
         OnCurrencyValueChange(Currency);
@@ -110,6 +111,13 @@ public void SubtractUpkeep(int upKeep)
         {
             return false;
         }
+    }
+
+    public void ReturnBuildingCosts(int valueToReturn)
+    {
+        _currency += valueToReturn;
+        UpdateMonthlyBuildCosts(-valueToReturn);
+        OnCurrencyValueChange(Currency);
     }
 
     public void UpdateMonthlyIncome(int incomeGain)

@@ -14,9 +14,13 @@ public class ObjectPlacement : MonoBehaviour
     public GameObject m_HighlightCursor;
     public Material m_HighlightMat;
 
+    private int tempBuildCost;
+
     [SerializeField]
     public bool BuildModeActivated { get; protected set; }
     private List<Vector2Int> _blockedTiles = new List<Vector2Int>();
+
+    public static event System.Action<int> OnBuildingCanceled = delegate { };
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +31,8 @@ public class ObjectPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DetectMouse();
+        if (BuildModeActivated)
+            DetectMouse();
     }
 
     protected virtual void SetBuildAreas()
@@ -37,7 +42,7 @@ public class ObjectPlacement : MonoBehaviour
 
     protected virtual void DetectMouse()
     {
-        if (Input.GetMouseButtonDown(0) && BuildModeActivated)
+        if (Input.GetMouseButtonDown(0))
         {
             if (GridManager.Instance.m_HoveredGridTile != null && !GridManager.Instance.m_HoveredGridTile.IsTileOccupied() && !EventSystem.current.IsPointerOverGameObject())
             {
@@ -55,12 +60,17 @@ public class ObjectPlacement : MonoBehaviour
                 PlaceObject();
             }
         }
+        else if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
+        {
+            AbortBuildMode();
+        }
     }
 
-    public virtual void ActivateBuildmode(GameObject pPrefab) 
+    public virtual void ActivateBuildmode(GameObject pPrefab, int pCost) 
     {
         BuildModeActivated = true;
         m_ObjectPrefab = pPrefab;
+        tempBuildCost = pCost;
         m_HighlightCursor.SetActive(false);
         _modelHolder = Instantiate(m_ObjectPrefab.GetComponent<Building>().m_Model, transform);
 
@@ -77,9 +87,15 @@ public class ObjectPlacement : MonoBehaviour
     protected virtual void DeactivateBuildmode()
     {
         Destroy(_modelHolder);
-        BuildModeActivated = false;
-        m_HighlightCursor.SetActive(true);
         _blockedTiles.Clear();        
+        m_HighlightCursor.SetActive(true);
+        BuildModeActivated = false;
+    }
+
+    protected virtual void AbortBuildMode()
+    {
+        OnBuildingCanceled(tempBuildCost);
+        DeactivateBuildmode();
     }
 
     protected virtual void PlaceObject() 

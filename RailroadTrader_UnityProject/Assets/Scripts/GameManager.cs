@@ -30,5 +30,4 @@ public class GameManager : Singleton<GameManager>
     {
         State = newState;
     }
-
 }

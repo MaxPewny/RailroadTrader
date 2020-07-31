@@ -37,7 +37,7 @@ public class ShopBuildMenu : MonoBehaviour
     {
         if (FC.PayBuildingCost(pCost))
         {
-            _placement.ActivateBuildmode(pPrefab);
+            _placement.ActivateBuildmode(pPrefab, pCost);
         }
         else
         {
