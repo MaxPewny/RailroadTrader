@@ -263,7 +263,7 @@ MonoBehaviour:
   totalGuestCount: 0
   m_BlockedTilesXZ: []
   BlockedXTiles: 5
-  BlockedZTiles: 3
+  BlockedZTiles: 4
   values: {fileID: 11400000, guid: 54cc8c168b665e247899eb796ac6b129, type: 2}
   m_Ressources:
   - type: 0

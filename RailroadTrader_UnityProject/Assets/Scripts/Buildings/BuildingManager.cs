@@ -9,6 +9,7 @@ public class BuildingManager : MonoBehaviour
 
     private int maxShopAmount = 10;
     private int waxTrackAmount = 6;
+    private int upkeepPerCargotrack = 10;
     public List<Building> m_Buildings { get; protected set; }
 
     public static event System.Action<int> OnUpkeepDue = delegate { };
@@ -20,6 +21,7 @@ public class BuildingManager : MonoBehaviour
         m_Buildings = new List<Building>();
         maxShopAmount = values.MaxShopAmount;
         waxTrackAmount = values.MaxTrackAmount;
+        upkeepPerCargotrack = values.CargoUpkeepCost;
     }
 
     private void Start()
@@ -66,7 +68,14 @@ public class BuildingManager : MonoBehaviour
         int sum = 0;
         foreach(Building b in m_Buildings)
         {
-            sum += b.UpkeepCost;
+            if (b.m_Type == BuildingType.CARGOTRAIN)
+            {
+                sum += upkeepPerCargotrack;
+            }
+            else
+            {
+                sum += b.UpkeepCost;
+            }
         }
         print("pay upkeep for this day: "+sum);
         return sum;

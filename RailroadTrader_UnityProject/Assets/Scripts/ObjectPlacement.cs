@@ -22,13 +22,11 @@ public class ObjectPlacement : MonoBehaviour
 
     public static event System.Action<int> OnBuildingCanceled = delegate { };
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        DeactivateBuildmode();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (BuildModeActivated)
@@ -75,7 +73,8 @@ public class ObjectPlacement : MonoBehaviour
         BuildModeActivated = true;
         m_ObjectPrefab = pPrefab;
         tempBuildCost = pCost;
-        m_HighlightCursor.SetActive(false);
+        Cursor.visible = false;
+        m_HighlightCursor.SetActive(true);
         _modelHolder = Instantiate(m_ObjectPrefab.GetComponent<Building>().m_Model, transform);
 
         for (int i = 0; i <= m_ObjectPrefab.GetComponent<Building>().BlockedXTiles; i++)
@@ -92,7 +91,8 @@ public class ObjectPlacement : MonoBehaviour
     {
         Destroy(_modelHolder);
         _blockedTiles.Clear();        
-        m_HighlightCursor.SetActive(true);
+        m_HighlightCursor.SetActive(false);
+        Cursor.visible = true;
         BuildModeActivated = false;
     }
 

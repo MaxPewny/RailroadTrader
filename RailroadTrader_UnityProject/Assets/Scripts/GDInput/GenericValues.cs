@@ -16,6 +16,8 @@ public class GenericValues : ScriptableObject
     public int StartMoney = 1000;
 
     [Header("Cargo specific values")]
+    [Tooltip("How much upkeep one cargo one track costs per hour")]
+    public int CargoUpkeepCost = 10;    
     [Tooltip("How much cargo one track can carry in t")]
     public int CargoAmountPerTrack = 15;
     [Tooltip("How long it takes for cargo to arrive in seconds")]

@@ -187,7 +187,7 @@ MonoBehaviour:
   - {x: 0, y: 1}
   - {x: 1, y: 1}
   BlockedXTiles: 12
-  BlockedZTiles: 3
+  BlockedZTiles: 4
   values: {fileID: 11400000, guid: de0af2030277871498b83b1e24835ef4, type: 2}
   m_Ressources: []
   m_VisitorStats:

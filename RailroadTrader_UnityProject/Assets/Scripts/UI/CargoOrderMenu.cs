@@ -129,7 +129,6 @@ public class CargoOrderMenu : MonoBehaviour
         maxCargoInShops.text = cargo.ToString();
     }
 
-
     private void CheckOrder()
     {
         int food = 0;
