@@ -70,7 +70,7 @@ public class ObjectPlacement : MonoBehaviour
 
     public virtual void ActivateBuildmode(GameObject pPrefab, int pCost) 
     {
-        BuildModeActivated = true;
+        GameManager.Instance.BuildModeActive = BuildModeActivated = true;
         m_ObjectPrefab = pPrefab;
         tempBuildCost = pCost;
         Cursor.visible = false;
@@ -93,7 +93,7 @@ public class ObjectPlacement : MonoBehaviour
         _blockedTiles.Clear();        
         m_HighlightCursor.SetActive(false);
         Cursor.visible = true;
-        BuildModeActivated = false;
+        GameManager.Instance.BuildModeActive = BuildModeActivated = false;
     }
 
     protected virtual void AbortBuildMode()

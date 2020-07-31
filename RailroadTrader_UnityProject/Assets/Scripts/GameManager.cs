@@ -7,9 +7,10 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     protected GameManager() { }
+    public bool UIElementOpen = false;
+    public bool BuildModeActive = false;
     
     public GameState State { get; protected set; }
-    public bool BuildModeActive = false;
 
     private void Awake()
     {

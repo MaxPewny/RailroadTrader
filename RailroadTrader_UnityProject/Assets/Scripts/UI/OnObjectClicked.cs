@@ -11,9 +11,15 @@ public class OnObjectClicked : MonoBehaviour
 	public static event System.Action OnCargoTrackClicked = delegate { };
 	public static event System.Action<SupplyStores> OnShopClicked = delegate { };
 	public static event System.Action<PassengerTrack> OnPassengerTrackClicked = delegate { };
+	public static event System.Action OnAnyTileClicked = delegate { };
 
 	private void Update()
 	{
+        //dont check if build mode is active
+        if (GameManager.Instance.BuildModeActive)
+            return;
+
+        //left mouse click and mouse is not over any UI elements
 		if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
 		{         
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -22,7 +28,10 @@ public class OnObjectClicked : MonoBehaviour
 			{
 				Building clickedBuilding = hit.collider.GetComponentInParent<Building>();
 				if (clickedBuilding == null)
+                {
+                    OnAnyTileClicked();
 					return;
+                }
 
                 print("clicked on object " + clickedBuilding.gameObject.name);
 
@@ -34,18 +43,18 @@ public class OnObjectClicked : MonoBehaviour
                 
                 switch (clickedBuilding.m_Type)
                 {                   
-                    case BuildingType.BOOKSTORE:
-                        return;
-                    case BuildingType.FLOWERSTORE:
-                        return;
-                    case BuildingType.TRAVELINFO:
-                        return;
-                    case BuildingType.TRAVELAGENCY:
-                        return;
-                    case BuildingType.HAIRSALON:
-                        return;
-                    case BuildingType.BANK:
-                        return;
+                    //case BuildingType.BOOKSTORE:
+                    //    return;
+                    //case BuildingType.FLOWERSTORE:
+                    //    return;
+                    //case BuildingType.TRAVELINFO:
+                    //    return;
+                    //case BuildingType.TRAVELAGENCY:
+                    //    return;
+                    //case BuildingType.HAIRSALON:
+                    //    return;
+                    //case BuildingType.BANK:
+                    //    return;
                     case BuildingType.PASSENGERTRAIN:
                         OnPassengerTrackClicked(hit.collider.GetComponentInParent<PassengerTrack>());
                         return;
@@ -53,6 +62,7 @@ public class OnObjectClicked : MonoBehaviour
                         OnCargoTrackClicked();
                         return;
                     default:
+                        OnAnyTileClicked();
                         Debug.LogError("building type not found: " + clickedBuilding.m_Type.ToString());
                         return;
                 }
