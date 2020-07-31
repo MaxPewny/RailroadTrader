@@ -257,7 +257,6 @@ MonoBehaviour:
   m_StoreType: 1
   m_Type: 2
   m_Model: {fileID: 430301078074107915}
-  m_BuildCost: 300
   UpkeepCost: 50
   NPCEnterPoint: {fileID: 4236627138288288619}
   m_NpcAmount: 0
@@ -266,8 +265,8 @@ MonoBehaviour:
   - {x: 1, y: 0}
   - {x: 0, y: 1}
   - {x: 1, y: 1}
-  BlockedXTiles: 5
-  BlockedZTiles: 4
+  BlockedXTiles: 8
+  BlockedZTiles: 3
   values: {fileID: 11400000, guid: f6768d71c4d4d1c4681bf89a138f0f2e, type: 2}
   m_Ressources: []
   m_VisitorStats:
@@ -298,7 +297,7 @@ GameObject:
   - component: {fileID: 6632962493606739164}
   - component: {fileID: 3900468489881291493}
   - component: {fileID: 4062901830672291260}
-  - component: {fileID: 8571959224040551107}
+  - component: {fileID: 7693689190912121489}
   m_Layer: 0
   m_Name: Collider
   m_TagString: BuildingModel
@@ -367,8 +366,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8571959224040551107
-MeshCollider:
+--- !u!65 &7693689190912121489
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -377,7 +376,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

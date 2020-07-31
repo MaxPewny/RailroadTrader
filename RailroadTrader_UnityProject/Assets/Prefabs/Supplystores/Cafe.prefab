@@ -269,7 +269,6 @@ MonoBehaviour:
   m_StoreType: 1
   m_Type: 1
   m_Model: {fileID: 7410959199154764456}
-  m_BuildCost: 700
   UpkeepCost: 20
   NPCEnterPoint: {fileID: 4814570535728479057}
   m_NpcAmount: 0
@@ -278,8 +277,8 @@ MonoBehaviour:
   - {x: 1, y: 0}
   - {x: 0, y: 1}
   - {x: 1, y: 1}
-  BlockedXTiles: 7
-  BlockedZTiles: 4
+  BlockedXTiles: 5
+  BlockedZTiles: 3
   values: {fileID: 11400000, guid: fe6cfd9c0d830e14c8cebc8237f99c8c, type: 2}
   m_Ressources: []
   m_VisitorStats:
