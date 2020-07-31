@@ -160,14 +160,13 @@ MonoBehaviour:
   m_StoreType: 0
   m_Type: 13
   m_Model: {fileID: 7281661845237950186}
-  m_BuildCost: 30
   UpkeepCost: 10
   NPCEnterPoint: {fileID: 5384868337621706794}
   m_NpcAmount: 10
   totalGuestCount: 0
   m_BlockedTilesXZ: []
-  BlockedXTiles: 0
-  BlockedZTiles: 5
+  BlockedXTiles: 5
+  BlockedZTiles: 0
   values: {fileID: 11400000, guid: 86ddc0b3577c0c64a9352e71cef5e398, type: 2}
   m_PassangerType: 0
   timeTilArrival: 5

@@ -85,8 +85,8 @@ MonoBehaviour:
   m_NpcAmount: 0
   totalGuestCount: 0
   m_BlockedTilesXZ: []
-  BlockedXTiles: 0
-  BlockedZTiles: 5
+  BlockedXTiles: 5
+  BlockedZTiles: 0
   anim: {fileID: 2440698257578022291}
 --- !u!208 &7064979181820133596
 NavMeshObstacle:
