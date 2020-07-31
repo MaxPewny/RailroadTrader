@@ -46,7 +46,11 @@ public class ObjectPlacement : MonoBehaviour
         {
             if (GridManager.Instance.m_HoveredGridTile != null && !GridManager.Instance.m_HoveredGridTile.IsTileOccupied() && !EventSystem.current.IsPointerOverGameObject())
             {
-                foreach (GridTile tile in GridManager.Instance.Neighbors(GridManager.Instance.m_HoveredGridTile, true, _blockedTiles))
+                List<GridTile> neighbors = GridManager.Instance.Neighbors(GridManager.Instance.m_HoveredGridTile, true, _blockedTiles);
+
+                if (neighbors.Count < _blockedTiles.Count - 1) return;
+
+                foreach (GridTile tile in neighbors)
                 {
                     if (tile.IsTileOccupied())
                     {
