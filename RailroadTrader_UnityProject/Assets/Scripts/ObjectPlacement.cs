@@ -73,7 +73,7 @@ public class ObjectPlacement : MonoBehaviour
         GameManager.Instance.BuildModeActive = BuildModeActivated = true;
         m_ObjectPrefab = pPrefab;
         tempBuildCost = pCost;
-        Cursor.visible = false;
+        //Cursor.visible = false;
         m_HighlightCursor.SetActive(true);
         _modelHolder = Instantiate(m_ObjectPrefab.GetComponent<Building>().m_Model, transform);
 
@@ -92,7 +92,7 @@ public class ObjectPlacement : MonoBehaviour
         Destroy(_modelHolder);
         _blockedTiles.Clear();        
         m_HighlightCursor.SetActive(false);
-        Cursor.visible = true;
+        //Cursor.visible = true;
         GameManager.Instance.BuildModeActive = BuildModeActivated = false;
     }
 
