@@ -168,9 +168,12 @@ MonoBehaviour:
   BlockedXTiles: 5
   BlockedZTiles: 0
   values: {fileID: 11400000, guid: 86ddc0b3577c0c64a9352e71cef5e398, type: 2}
+  TrainName: City train
   m_PassangerType: 0
   timeTilArrival: 5
-  passedTime: 0
+  passedArrivalTime: 0
+  passedDepartureTime: 0
+  timeTilDeparture: 10
   anim: {fileID: 5029391170590305336}
 --- !u!208 &5194532433053472230
 NavMeshObstacle:

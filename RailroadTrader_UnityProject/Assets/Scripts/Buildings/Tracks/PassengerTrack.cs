@@ -5,6 +5,7 @@ using UnityEngine;
 public class PassengerTrack : Building
 {
     public PassengerTrackValues values;
+    public string TrainName;
 
     public Passanger m_PassangerType = Passanger.COMMUTER;
     public bool inStation { get; protected set; }
@@ -12,12 +13,12 @@ public class PassengerTrack : Building
     [SerializeField]
     private float timeTilArrival = 45.0f;
     [SerializeField]
-    private float passedArrivalTime = 0.0f;
+    private float passedArrivalTime = 0.00f;
     [SerializeField]
-    private float passedDepartureTime = 0.0f;
+    private float passedDepartureTime = 0.00f;
     [SerializeField]
     private float timeTilDeparture = 10.0f;
-    private float trainAnimTime = 2.0f;
+    private float trainAnimTime = 1.0f;
     [SerializeField]
     private Animator anim;
        
@@ -44,7 +45,7 @@ public class PassengerTrack : Building
 
         if (!inStation)
             ArrivalTimer();
-        else if (inStation)
+        else
             DepartureTimer();
 
         //if (Input.GetKeyDown("s"))
@@ -54,16 +55,34 @@ public class PassengerTrack : Building
         //}
     }
 
-    //public int CurArrivalTime()
-    //{
+    public float CurArrivalTime()
+    {
 
-    
-    //}
+        if (!inStation)
+        {
+            //train is gone
+            return timeTilArrival - passedArrivalTime;
+        }
+        else
+        {
+            //train is there
+            return 0.00f;
+        }
+    }
 
-    //public int CurDepartureTime()
-    //{
-    //    timeTilDeparture + trainAnimTime
-    //}
+    public float CurDepartureTime()
+    {
+        if (!inStation)
+        {
+            //train is gone
+            return 0.00f;
+        }
+        else 
+        {
+            //train is there
+            return timeTilDeparture - passedDepartureTime;
+        }
+    }
 
     protected override void WriteGDValues()
     {
@@ -80,7 +99,7 @@ public class PassengerTrack : Building
         if (passedArrivalTime >= timeTilArrival)
         {
             inStation = true;
-            passedArrivalTime = 0.0f;
+            passedArrivalTime = 0.00f;
             StartCoroutine(TrainArrived());
         }
     }
@@ -91,8 +110,8 @@ public class PassengerTrack : Building
         if (passedDepartureTime >= timeTilDeparture)
         {
             inStation = false;
-            passedArrivalTime = 0.0f;
-            StartCoroutine(TrainArrived());
+            passedDepartureTime = 0.00f;
+            StartCoroutine(TrainLeaves());
         }
     }
 
@@ -101,16 +120,21 @@ public class PassengerTrack : Building
         //start train enter anim
         //wait for it to finish
         anim.SetTrigger("enter");
-        yield return new WaitForSeconds(1.0f);        
+        yield return new WaitForSeconds(trainAnimTime + 0.25f);
+ 
         //switch to open doors
         //wait a moment     
         StartCoroutine(NPCs.SpawnNpcGroup(m_NpcAmount, m_PassangerType, m_NpcMovePoint));
-        yield return new WaitForSeconds(timeTilDeparture);        
+        //yield return new WaitForSeconds(timeTilDeparture);        
         //wait for the spawn to finish
         //start train exit anim
         //wait for it to finish
+    }
+
+    private IEnumerator TrainLeaves()
+    {
         anim.SetTrigger("exit");
-        yield return new WaitForSeconds(1.0f);  
+        yield return new WaitForSeconds(1.0f);
         inStation = false;
     }
 }

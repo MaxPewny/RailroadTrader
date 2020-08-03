@@ -15,7 +15,7 @@ public class MenuController : MonoBehaviour
     {
         OnObjectClicked.OnAnyTileClicked += CloseAllMenus;
         OnObjectClicked.OnCargoTrackClicked += CloseMenusExceptCargo;
-        //OnObjectClicked.OnPassengerTrackClicked
+        OnObjectClicked.OnPassengerTrackClicked += CloseMenusExceptPTracks;
         //OnObjectClicked.OnShopClicked
     }
 
@@ -37,5 +37,12 @@ public class MenuController : MonoBehaviour
         ShopBuildMenu.SetActive(false);
         TrackBuildMenu.SetActive(false);
     }
-
+    private void CloseMenusExceptPTracks(PassengerTrack track)
+    {
+        StationManagementMenu.SetActive(false);
+        ShopInfoMenu.SetActive(false);
+        CargoOrderMenu.SetActive(false);
+        ShopBuildMenu.SetActive(false);
+        TrackBuildMenu.SetActive(false);
+    }
 }
