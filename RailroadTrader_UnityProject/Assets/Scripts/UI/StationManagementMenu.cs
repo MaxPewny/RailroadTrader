@@ -62,6 +62,48 @@ public class StationManagementMenu : MonoBehaviour
         FM.WriteCurrentOverview(FOs[0]);
         FM.WriteLastOverview(FOs[1]);
         FM.WriteTotalOverview(FOs[2]);
+
+        FM.WriteIncomeGraph(FC.YearOverview());
+    }
+
+    public void OnFinanceIncomeButton()
+    {
+        FinanceOverview[] FOs = FC.WholeOverview();
+        FM.WriteCurrentOverview(FOs[0]);
+        FM.WriteLastOverview(FOs[1]);
+        FM.WriteTotalOverview(FOs[2]);
+
+        FM.WriteIncomeGraph(FC.YearOverview());
+    }
+
+    public void OnFinanceUpkeepButton()
+    {
+        FinanceOverview[] FOs = FC.WholeOverview();
+        FM.WriteCurrentOverview(FOs[0]);
+        FM.WriteLastOverview(FOs[1]);
+        FM.WriteTotalOverview(FOs[2]);
+
+        FM.WriteUpkeepGraph(FC.YearOverview());
+    }
+
+    public void OnFinanceRevenueButton()
+    {
+        FinanceOverview[] FOs = FC.WholeOverview();
+        FM.WriteCurrentOverview(FOs[0]);
+        FM.WriteLastOverview(FOs[1]);
+        FM.WriteTotalOverview(FOs[2]);
+
+        FM.WriteRevenueGraph(FC.YearOverview());
+    }
+
+    public void OnFinanceBuildCostsButton()
+    {
+        FinanceOverview[] FOs = FC.WholeOverview();
+        FM.WriteCurrentOverview(FOs[0]);
+        FM.WriteLastOverview(FOs[1]);
+        FM.WriteTotalOverview(FOs[2]);
+
+        FM.WriteBuildGraph(FC.YearOverview());
     }
 
     public void OnGuestOverview()

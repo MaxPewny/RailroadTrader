@@ -9,6 +9,7 @@ public class FinanceController : MonoBehaviour
     //int is the number of the month, starting with 1 for the first obv
     private Dictionary<int, FinanceOverview> monthlyFinances = new Dictionary<int, FinanceOverview>();
     private int curFinanceID = 0;
+    private int curYearID = 1;
 
     public static event System.Action<int> OnCurrencyValueChange = delegate { };
     public static event System.Action<Passanger, int> OnPassangerSpendMoney = delegate { };
@@ -39,7 +40,20 @@ public class FinanceController : MonoBehaviour
         FOs[1] = GetFinances(curFinanceID - 1);
         FOs[2] = TotalFinances();
         return FOs;
-    }    
+    }
+    public List<FinanceOverview> YearOverview()
+    {
+        List<FinanceOverview> FOs = new List<FinanceOverview>();
+        int curMonth = curFinanceID / curYearID;
+        UpdateMonthlySum();
+        for (int i = 1; i <= curMonth; i++)
+        {
+            FinanceOverview FO = new FinanceOverview();
+            FO = GetFinances(i);
+            FOs.Add(FO);
+        }
+        return FOs;
+    }
 
     //Gets the current FinanceOverview for THIS month
     private FinanceOverview GetFinances()
@@ -76,6 +90,10 @@ public class FinanceController : MonoBehaviour
     public void IncreaseMonthCounterByOne()
     {
         curFinanceID += 1;
+        if (curFinanceID / curYearID > 12)
+        {
+            ++curYearID;
+        }
         monthlyFinances.Add(curFinanceID, new FinanceOverview());
         UpdateMonthlySum();
     }

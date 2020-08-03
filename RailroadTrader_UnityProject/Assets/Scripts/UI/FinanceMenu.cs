@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class FinanceMenu : MonoBehaviour
@@ -35,6 +36,18 @@ public class FinanceMenu : MonoBehaviour
     public Text ShopRevTT;
     public Text UpkeepTT;
     public Text SumTT;
+
+    [Header("Finance Overview: Income Graphs")]
+    public List<Slider> IncomeGraphs = new List<Slider>();
+
+    [Header("Finance Overview: Upkeep Graphs")]
+    public List<Slider> UpkeepGraphs = new List<Slider>();
+
+    [Header("Finance Overview: Revenue Graphs")]
+    public List<Slider> RevenueGraphs = new List<Slider>();
+
+    [Header("Finance Overview: Buildcost Graphs")]
+    public List<Slider> BuildGraphs = new List<Slider>();
 
     public void WriteToolTipFinances(FinanceOverview FO)
     {
@@ -79,4 +92,94 @@ public class FinanceMenu : MonoBehaviour
         BuildCostsTotal.text = FO.monthlyBuildCosts.ToString() + " €";
         SumTotal.text = FO.monthlySum.ToString() + " €";
     }
+
+    public void WriteIncomeGraph(List<FinanceOverview> FOs)
+    {
+        for (int i = 0; i < 12; i++)
+        {
+            if (i >= FOs.Count)
+            {
+                IncomeGraphs[i].value = 0;
+            }
+            else 
+            {
+                if(IncomeGraphs[i].maxValue < FOs[i].monthlyIncome) 
+                {
+                    IncomeGraphs[i].value = IncomeGraphs[i].maxValue;
+                }
+                else
+                {
+                    IncomeGraphs[i].maxValue = FOs[i].monthlyIncome;
+                }
+            }
+        }
+    }
+
+    public void WriteUpkeepGraph(List<FinanceOverview> FOs)
+    {
+        for (int i = 0; i < 12; i++)
+        {
+            if (i >= FOs.Count)
+            {
+                UpkeepGraphs[i].value = 0;
+            }
+            else
+            {
+                if (UpkeepGraphs[i].maxValue < FOs[i].monthlyUpkeep)
+                {
+                    UpkeepGraphs[i].value = UpkeepGraphs[i].maxValue;
+                }
+                else
+                {
+                    UpkeepGraphs[i].maxValue = FOs[i].monthlyUpkeep;
+                }
+            }
+        }
+    }
+
+    public void WriteRevenueGraph(List<FinanceOverview> FOs)
+    {
+        for (int i = 0; i < 12; i++)
+        {
+            if (i >= FOs.Count)
+            {
+                RevenueGraphs[i].value = 0;
+            }
+            else
+            {
+                if (RevenueGraphs[i].maxValue < FOs[i].monthlyRevenue)
+                {
+                    RevenueGraphs[i].value = RevenueGraphs[i].maxValue;
+                }
+                else
+                {
+                    RevenueGraphs[i].maxValue = FOs[i].monthlyRevenue;
+                }
+            }
+        }
+    }
+
+    public void WriteBuildGraph(List<FinanceOverview> FOs)
+    {
+        for (int i = 0; i < 12; i++)
+        {
+            if (i >= FOs.Count)
+            {
+                BuildGraphs[i].value = 0;
+            }
+            else
+            {
+                if (BuildGraphs[i].maxValue < FOs[i].monthlyBuildCosts)
+                {
+                    BuildGraphs[i].value = BuildGraphs[i].maxValue;
+                }
+                else
+                {
+                    BuildGraphs[i].maxValue = FOs[i].monthlyBuildCosts;
+                }
+            }
+        }
+    }
+
+
 }
