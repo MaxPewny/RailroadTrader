@@ -26,6 +26,8 @@ public class TimeController : MonoBehaviour
         CurTime = new IngameTime(0, 1, 1, 1);
         OnHourChange(CurTime);
         realTimePerHour = values.RealTimeSecsPerHour;
+
+        FinanceController.GetCurTime += CurrentTime;
     }
 
     private void Update()

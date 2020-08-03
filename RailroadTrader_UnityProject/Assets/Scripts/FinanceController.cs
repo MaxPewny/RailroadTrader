@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FinanceController : MonoBehaviour
@@ -14,6 +15,8 @@ public class FinanceController : MonoBehaviour
     public static event System.Action<int> OnCurrencyValueChange = delegate { };
     public static event System.Action<Passanger, int> OnPassangerSpendMoney = delegate { };
 
+    public static Func<IngameTime> GetCurTime = delegate { return null; };
+
     private void Awake()
     {
         IncreaseMonthCounterByOne();
@@ -25,6 +28,17 @@ public class FinanceController : MonoBehaviour
         BuildingManager.OnUpkeepDue += UpdateMonthlyUpkeep;
         BuildingManager.OnUpkeepDue += SubtractUpkeep;
         ObjectPlacement.OnBuildingCanceled += ReturnBuildingCosts;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {            
+            IngameTime time = GetCurTime();
+            if (time == null)
+                return;
+            print("FC knows it is currently the "+time.month + ". month");
+        }
     }
 
     public FinanceOverview CurrentFO()
