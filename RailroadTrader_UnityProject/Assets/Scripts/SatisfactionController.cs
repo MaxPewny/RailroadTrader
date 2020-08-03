@@ -40,7 +40,7 @@ public class SatisfactionController : MonoBehaviour
     private void RecalculateMaxSatisfaction(int arrivingGuests = 0)
     {
         guestsInStationToday += arrivingGuests;
-        maxSatisfaction = guestsInStationToday > 0 ? guestsInStationToday / 3 : 0;
+        maxSatisfaction = guestsInStationToday * 3;
         OnSatisfactionPercentageChange(SatisfactionPercentage());
     }
 
@@ -57,8 +57,8 @@ public class SatisfactionController : MonoBehaviour
         else if (maxSatisfaction <= curSatisfaction)
             return 100;
 
-        float percentage = (float)maxSatisfaction /((float)curSatisfaction / (float)maxSatisfaction);
-        //print("float % = " + percentage);
+        float percentage = ((float)curSatisfaction / (float)maxSatisfaction) * 100.0f;
+        print("float % = " + percentage);
         return Mathf.RoundToInt(percentage) >= 100 ? 100 : Mathf.RoundToInt(percentage);
     }
 }

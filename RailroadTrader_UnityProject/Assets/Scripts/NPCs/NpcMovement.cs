@@ -7,30 +7,7 @@ using UnityEngine.AI;
 
 public class NpcMovement: MonoBehaviour
 {
-    [System.Serializable]
-    public struct MovementProbabilities 
-    {
-        public Passanger type;
-        public float eatProb;
-        public float drinkProb;
-
-        public float bakeryProb;
-        public float cafeProb;
-        public float pubProb;
-        public float barProb;
-        public float loungeProb;
-        public float restaurantProb;
-        public float highRestaurantProb;
-        
-        public float shopProb;
-         
-        public float bookstoreProb;
-        public float flowerstoreProb;
-        public float travelInfoProb;
-        public float travelAgencyProb;
-        public float hairSalonProb;
-        public float bankProb;
-    }
+    public NPCShopProbabilityValues values;
 
     public class StoreInfo
     {
@@ -76,21 +53,25 @@ public class NpcMovement: MonoBehaviour
     //private List<NavMeshAgent> _npcAgents;
 
     // Singleton
-    protected static NpcMovement _instance = null;
-    public static NpcMovement Instance
-    {
-        get
-        {
-            if (_instance == null) { _instance = FindObjectOfType<NpcMovement>(); }
-            return _instance;
-        }
-        protected set { _instance = value; }
-    }
+    //protected static NpcMovement _instance = null;
+    //public static NpcMovement Instance
+    //{
+    //    get
+    //    {
+    //        if (_instance == null) { _instance = FindObjectOfType<NpcMovement>(); }
+    //        return _instance;
+    //    }
+    //    protected set { _instance = value; }
+    //}
 
     // Start is called before the first frame update
     void Start()
     {
         _buildingManager = FindObjectOfType<BuildingManager>();
+        //TODO get values for npc movement probabilty 
+        _movementProbabilities.Add(values.CommuterVisitValues);
+        _movementProbabilities.Add(values.BusinessVisitValues);
+        _movementProbabilities.Add(values.TouristVisitValues);
     }
 
     //private void TrainArrived()

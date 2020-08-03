@@ -145,3 +145,56 @@ public class BuildOptionValues
 //    public Cargo(Resource type, )
 //}
 
+[System.Serializable]
+public class MovementProbabilities
+{
+    public Passanger type { get; protected set; }
+
+    [UnityEngine.Tooltip("Eating probability")]
+    [UnityEngine.Range(0.0f, 1.0f)]
+    public float eatProb = 0.75f;
+    [UnityEngine.Tooltip("Drinking probability")]
+    [UnityEngine.Range(0.0f, 1.0f)]
+    public float drinkProb = 0.75f;
+
+    [UnityEngine.Header("Specific shop probabilities")]
+    [UnityEngine.Tooltip("Bakery visit probability")]
+    [UnityEngine.Range(0.0f, 1.0f)]
+    public float bakeryProb = 0.75f;
+    [UnityEngine.Tooltip("Cafe visit probability")]
+    [UnityEngine.Range(0.0f, 1.0f)]
+    public float cafeProb = 0.75f;
+    [UnityEngine.Tooltip("Pub visit probability")]
+    [UnityEngine.Range(0.0f, 1.0f)]
+    public float pubProb = 0.75f;
+    [UnityEngine.Tooltip("Bar visit probability")]
+    [UnityEngine.Range(0.0f, 1.0f)]
+    public float barProb = 0.75f;
+    [UnityEngine.Tooltip("Lounge visit probability")]
+    [UnityEngine.Range(0.0f, 1.0f)]
+    public float loungeProb = 0.75f;
+    [UnityEngine.Tooltip("Restaurant visit probability")]
+    [UnityEngine.Range(0.0f, 1.0f)]
+    public float restaurantProb = 0.75f;
+    [UnityEngine.Tooltip("5-Star Restaurant visit probability")]
+    [UnityEngine.Range(0.0f, 1.0f)]
+    public float highRestaurantProb = 0.75f;
+
+    //public float shopProb;
+    //public float bookstoreProb;
+    //public float flowerstoreProb;
+    //public float travelInfoProb;
+    //public float travelAgencyProb;
+    //public float hairSalonProb;
+    //public float bankProb;
+
+    public MovementProbabilities()
+    {
+
+    }
+
+    public MovementProbabilities(Passanger type)
+    {
+        this.type = type;
+    }
+}
