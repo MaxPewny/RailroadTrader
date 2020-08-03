@@ -11,9 +11,7 @@ public class TimeController : MonoBehaviour
     [Tooltip("Order: paused, normal, fast, super fast")]
     public float[] ingameSpeed = new float[4];
     
-    public int CurMonth { get; protected set; }
-
-    private IngameTime curTime;
+    public IngameTime CurTime { get; protected set; }
     private float passedTime = 0.0f;
 
     public static event System.Action<IngameTime> OnHourChange = delegate { };
@@ -21,13 +19,12 @@ public class TimeController : MonoBehaviour
     public static event System.Action OnDayEnd = delegate { };
     public static event System.Action OnMonthEnd = delegate { };
     public static event System.Action OnYearEnd = delegate { };
-    
+
 
     private void Start()
     {
-        curTime = new IngameTime(0, 1, 1, 1);
-        CurMonth = 1;
-        OnHourChange(curTime);
+        CurTime = new IngameTime(0, 1, 1, 1);
+        OnHourChange(CurTime);
         realTimePerHour = values.RealTimeSecsPerHour;
     }
 
@@ -51,21 +48,19 @@ public class TimeController : MonoBehaviour
     
     private void AddHours(int hoursToAdd = 1)
     {
-        if (curTime.ChangeDay())
+        if (CurTime.ChangeDay())
         {
             OnDayEnd();
-            if (curTime.ChangeMonth())
+            if (CurTime.ChangeMonth())
             {
                 OnMonthEnd();
-                ++CurMonth;
-                if (curTime.ChangeYear())
+                if (CurTime.ChangeYear())
                 {
                     OnYearEnd();
-                    CurMonth = 1;
                 }
             }
         }
-        OnHourChange(curTime);
+        OnHourChange(CurTime);
     }
 
     private int StartNextDay()
@@ -94,8 +89,8 @@ public class TimeController : MonoBehaviour
 
     }
 
-    public IngameTime CurTime()
+    public IngameTime CurrentTime()
     {
-        return curTime;
+        return CurTime;
     }
 }
