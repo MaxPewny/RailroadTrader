@@ -81,7 +81,7 @@ public class VisitorStats
     public int satisfactionGain;
     [UnityEngine.Tooltip("Currently in this building")]
     [ReadOnly]
-    public int curAmount;
+    public int curAmount = 0;
 }
 
 public class PassengerStats

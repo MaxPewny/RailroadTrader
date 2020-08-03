@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
 
 public class SupplyStores : Building
 {
@@ -65,6 +66,11 @@ public class SupplyStores : Building
         m_Ressources = values.Resources;
         m_VisitorStats = values.VisitorStats;
         secondsSpendByNPC = values.SecondsSpendByNPC;
+
+        foreach(VisitorStats vs in m_VisitorStats)
+        {
+            vs.curAmount = 0;
+        }
     }
 
     protected void RunLeaveTimer()
@@ -137,9 +143,10 @@ public class SupplyStores : Building
     {        
         foreach (BuildingRessource ressi in m_Ressources)
         {
-            if (ressi.curAmount == 0)
+            if (ressi.curAmount < 1)
             {
-                return false;
+                print(this.gameObject.name + " has not enough " + ressi.type.ToString()+" to service customers");
+                return false;                
             }
         }
         return true;
@@ -164,11 +171,13 @@ public class SupplyStores : Building
         foreach (BuildingRessource ressi in m_Ressources)
         {
             int amount = ressi.maxCapacity - ressi.curAmount;
+            print(gameObject.name + " needs " + amount + "x " + ressi.type.ToString());
 
             if (RC.TakeRessourceFromCargo(ressi.type, amount) == amount)
             {
                 ressi.curAmount += amount;
                 RC.AddToShopRessis(ressi.type, amount);
+                print("refilled "+amount+" of "+ ressi.type.ToString()+" of "+ gameObject.name);
                 //RC.SubtractFromShopRessis(ressi.type, ressi.curAmount);
             }
         }

@@ -45,6 +45,9 @@ public class CargoOrderMenu : MonoBehaviour
         BuildingManager.OnSupplyStoreCountChange += UpdateStockInShop;
         RessourceController.OnShopStockChange += ChangeStockInShops;
         OrderButton.onClick.AddListener(delegate { CheckOrder(); });
+
+        WriteCurShopInventory(0, 0, 0);
+        WriteMaxShopInventory(0, 0, 0);
         //foreach(ValueInput v in arrowButtons)
         //{
         //        v.increaseButton.onClick.AddListener(delegate { ChangeAmountInTextfield(v.amountTxt, +1); });
@@ -163,6 +166,10 @@ public class CargoOrderMenu : MonoBehaviour
         {
             print("cargo order over capacity");
             return;
+        }
+        else if (!CTC.inStation)
+        {
+            print("still waiting for last order");
         }
         else
         {

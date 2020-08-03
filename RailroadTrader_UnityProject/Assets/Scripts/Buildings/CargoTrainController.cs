@@ -31,6 +31,7 @@ public class CargoTrainController : MonoBehaviour
         cargoAmountPerTrack = values.CargoAmountPerTrack;
         OrderedCargo = new Dictionary<Resource, int>();
         BuildingManager.OnCargoTrackCountChange += UpdateTrackList;
+        inStation = true;
     }
 
     void Update()
@@ -47,19 +48,29 @@ public class CargoTrainController : MonoBehaviour
     private void UpdateTrackList(List<CargoTrack> tracks)
     {
         allTracks = tracks;
+        if (inStation)
+        {
+            foreach (CargoTrack track in allTracks)
+            {
+                StartCoroutine(track.TrainArrived());
+            }
+        }
     }
 
     private void SendCargoTrains()
     {
+        inStation = false;
         foreach(CargoTrack track in allTracks)
         {
             StartCoroutine( track.TrainLeaves());
         }
-        inStation = false;
     }
 
     public void SaveOrder(int foodAmount, int drinkAmount, int cargoAmount)
     {
+        if (!inStation)
+            return;
+
         OrderedCargo.Add(Resource.FOOD, foodAmount);
         OrderedCargo.Add(Resource.BEVERAGE, drinkAmount);
         OrderedCargo.Add(Resource.CARGO, cargoAmount);
@@ -77,6 +88,7 @@ public class CargoTrainController : MonoBehaviour
                 StartCoroutine(track.TrainArrived());
                 OnOrderArrived(OrderedCargo);
                 OrderedCargo.Clear();
+                inStation = true;
             }
             passedTime = 0.0f;
         }

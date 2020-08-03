@@ -15,5 +15,7 @@ MonoBehaviour:
   MaxShopAmount: 10
   MaxTrackAmount: 6
   RealTimeSecsPerHour: 5
+  StartMoney: 1000
+  CargoUpkeepCost: 10
   CargoAmountPerTrack: 15
-  CargoTimeTilArrival: 45
+  CargoTimeTilArrival: 10

@@ -69,7 +69,12 @@ public class NpcMovement: MonoBehaviour
     void Start()
     {
         _buildingManager = FindObjectOfType<BuildingManager>();
-        //TODO get values for npc movement probabilty 
+        WriteMovementProbs();
+    }
+
+    private void WriteMovementProbs()
+    {
+        _movementProbabilities.Clear();
         _movementProbabilities.Add(values.CommuterVisitValues);
         _movementProbabilities.Add(values.BusinessVisitValues);
         _movementProbabilities.Add(values.TouristVisitValues);
@@ -99,9 +104,12 @@ public class NpcMovement: MonoBehaviour
     {
         GameObject prefab = _npcPrefabs[type + GetNPCGender()];
         GameObject npc = Instantiate(prefab ,pSpawnPoint, prefab.transform.rotation);
-        //Debug.Log("Spawn");
         NpcActor actor = npc.GetComponent<NpcActor>();
         actor.SetTarget(store.position, store.building);
+        if (store.building != null)
+            print(prefab.name+" is going to "+store.building.ToString());
+        else
+            print(prefab.name+" is going to the exit");
     }
 
     protected virtual int GetNPCGender()
@@ -109,18 +117,23 @@ public class NpcMovement: MonoBehaviour
         return UnityEngine.Random.Range(0.0f, 1.0f) <= 0.51f ? 0 : 3;
     }
 
+    protected virtual MovementProbabilities Probability(Passanger pPassanger)
+    {
+        return _movementProbabilities.FirstOrDefault(p => p.type == pPassanger);
+    }
+
     protected virtual StoreInfo CalculateGoToStore(Passanger pPassanger) 
     {
-        MovementProbabilities probs = new MovementProbabilities();
-        foreach (MovementProbabilities prob in _movementProbabilities)
-        {
-            if(prob.type == pPassanger) 
-            {
-                probs = prob;
-                break;
-            }
-        }
-
+        MovementProbabilities probs = Probability(pPassanger);
+        //new MovementProbabilities();
+        //foreach (MovementProbabilities prob in _movementProbabilities)
+        //{
+        //    if(prob.type == pPassanger) 
+        //    {
+        //        probs = prob;
+        //        break;
+        //    }
+        //}
         if (UnityEngine.Random.Range(0.0f, 1.0f) <= probs.eatProb)
         {
             if (UnityEngine.Random.Range(0.0f, 1.0f) <= probs.bakeryProb)

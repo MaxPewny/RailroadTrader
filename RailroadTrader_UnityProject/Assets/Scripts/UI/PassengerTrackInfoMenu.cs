@@ -54,7 +54,7 @@ public class PassengerTrackInfoMenu : MonoBehaviour
             return "";
 
         string time = curTrack.CurArrivalTime().ToString().Replace('.', ':');
-        print(time);
+        //print(time);
 
         if (curTrack.CurArrivalTime() >= 10.00f)
         {

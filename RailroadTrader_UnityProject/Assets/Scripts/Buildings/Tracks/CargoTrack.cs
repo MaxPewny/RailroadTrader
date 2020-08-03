@@ -31,7 +31,7 @@ public class CargoTrack : Building
     {
         //m_Type = BuildingType.TRAINPLATFORM;
         base.Start();
-        StartCoroutine(TrainArrived());
+        //StartCoroutine(TrainArrived());
     }
 
     protected override void Update()
@@ -57,7 +57,7 @@ public class CargoTrack : Building
         //inStation = true;
         //switch to open doors
         //wait a moment
-        yield return new WaitForSeconds(0.25f);
+        //yield return new WaitForSeconds(0.25f);
     }
 
     public IEnumerator TrainLeaves()
