@@ -109,7 +109,7 @@ public class FinanceMenu : MonoBehaviour
                 }
                 else
                 {
-                    IncomeGraphs[i].maxValue = FOs[i].monthlyIncome;
+                    IncomeGraphs[i].value = FOs[i].monthlyIncome;
                 }
             }
         }
@@ -131,7 +131,7 @@ public class FinanceMenu : MonoBehaviour
                 }
                 else
                 {
-                    UpkeepGraphs[i].maxValue = FOs[i].monthlyUpkeep;
+                    UpkeepGraphs[i].value = FOs[i].monthlyUpkeep;
                 }
             }
         }
@@ -153,7 +153,7 @@ public class FinanceMenu : MonoBehaviour
                 }
                 else
                 {
-                    RevenueGraphs[i].maxValue = FOs[i].monthlyRevenue;
+                    RevenueGraphs[i].value = FOs[i].monthlyRevenue;
                 }
             }
         }
@@ -175,7 +175,7 @@ public class FinanceMenu : MonoBehaviour
                 }
                 else
                 {
-                    BuildGraphs[i].maxValue = FOs[i].monthlyBuildCosts;
+                    BuildGraphs[i].value = FOs[i].monthlyBuildCosts;
                 }
             }
         }
