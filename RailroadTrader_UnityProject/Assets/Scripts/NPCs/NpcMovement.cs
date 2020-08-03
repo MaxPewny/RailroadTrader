@@ -21,6 +21,7 @@ public class NpcMovement: MonoBehaviour
         }
     }
 
+    [Tooltip("0 commuter, 1 tourist, 2 business; first male second female prefabs")]
     [SerializeField]
     private List<GameObject> _npcPrefabs;
 
@@ -96,11 +97,16 @@ public class NpcMovement: MonoBehaviour
 
     protected virtual void SpawnNpcAndMove(Vector3 pSpawnPoint, StoreInfo store, int type) 
     {
-        GameObject prefab = _npcPrefabs[type];
+        GameObject prefab = _npcPrefabs[type + GetNPCGender()];
         GameObject npc = Instantiate(prefab ,pSpawnPoint, prefab.transform.rotation);
         //Debug.Log("Spawn");
         NpcActor actor = npc.GetComponent<NpcActor>();
         actor.SetTarget(store.position, store.building);
+    }
+
+    protected virtual int GetNPCGender()
+    {
+        return UnityEngine.Random.Range(0.0f, 1.0f) <= 0.51f ? 0 : 3;
     }
 
     protected virtual StoreInfo CalculateGoToStore(Passanger pPassanger) 
