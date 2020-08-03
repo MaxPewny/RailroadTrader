@@ -14,16 +14,16 @@ public class GameManager : Singleton<GameManager>
 
     private void Awake()
     {
-        //StartCoroutine(PrepareGameForStart());
+        StartCoroutine(PrepareGameForStart());
     }
 
     public IEnumerator PrepareGameForStart()
     {
         SetGameState(GameState.LOADING);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.0f);
         FinanceController FC = FindObjectOfType<FinanceController>();
         FC.AddCurrency(FC.Values.StartMoney);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.0f);
         print("Game ready");
         SetGameState(GameState.RUNNING);
     }
