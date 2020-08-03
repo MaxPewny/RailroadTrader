@@ -1,18 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PassengerTrackInfoMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Text TrainName;
+    public Text DepartureTime;
+    public Text ArrivalTime;
+    public bool timersRunning { get; private set; }
+    public PassengerTrack curTrack;
+
+
+    private void Start()
     {
-        
+        OnObjectClicked.OnPassengerTrackClicked += GetClickedTrackInfo;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        if (timersRunning)
+        {
+            //TODO update the texts
+        }
+    }
+
+    public void GetClickedTrackInfo(PassengerTrack curTrack)
+    {
+        this.curTrack = curTrack;
+        timersRunning = true;
     }
 }

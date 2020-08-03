@@ -41,6 +41,7 @@ public class FinanceController : MonoBehaviour
         return FOs;
     }    
 
+    //Gets the current FinanceOverview for THIS month
     private FinanceOverview GetFinances()
     {
         return monthlyFinances[curFinanceID];

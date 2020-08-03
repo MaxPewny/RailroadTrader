@@ -10,6 +10,8 @@ public class TimeController : MonoBehaviour
     public float realTimePerHour = 120.0f;
     [Tooltip("Order: paused, normal, fast, super fast")]
     public float[] ingameSpeed = new float[4];
+    
+    public int CurMonth { get; protected set; }
 
     private IngameTime curTime;
     private float passedTime = 0.0f;
@@ -24,6 +26,7 @@ public class TimeController : MonoBehaviour
     private void Start()
     {
         curTime = new IngameTime(0, 1, 1, 1);
+        CurMonth = 1;
         OnHourChange(curTime);
         realTimePerHour = values.RealTimeSecsPerHour;
     }
@@ -54,9 +57,11 @@ public class TimeController : MonoBehaviour
             if (curTime.ChangeMonth())
             {
                 OnMonthEnd();
+                ++CurMonth;
                 if (curTime.ChangeYear())
                 {
                     OnYearEnd();
+                    CurMonth = 1;
                 }
             }
         }

@@ -12,9 +12,15 @@ public class PassengerTrack : Building
     [SerializeField]
     private float timeTilArrival = 45.0f;
     [SerializeField]
-    private float passedTime = 0.0f;
+    private float passedArrivalTime = 0.0f;
+    [SerializeField]
+    private float passedDepartureTime = 0.0f;
+    [SerializeField]
+    private float timeTilDeparture = 10.0f;
+    private float trainAnimTime = 2.0f;
     [SerializeField]
     private Animator anim;
+       
 
     private NpcMovement NPCs;
 
@@ -35,9 +41,11 @@ public class PassengerTrack : Building
     protected override void Update()
     {
         base.Update();
-        
-        if(!inStation)
-            Timer();
+
+        if (!inStation)
+            ArrivalTimer();
+        else if (inStation)
+            DepartureTimer();
 
         //if (Input.GetKeyDown("s"))
         //{
@@ -45,6 +53,18 @@ public class PassengerTrack : Building
         //    TrainArrived();
         //}
     }
+
+    //public int CurArrivalTime()
+    //{
+
+    
+    //}
+
+    //public int CurDepartureTime()
+    //{
+    //    timeTilDeparture + trainAnimTime
+    //}
+
     protected override void WriteGDValues()
     {
         base.WriteGDValues();
@@ -54,16 +74,27 @@ public class PassengerTrack : Building
         timeTilArrival = values.TimeTilArrival;
     }
 
-    private void Timer()
+    private void ArrivalTimer()
     {
-        passedTime += Time.deltaTime;
-        if (passedTime >= timeTilArrival)
+        passedArrivalTime += Time.deltaTime;
+        if (passedArrivalTime >= timeTilArrival)
         {
             inStation = true;
+            passedArrivalTime = 0.0f;
             StartCoroutine(TrainArrived());
-            passedTime = 0.0f;
         }
-    }    
+    }
+
+    private void DepartureTimer()
+    {
+        passedDepartureTime += Time.deltaTime;
+        if (passedDepartureTime >= timeTilDeparture)
+        {
+            inStation = false;
+            passedArrivalTime = 0.0f;
+            StartCoroutine(TrainArrived());
+        }
+    }
 
     private IEnumerator TrainArrived()
     {
@@ -72,10 +103,9 @@ public class PassengerTrack : Building
         anim.SetTrigger("enter");
         yield return new WaitForSeconds(1.0f);        
         //switch to open doors
-        //wait a moment
-        yield return new WaitForSeconds(0.25f);        
+        //wait a moment     
         StartCoroutine(NPCs.SpawnNpcGroup(m_NpcAmount, m_PassangerType, m_NpcMovePoint));
-        yield return new WaitForSeconds(0.5f);        
+        yield return new WaitForSeconds(timeTilDeparture);        
         //wait for the spawn to finish
         //start train exit anim
         //wait for it to finish
