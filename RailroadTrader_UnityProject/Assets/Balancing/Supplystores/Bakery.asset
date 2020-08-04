@@ -12,31 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9964184369ef7da49bbf23cec711060a, type: 3}
   m_Name: Bakery
   m_EditorClassIdentifier: 
-  UpkeepCost: 25
-  SecondsSpendByNPC: 7
+  UpkeepCost: 7
+  SecondsSpendByNPC: 10
   Resources:
   - type: 0
-    maxCapacity: 10
-    curAmount: 0
+    maxCapacity: 20
+    curAmount: 20
   - type: 1
-    maxCapacity: 10
+    maxCapacity: 0
     curAmount: 0
   - type: 2
-    maxCapacity: 10
-    curAmount: 0
+    maxCapacity: 5
+    curAmount: 5
   VisitorStats:
   - type: 0
+    maxCapacity: 50
+    earningGain: 3
+    satisfactionGain: 3
+    curAmount: 10
+  - type: 1
     maxCapacity: 10
     earningGain: 5
     satisfactionGain: 2
-    curAmount: 0
-  - type: 1
-    maxCapacity: 10
-    earningGain: 5
-    satisfactionGain: 1
-    curAmount: 0
+    curAmount: 3
   - type: 2
-    maxCapacity: 10
-    earningGain: 5
-    satisfactionGain: 1
+    maxCapacity: 0
+    earningGain: 0
+    satisfactionGain: 0
     curAmount: 0

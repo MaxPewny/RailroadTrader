@@ -13,32 +13,32 @@ MonoBehaviour:
   m_Name: NPCVisitProbabilities
   m_EditorClassIdentifier: 
   CommuterVisitValues:
-    eatProb: 1
-    drinkProb: 0
-    bakeryProb: 1
+    eatProb: 0.5
+    drinkProb: 0.35
+    bakeryProb: 0.666
+    cafeProb: 0.333
+    pubProb: 0.5
+    barProb: 0.37
+    loungeProb: 0.13
+    restaurantProb: 0.666
+    highRestaurantProb: 0.333
+  TouristVisitValues:
+    eatProb: 0.5
+    drinkProb: 0.5
+    bakeryProb: 0.333
+    cafeProb: 0.666
+    pubProb: 0.2
+    barProb: 0.5
+    loungeProb: 0.3
+    restaurantProb: 0.333
+    highRestaurantProb: 0.666
+  BusinessVisitValues:
+    eatProb: 0.5
+    drinkProb: 1
+    bakeryProb: 0
     cafeProb: 0
     pubProb: 0
     barProb: 0
-    loungeProb: 0
-    restaurantProb: 0
-    highRestaurantProb: 0
-  TouristVisitValues:
-    eatProb: 0.75
-    drinkProb: 0.75
-    bakeryProb: 0.75
-    cafeProb: 0.75
-    pubProb: 0.75
-    barProb: 0.75
-    loungeProb: 0.75
-    restaurantProb: 0.75
-    highRestaurantProb: 0.75
-  BusinessVisitValues:
-    eatProb: 0.75
-    drinkProb: 0.75
-    bakeryProb: 0.75
-    cafeProb: 0.75
-    pubProb: 0.75
-    barProb: 0.75
-    loungeProb: 0.75
-    restaurantProb: 0.75
-    highRestaurantProb: 0.75
+    loungeProb: 1
+    restaurantProb: 0.33
+    highRestaurantProb: 0.66

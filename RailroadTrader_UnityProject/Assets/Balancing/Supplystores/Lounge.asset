@@ -12,32 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9964184369ef7da49bbf23cec711060a, type: 3}
   m_Name: Lounge
   m_EditorClassIdentifier: 
-  BuildCost: 5
-  UpkeepCost: 25
-  SecondsSpendByNPC: 30
+  UpkeepCost: 75
+  SecondsSpendByNPC: 17
   Resources:
   - type: 0
-    maxCapacity: 5
-    curAmount: 0
+    maxCapacity: 20
+    curAmount: 8
   - type: 1
-    maxCapacity: 5
-    curAmount: 0
+    maxCapacity: 50
+    curAmount: 38
   - type: 2
-    maxCapacity: 5
-    curAmount: 0
+    maxCapacity: 15
+    curAmount: 3
   VisitorStats:
   - type: 0
-    maxCapacity: 10
-    earningGain: 5
+    maxCapacity: 100
+    earningGain: 11
     satisfactionGain: 2
-    curAmount: 0
+    curAmount: 99
   - type: 1
-    maxCapacity: 10
-    earningGain: 5
-    satisfactionGain: 1
+    maxCapacity: 30
+    earningGain: 14
+    satisfactionGain: 3
     curAmount: 0
   - type: 2
-    maxCapacity: 10
-    earningGain: 5
-    satisfactionGain: 1
+    maxCapacity: 40
+    earningGain: 18
+    satisfactionGain: 3
     curAmount: 0

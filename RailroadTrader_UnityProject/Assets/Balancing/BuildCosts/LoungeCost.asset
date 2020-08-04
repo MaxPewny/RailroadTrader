@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StoreType: 1
   Name: 4
-  BuildCost: 10
+  BuildCost: 1000

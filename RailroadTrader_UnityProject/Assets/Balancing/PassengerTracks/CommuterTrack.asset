@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe709ca5c00eae348b04a33a0230178a, type: 3}
   m_Name: CommuterTrack
   m_EditorClassIdentifier: 
-  UpkeepCost: 25
+  UpkeepCost: 170
   PassangerType: 0
-  TimeTilArrival: 12
+  TimeTilArrival: 15
