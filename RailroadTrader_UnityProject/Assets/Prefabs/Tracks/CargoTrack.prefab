@@ -77,6 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ca75447b65ee54fbc5c0aa0c187772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BlockedTilesXZ: []
   m_StoreType: 0
   m_Type: 14
   m_Model: {fileID: 1054028393516034646}
@@ -84,9 +85,8 @@ MonoBehaviour:
   NPCEnterPoint: {fileID: 1482735826439733414}
   m_NpcAmount: 0
   totalGuestCount: 0
-  m_BlockedTilesXZ: []
   BlockedXTiles: 5
-  BlockedZTiles: 0
+  BlockedZTiles: 1
   anim: {fileID: 2440698257578022291}
 --- !u!208 &7064979181820133596
 NavMeshObstacle:

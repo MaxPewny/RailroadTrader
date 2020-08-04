@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152959a7d5865714ebeedbe2f8c4bff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BlockedTilesXZ: []
   m_StoreType: 0
   m_Type: 13
   m_Model: {fileID: 2039231596921165182}
@@ -339,9 +340,8 @@ MonoBehaviour:
   NPCEnterPoint: {fileID: 8247989852759442592}
   m_NpcAmount: 5
   totalGuestCount: 0
-  m_BlockedTilesXZ: []
   BlockedXTiles: 5
-  BlockedZTiles: 0
+  BlockedZTiles: 1
   values: {fileID: 11400000, guid: f71d8532430b47140a9571586be1e64a, type: 2}
   TrainName: 
   m_PassangerType: 2
