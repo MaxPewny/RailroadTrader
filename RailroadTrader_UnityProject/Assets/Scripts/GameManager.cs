@@ -14,7 +14,12 @@ public class GameManager : Singleton<GameManager>
 
     private void Awake()
     {
-        StartCoroutine(PrepareGameForStart());
+        //StartCoroutine(PrepareGameForStart());
+    }
+
+    private void Update()
+    {
+        //TestTimeScale();
     }
 
     public IEnumerator PrepareGameForStart()
@@ -31,5 +36,16 @@ public class GameManager : Singleton<GameManager>
     public void SetGameState(GameState newState)
     {
         State = newState;
+    }
+
+    private void TestTimeScale()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            if (Time.timeScale < 0.1f)
+                Time.timeScale = 1.0f;
+            else
+                Time.timeScale = 0.0f;
+        }
     }
 }

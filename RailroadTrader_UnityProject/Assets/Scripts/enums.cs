@@ -3,8 +3,8 @@
     LOADING,
     RUNNING,
     PAUSED,
+    COMBOBREAKER
 }
-
 public enum BuildingLevel 
 {
     LEVEL_1,
