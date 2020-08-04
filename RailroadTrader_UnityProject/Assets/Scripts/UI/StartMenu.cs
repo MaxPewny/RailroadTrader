@@ -9,10 +9,16 @@ public class StartMenu : MonoBehaviour
     public CanvasGroup FadeScreen;
     [SerializeField]
     private float fadeTime = 1.0f;
+
     public void StartGame()
     {
         StartCoroutine(GameManager.Instance.PrepareGameForStart());
         StartCoroutine(FadeOut());
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
     private IEnumerator FadeOut()

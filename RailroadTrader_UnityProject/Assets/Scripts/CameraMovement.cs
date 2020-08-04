@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -51,6 +52,7 @@ public class CameraMovement : MonoBehaviour
         {
             MoveHorizontal(true);
         }
+
     }
 
     private bool CanMove(Direction dir)
