@@ -1,0 +1,1160 @@
+fileFormatVersion: 2
+guid: a9a90678d2467b14ba3e0ddd3a98d402
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1647102647600141130
+    second: Spritesheet_businesswoman_FIXED_0
+  - first:
+      213: 5571559674615088139
+    second: Spritesheet_businesswoman_FIXED_1
+  - first:
+      213: -2867073595802976814
+    second: Spritesheet_businesswoman_FIXED_2
+  - first:
+      213: 4313804214341327015
+    second: Spritesheet_businesswoman_FIXED_3
+  - first:
+      213: 6512285087969129369
+    second: Spritesheet_businesswoman_FIXED_4
+  - first:
+      213: -4047909334658967386
+    second: Spritesheet_businesswoman_FIXED_5
+  - first:
+      213: -8770696966250337263
+    second: Spritesheet_businesswoman_FIXED_6
+  - first:
+      213: 2538134099846405048
+    second: Spritesheet_businesswoman_FIXED_7
+  - first:
+      213: 8287958203788012741
+    second: Spritesheet_businesswoman_FIXED_8
+  - first:
+      213: 7116164634048500713
+    second: Spritesheet_businesswoman_FIXED_9
+  - first:
+      213: -7087566787689263351
+    second: Spritesheet_businesswoman_FIXED_10
+  - first:
+      213: 221474657439496724
+    second: Spritesheet_businesswoman_FIXED_11
+  - first:
+      213: 1763987635384568972
+    second: Spritesheet_businesswoman_FIXED_12
+  - first:
+      213: -3415144369997957798
+    second: Spritesheet_businesswoman_FIXED_13
+  - first:
+      213: -5090803080088586745
+    second: Spritesheet_businesswoman_FIXED_14
+  - first:
+      213: -6441374223609714621
+    second: Spritesheet_businesswoman_FIXED_15
+  - first:
+      213: 8821977814963457005
+    second: Spritesheet_businesswoman_FIXED_16
+  - first:
+      213: 73026814197419261
+    second: Spritesheet_businesswoman_FIXED_17
+  - first:
+      213: -7903891599259589036
+    second: Spritesheet_businesswoman_FIXED_18
+  - first:
+      213: 6107140128607975987
+    second: Spritesheet_businesswoman_FIXED_19
+  - first:
+      213: -4032351366498960637
+    second: Spritesheet_businesswoman_FIXED_20
+  - first:
+      213: 7260908114428165900
+    second: Spritesheet_businesswoman_FIXED_21
+  - first:
+      213: -5235046988081985967
+    second: Spritesheet_businesswoman_FIXED_22
+  - first:
+      213: 3905421445967678613
+    second: Spritesheet_businesswoman_FIXED_23
+  - first:
+      213: -1250771999502754192
+    second: Spritesheet_businesswoman_FIXED_24
+  - first:
+      213: 8578018670961855546
+    second: Spritesheet_businesswoman_FIXED_25
+  - first:
+      213: -6439761467732412173
+    second: Spritesheet_businesswoman_FIXED_26
+  - first:
+      213: -8551417765027418807
+    second: Spritesheet_businesswoman_FIXED_27
+  - first:
+      213: 3961170524722618028
+    second: Spritesheet_businesswoman_FIXED_28
+  - first:
+      213: 4700776737014597546
+    second: Spritesheet_businesswoman_FIXED_29
+  - first:
+      213: 1955991941423175792
+    second: Spritesheet_businesswoman_FIXED_30
+  - first:
+      213: 1925498854589210127
+    second: Spritesheet_businesswoman_FIXED_31
+  - first:
+      213: -6612429219794935580
+    second: Spritesheet_businesswoman_FIXED_32
+  - first:
+      213: 1709239050550204183
+    second: Spritesheet_businesswoman_FIXED_33
+  - first:
+      213: 3412234844606458010
+    second: Spritesheet_businesswoman_FIXED_34
+  - first:
+      213: 1798600102116865970
+    second: Spritesheet_businesswoman_FIXED_35
+  - first:
+      213: 834392294333021494
+    second: Spritesheet_businesswoman_FIXED_36
+  - first:
+      213: -7407477459252255400
+    second: Spritesheet_businesswoman_FIXED_37
+  - first:
+      213: -3207629873044658813
+    second: Spritesheet_businesswoman_FIXED_38
+  - first:
+      213: 5610227795469803434
+    second: Spritesheet_businesswoman_FIXED_39
+  - first:
+      213: -7884455571633257530
+    second: Spritesheet_businesswoman_FIXED_40
+  - first:
+      213: -1600951586828010206
+    second: Spritesheet_businesswoman_FIXED_41
+  - first:
+      213: 446384827114704225
+    second: Spritesheet_businesswoman_FIXED_42
+  - first:
+      213: -8555884379325625392
+    second: Spritesheet_businesswoman_FIXED_43
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1735
+        width: 155
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc20356ed05429e0800000000000000
+      internalID: -1647102647600141130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_1
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1735
+        width: 143
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04c2523108225d40800000000000000
+      internalID: 5571559674615088139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_2
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1740
+        width: 140
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ddf24941cb1638d0800000000000000
+      internalID: -2867073595802976814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_3
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1741
+        width: 132
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8d562d316bddb30800000000000000
+      internalID: 4313804214341327015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_4
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1741
+        width: 113
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9933970b8c8406a50800000000000000
+      internalID: 6512285087969129369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_5
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 1729
+        width: 109
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a81aa828efe2d7c0800000000000000
+      internalID: -4047909334658967386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_6
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1729
+        width: 109
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c6d0e0499384680800000000000000
+      internalID: -8770696966250337263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_7
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 1741
+        width: 113
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb96a52483493320800000000000000
+      internalID: 2538134099846405048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_8
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1741
+        width: 132
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cca11a231eb40370800000000000000
+      internalID: 8287958203788012741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_9
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 1740
+        width: 140
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e398a71802b1c260800000000000000
+      internalID: 7116164634048500713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_10
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 1735
+        width: 143
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90fcce1ee87e3ad90800000000000000
+      internalID: -7087566787689263351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_11
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 1735
+        width: 155
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41abe6b0706d21300800000000000000
+      internalID: 221474657439496724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1406
+        width: 103
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c474b8861fa7810800000000000000
+      internalID: 1763987635384568972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1402
+        width: 108
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55b8992a48fa90d0800000000000000
+      internalID: -3415144369997957798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_14
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1412
+        width: 121
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706fad52295d959b0800000000000000
+      internalID: -5090803080088586745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_15
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1423
+        width: 148
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348a2608544ab96a0800000000000000
+      internalID: -6441374223609714621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_16
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 1421
+        width: 183
+        height: 299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb0645f416fd6a70800000000000000
+      internalID: 8821977814963457005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_17
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 1421
+        width: 183
+        height: 299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfcc0572081730100800000000000000
+      internalID: 73026814197419261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_18
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 1423
+        width: 148
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45620f2977cbf4290800000000000000
+      internalID: -7903891599259589036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_19
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 1412
+        width: 121
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a3637079be0c450800000000000000
+      internalID: 6107140128607975987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_20
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1402
+        width: 108
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30bb446ebc53a08c0800000000000000
+      internalID: -4032351366498960637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_21
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 1406
+        width: 103
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ffd3bc57de3c460800000000000000
+      internalID: 7260908114428165900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_22
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 627
+        width: 182
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15605e430806957b0800000000000000
+      internalID: -5235046988081985967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_23
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 645
+        width: 134
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c88110d18d23630800000000000000
+      internalID: 3905421445967678613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_24
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 645
+        width: 91
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e12aa4e7d54aee0800000000000000
+      internalID: -1250771999502754192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_25
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 644
+        width: 108
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c895f688e3b0770800000000000000
+      internalID: 8578018670961855546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_26
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 671
+        width: 149
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8bf8d701f51a6a0800000000000000
+      internalID: -6439761467732412173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_27
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 671
+        width: 149
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d639d99d2435980800000000000000
+      internalID: -8551417765027418807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_28
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 644
+        width: 108
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caed6d4ea97e8f630800000000000000
+      internalID: 3961170524722618028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_29
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 645
+        width: 91
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7cc2a59838c3140800000000000000
+      internalID: 4700776737014597546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_30
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 645
+        width: 134
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0781e04be44152b10800000000000000
+      internalID: 1955991941423175792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_31
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 627
+        width: 182
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e163ba10fb8ba10800000000000000
+      internalID: 1925498854589210127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_32
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 219
+        width: 146
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0a5b3a8aeeb34a0800000000000000
+      internalID: -6612429219794935580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_33
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 201
+        width: 91
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717554c4cdf68b710800000000000000
+      internalID: 1709239050550204183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_34
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 207
+        width: 118
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a986afa2381ba5f20800000000000000
+      internalID: 3412234844606458010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_35
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 198
+        width: 150
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b738a37349e5f810800000000000000
+      internalID: 1798600102116865970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_36
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 206
+        width: 170
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63dfa03fe5b549b00800000000000000
+      internalID: 834392294333021494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_37
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 230
+        width: 195
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8556e8f4f7a533990800000000000000
+      internalID: -7407477459252255400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_38
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 230
+        width: 195
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385ed3e00a53c73d0800000000000000
+      internalID: -3207629873044658813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_39
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 206
+        width: 170
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf100aa4788bdd40800000000000000
+      internalID: 5610227795469803434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_40
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 198
+        width: 150
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c343756e69c49290800000000000000
+      internalID: -7884455571633257530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_41
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 207
+        width: 118
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22db484930748c9e0800000000000000
+      internalID: -1600951586828010206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_42
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 201
+        width: 91
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16dcb4d92a0e13600800000000000000
+      internalID: 446384827114704225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businesswoman_FIXED_43
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 219
+        width: 146
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db8bfeec74634980800000000000000
+      internalID: -8555884379325625392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: efa08d4c0861197419a80c13b25e6088
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

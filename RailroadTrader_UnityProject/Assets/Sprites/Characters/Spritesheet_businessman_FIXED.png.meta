@@ -1,0 +1,1256 @@
+fileFormatVersion: 2
+guid: 286cd5e7151280246a938376887a60f4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9156540694476276538
+    second: Spritesheet_businessman_FIXED_0
+  - first:
+      213: 8476335087572556231
+    second: Spritesheet_businessman_FIXED_1
+  - first:
+      213: 3468967863615071726
+    second: Spritesheet_businessman_FIXED_2
+  - first:
+      213: -7429255544225343843
+    second: Spritesheet_businessman_FIXED_3
+  - first:
+      213: -2699022697282322468
+    second: Spritesheet_businessman_FIXED_4
+  - first:
+      213: 8131499762316145572
+    second: Spritesheet_businessman_FIXED_5
+  - first:
+      213: -5945839651209993644
+    second: Spritesheet_businessman_FIXED_6
+  - first:
+      213: 8490172698988083784
+    second: Spritesheet_businessman_FIXED_7
+  - first:
+      213: 6149140331886119135
+    second: Spritesheet_businessman_FIXED_8
+  - first:
+      213: -5800005233684150575
+    second: Spritesheet_businessman_FIXED_9
+  - first:
+      213: 5449573527210719057
+    second: Spritesheet_businessman_FIXED_10
+  - first:
+      213: -5391576301505117564
+    second: Spritesheet_businessman_FIXED_11
+  - first:
+      213: 3749817086561823852
+    second: Spritesheet_businessman_FIXED_12
+  - first:
+      213: 6325094571619878409
+    second: Spritesheet_businessman_FIXED_13
+  - first:
+      213: 7701145478669287078
+    second: Spritesheet_businessman_FIXED_14
+  - first:
+      213: -5593901418880261576
+    second: Spritesheet_businessman_FIXED_15
+  - first:
+      213: -7464496983540396043
+    second: Spritesheet_businessman_FIXED_16
+  - first:
+      213: -9207241647706585406
+    second: Spritesheet_businessman_FIXED_17
+  - first:
+      213: -5525078688998871166
+    second: Spritesheet_businessman_FIXED_18
+  - first:
+      213: 6046137568303212419
+    second: Spritesheet_businessman_FIXED_19
+  - first:
+      213: 5246171702566520606
+    second: Spritesheet_businessman_FIXED_20
+  - first:
+      213: 907899275406615768
+    second: Spritesheet_businessman_FIXED_21
+  - first:
+      213: 5119684108994100534
+    second: Spritesheet_businessman_FIXED_22
+  - first:
+      213: -2643151397487647565
+    second: Spritesheet_businessman_FIXED_23
+  - first:
+      213: 7117137080262230880
+    second: Spritesheet_businessman_FIXED_24
+  - first:
+      213: 192267663679702576
+    second: Spritesheet_businessman_FIXED_25
+  - first:
+      213: 1145672796630056813
+    second: Spritesheet_businessman_FIXED_26
+  - first:
+      213: -4058362384100550869
+    second: Spritesheet_businessman_FIXED_27
+  - first:
+      213: -6546081853963719604
+    second: Spritesheet_businessman_FIXED_28
+  - first:
+      213: 8375906646579588722
+    second: Spritesheet_businessman_FIXED_29
+  - first:
+      213: -2592425333293576219
+    second: Spritesheet_businessman_FIXED_30
+  - first:
+      213: 8327102648916685607
+    second: Spritesheet_businessman_FIXED_31
+  - first:
+      213: -686038918650835680
+    second: Spritesheet_businessman_FIXED_32
+  - first:
+      213: 7483368188531699141
+    second: Spritesheet_businessman_FIXED_33
+  - first:
+      213: 7236375876957087228
+    second: Spritesheet_businessman_FIXED_34
+  - first:
+      213: -1271508064636023655
+    second: Spritesheet_businessman_FIXED_35
+  - first:
+      213: -3861688408064711189
+    second: Spritesheet_businessman_FIXED_36
+  - first:
+      213: 7302725391057045510
+    second: Spritesheet_businessman_FIXED_37
+  - first:
+      213: -696965914457870462
+    second: Spritesheet_businessman_FIXED_38
+  - first:
+      213: -4427074118649249444
+    second: Spritesheet_businessman_FIXED_39
+  - first:
+      213: 5357593282245941912
+    second: Spritesheet_businessman_FIXED_40
+  - first:
+      213: 6001940201276040915
+    second: Spritesheet_businessman_FIXED_41
+  - first:
+      213: 8953266390068128400
+    second: Spritesheet_businessman_FIXED_42
+  - first:
+      213: 4042488794928483628
+    second: Spritesheet_businessman_FIXED_43
+  - first:
+      213: 882081684084476454
+    second: Spritesheet_businessman_FIXED_44
+  - first:
+      213: 6349032187409199562
+    second: Spritesheet_businessman_FIXED_45
+  - first:
+      213: 6192907616920169650
+    second: Spritesheet_businessman_FIXED_46
+  - first:
+      213: 1408570593361918392
+    second: Spritesheet_businessman_FIXED_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1744
+        width: 173
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc355670ce6de080800000000000000
+      internalID: -9156540694476276538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_1
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 1745
+        width: 147
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c911f34addf1a570800000000000000
+      internalID: 8476335087572556231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_2
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 1740
+        width: 123
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5a50084ef342030800000000000000
+      internalID: 3468967863615071726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_3
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1745
+        width: 140
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96d8d4c17bf5e890800000000000000
+      internalID: -7429255544225343843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_4
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1749
+        width: 163
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf35c728252b8ad0800000000000000
+      internalID: -2699022697282322468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_5
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 1749
+        width: 164
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3f60883f3e8d070800000000000000
+      internalID: 8131499762316145572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_6
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 1745
+        width: 140
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4522232f6522c7da0800000000000000
+      internalID: -5945839651209993644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_7
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 1740
+        width: 122
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a77ec361723d570800000000000000
+      internalID: 8490172698988083784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_8
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 1745
+        width: 146
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd889146d82265550800000000000000
+      internalID: 6149140331886119135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_9
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 1744
+        width: 174
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d689de38fd328fa0800000000000000
+      internalID: -5800005233684150575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1433
+        width: 127
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15774caff36c0ab40800000000000000
+      internalID: 5449573527210719057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_11
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1429
+        width: 107
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4828f596be54d25b0800000000000000
+      internalID: -5391576301505117564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_12
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1442
+        width: 89
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c2539d5c60a0430800000000000000
+      internalID: 3749817086561823852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_13
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1450
+        width: 106
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9068728400047c750800000000000000
+      internalID: 6325094571619878409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_14
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1453
+        width: 143
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae30bba207ffda60800000000000000
+      internalID: 7701145478669287078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_15
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1460
+        width: 189
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832a61b1c487e52b0800000000000000
+      internalID: -5593901418880261576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_16
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1460
+        width: 188
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff8915ca87c86890800000000000000
+      internalID: -7464496983540396043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_17
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 1453
+        width: 142
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c64443e08e493080800000000000000
+      internalID: -9207241647706585406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_18
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 1450
+        width: 106
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f242a943af253b0800000000000000
+      internalID: -5525078688998871166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_19
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1442
+        width: 88
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3876bd5a51238e350800000000000000
+      internalID: 6046137568303212419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_20
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 1429
+        width: 107
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e170f2a3e552ec840800000000000000
+      internalID: 5246171702566520606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_21
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 1433
+        width: 127
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4227aa491899c00800000000000000
+      internalID: 907899275406615768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_22
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 1124
+        width: 140
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d3ec66295cc0740800000000000000
+      internalID: 5119684108994100534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_23
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 1124
+        width: 140
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4eb29dec3a15bd0800000000000000
+      internalID: -2643151397487647565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 843
+        width: 110
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0638ace577625c260800000000000000
+      internalID: 7117137080262230880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_25
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 842
+        width: 103
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0364c63eb621ba200800000000000000
+      internalID: 192267663679702576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_26
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 843
+        width: 107
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f76f7a65f36ef00800000000000000
+      internalID: 1145672796630056813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_27
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 839
+        width: 136
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2711ede9eccda7c0800000000000000
+      internalID: -4058362384100550869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_28
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 848
+        width: 161
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4cacd78c35a725a0800000000000000
+      internalID: -6546081853963719604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_29
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 853
+        width: 173
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ea535b7b23d3470800000000000000
+      internalID: 8375906646579588722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_30
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 853
+        width: 173
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef005605ead50cd0800000000000000
+      internalID: -2592425333293576219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_31
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 848
+        width: 161
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723b4e48dbfcf8370800000000000000
+      internalID: 8327102648916685607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_32
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 839
+        width: 136
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d49bffc33ba76f0800000000000000
+      internalID: -686038918650835680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_33
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 843
+        width: 107
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cde3e808b34ad760800000000000000
+      internalID: 7483368188531699141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_34
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 842
+        width: 103
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5ab372585cc6460800000000000000
+      internalID: 7236375876957087228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_35
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 843
+        width: 110
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c4356e622ba5ee0800000000000000
+      internalID: -1271508064636023655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_36
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 518
+        width: 157
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be52f0c5ad6886ac0800000000000000
+      internalID: -3861688408064711189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_37
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 516
+        width: 164
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6084e2a3d0e785560800000000000000
+      internalID: 7302725391057045510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_38
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 517
+        width: 142
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28fee288131e356f0800000000000000
+      internalID: -696965914457870462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_39
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 518
+        width: 77
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5106937b8fdf82c0800000000000000
+      internalID: -4427074118649249444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_40
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 523
+        width: 73
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ad94754bef95a40800000000000000
+      internalID: 5357593282245941912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_41
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 514
+        width: 86
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6e13c30dc2b4350800000000000000
+      internalID: 6001940201276040915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_42
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 514
+        width: 86
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a64776854604c70800000000000000
+      internalID: 8953266390068128400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_43
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 523
+        width: 73
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d8536142ec91830800000000000000
+      internalID: 4042488794928483628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_44
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 518
+        width: 77
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62acbb24e98cd3c00800000000000000
+      internalID: 882081684084476454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_45
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 517
+        width: 142
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1fb06c22b4c1850800000000000000
+      internalID: 6349032187409199562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_46
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 516
+        width: 164
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc66598aa0a1f550800000000000000
+      internalID: 6192907616920169650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_businessman_FIXED_47
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 518
+        width: 157
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9f562ed7f3c8310800000000000000
+      internalID: 1408570593361918392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: de6c97c77dbc41e4db29fdac8ff42109
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

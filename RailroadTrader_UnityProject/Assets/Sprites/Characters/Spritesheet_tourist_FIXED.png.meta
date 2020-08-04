@@ -1,0 +1,1160 @@
+fileFormatVersion: 2
+guid: db256722316e630438ee213668f49c92
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9007412324784448989
+    second: Spritesheet_tourist_FIXED_0
+  - first:
+      213: -2294153966096161161
+    second: Spritesheet_tourist_FIXED_1
+  - first:
+      213: -6237764718395695612
+    second: Spritesheet_tourist_FIXED_2
+  - first:
+      213: 6683289657393851234
+    second: Spritesheet_tourist_FIXED_3
+  - first:
+      213: -408249522233895242
+    second: Spritesheet_tourist_FIXED_4
+  - first:
+      213: 64913407621171042
+    second: Spritesheet_tourist_FIXED_5
+  - first:
+      213: -6058269353126146737
+    second: Spritesheet_tourist_FIXED_6
+  - first:
+      213: 8201902677584834725
+    second: Spritesheet_tourist_FIXED_7
+  - first:
+      213: -3874230763910708009
+    second: Spritesheet_tourist_FIXED_8
+  - first:
+      213: 3783617430663549754
+    second: Spritesheet_tourist_FIXED_9
+  - first:
+      213: -8415681209415004724
+    second: Spritesheet_tourist_FIXED_10
+  - first:
+      213: 1386009133356771561
+    second: Spritesheet_tourist_FIXED_11
+  - first:
+      213: -5917679608026246818
+    second: Spritesheet_tourist_FIXED_12
+  - first:
+      213: 6261150648834019675
+    second: Spritesheet_tourist_FIXED_13
+  - first:
+      213: -3068340917115856840
+    second: Spritesheet_tourist_FIXED_14
+  - first:
+      213: 418324988651123235
+    second: Spritesheet_tourist_FIXED_15
+  - first:
+      213: -5467874545976859526
+    second: Spritesheet_tourist_FIXED_16
+  - first:
+      213: -6939894816553064947
+    second: Spritesheet_tourist_FIXED_17
+  - first:
+      213: -8501093164835937594
+    second: Spritesheet_tourist_FIXED_18
+  - first:
+      213: 5388648039037168075
+    second: Spritesheet_tourist_FIXED_19
+  - first:
+      213: -2709873122991270182
+    second: Spritesheet_tourist_FIXED_20
+  - first:
+      213: 2295009370315647437
+    second: Spritesheet_tourist_FIXED_21
+  - first:
+      213: 1119642163333325691
+    second: Spritesheet_tourist_FIXED_22
+  - first:
+      213: 7295534669125037165
+    second: Spritesheet_tourist_FIXED_23
+  - first:
+      213: 1308039598805628181
+    second: Spritesheet_tourist_FIXED_24
+  - first:
+      213: -8067326072108450316
+    second: Spritesheet_tourist_FIXED_25
+  - first:
+      213: -5038937256253429698
+    second: Spritesheet_tourist_FIXED_26
+  - first:
+      213: 6422801948685620439
+    second: Spritesheet_tourist_FIXED_27
+  - first:
+      213: -4127761794097651420
+    second: Spritesheet_tourist_FIXED_28
+  - first:
+      213: 4288977945167879509
+    second: Spritesheet_tourist_FIXED_29
+  - first:
+      213: -8005622628969769609
+    second: Spritesheet_tourist_FIXED_30
+  - first:
+      213: -8326689793180129699
+    second: Spritesheet_tourist_FIXED_31
+  - first:
+      213: 6010819732893687271
+    second: Spritesheet_tourist_FIXED_32
+  - first:
+      213: 6458666077079794860
+    second: Spritesheet_tourist_FIXED_33
+  - first:
+      213: -7301224710933586021
+    second: Spritesheet_tourist_FIXED_34
+  - first:
+      213: -9171260708519338071
+    second: Spritesheet_tourist_FIXED_35
+  - first:
+      213: -2696380010921576005
+    second: Spritesheet_tourist_FIXED_36
+  - first:
+      213: 4138126011854576382
+    second: Spritesheet_tourist_FIXED_37
+  - first:
+      213: -8018303560828108349
+    second: Spritesheet_tourist_FIXED_38
+  - first:
+      213: 3102427969148954563
+    second: Spritesheet_tourist_FIXED_39
+  - first:
+      213: -3881017565283013204
+    second: Spritesheet_tourist_FIXED_40
+  - first:
+      213: 5151580314815878593
+    second: Spritesheet_tourist_FIXED_41
+  - first:
+      213: 8356316461728482491
+    second: Spritesheet_tourist_FIXED_42
+  - first:
+      213: 3800249385866384742
+    second: Spritesheet_tourist_FIXED_43
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1657
+        width: 149
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5a04c39c1c00d70800000000000000
+      internalID: 9007412324784448989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1688
+        width: 145
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776e8ce6f178920e0800000000000000
+      internalID: -2294153966096161161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_2
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1690
+        width: 137
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e5f87a9020f69a0800000000000000
+      internalID: -6237764718395695612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_3
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 1690
+        width: 142
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ba008a880dfbc50800000000000000
+      internalID: 6683289657393851234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_4
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1684
+        width: 144
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b69687f83b955af0800000000000000
+      internalID: -408249522233895242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_5
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1696
+        width: 158
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2678b6a766e96e000800000000000000
+      internalID: 64913407621171042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_6
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 1699
+        width: 156
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4dc7451f14bceba0800000000000000
+      internalID: -6058269353126146737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_7
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 1687
+        width: 144
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0f4cb970303d170800000000000000
+      internalID: 8201902677584834725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_8
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 1692
+        width: 143
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4463395a7fb3ac0800000000000000
+      internalID: -3874230763910708009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_9
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 1692
+        width: 138
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a335da8b10c128430800000000000000
+      internalID: 3783617430663549754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_10
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 1691
+        width: 145
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd83e9378e753b80800000000000000
+      internalID: -8415681209415004724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_11
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 1659
+        width: 149
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e86d21a6f71c3310800000000000000
+      internalID: 1386009133356771561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_12
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1294
+        width: 170
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51d50defbd20eda0800000000000000
+      internalID: -5917679608026246818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_13
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1291
+        width: 141
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5155f4975314e650800000000000000
+      internalID: 6261150648834019675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_14
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 1294
+        width: 133
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838538151301b65d0800000000000000
+      internalID: -3068340917115856840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_15
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1300
+        width: 127
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322383d5c503ec500800000000000000
+      internalID: 418324988651123235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_16
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 1310
+        width: 135
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7426aa02153e14b0800000000000000
+      internalID: -5467874545976859526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_17
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1314
+        width: 135
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06a7c8fe6a80bf90800000000000000
+      internalID: -6939894816553064947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_18
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 1303
+        width: 128
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2e37baecc060a80800000000000000
+      internalID: -8501093164835937594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_19
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 1296
+        width: 134
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc96a6a57d258ca40800000000000000
+      internalID: 5388648039037168075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_20
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 1294
+        width: 142
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad61abd80c8946ad0800000000000000
+      internalID: -2709873122991270182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_21
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 1296
+        width: 170
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc96bd1ecd289df10800000000000000
+      internalID: 2295009370315647437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_22
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 991
+        width: 125
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73680d8d94c98f00800000000000000
+      internalID: 1119642163333325691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_23
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 979
+        width: 106
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6caebfc022fe3560800000000000000
+      internalID: 7295534669125037165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_24
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 974
+        width: 92
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51534f6b517172210800000000000000
+      internalID: 1308039598805628181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_25
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 965
+        width: 82
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd7ab01ea91b0090800000000000000
+      internalID: -8067326072108450316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_26
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 971
+        width: 111
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38688b4349121ab0800000000000000
+      internalID: -5038937256253429698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_27
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 949
+        width: 155
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4d716c750622950800000000000000
+      internalID: 6422801948685620439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_28
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 952
+        width: 154
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4216161a48e37b6c0800000000000000
+      internalID: -4127761794097651420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_29
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 951
+        width: 154
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d573797b2858b30800000000000000
+      internalID: 4288977945167879509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_30
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 947
+        width: 155
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7759d6272a056e090800000000000000
+      internalID: -8005622628969769609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_31
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 970
+        width: 111
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56a0a2ffb7a17c80800000000000000
+      internalID: -8326689793180129699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_32
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 963
+        width: 82
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed590c43b8ba6350800000000000000
+      internalID: 6010819732893687271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_33
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 972
+        width: 92
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4f43fd39ac1a950800000000000000
+      internalID: 6458666077079794860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_34
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 978
+        width: 106
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fdf771fc6dcaa90800000000000000
+      internalID: -7301224710933586021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_35
+      rect:
+        serializedVersion: 2
+        x: 1859
+        y: 990
+        width: 125
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af153e1af229b080800000000000000
+      internalID: -9171260708519338071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_36
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 655
+        width: 127
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb93e858aa8849ad0800000000000000
+      internalID: -2696380010921576005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_37
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 659
+        width: 82
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa556cdea39d6930800000000000000
+      internalID: 4138126011854576382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_38
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 657
+        width: 84
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c1479be46349b090800000000000000
+      internalID: -8018303560828108349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_39
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 653
+        width: 136
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c72c52fcc90e0b20800000000000000
+      internalID: 3102427969148954563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_40
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 652
+        width: 136
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad214e361bd32ac0800000000000000
+      internalID: -3881017565283013204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_41
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 655
+        width: 84
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5de7880071e7740800000000000000
+      internalID: 5151580314815878593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_42
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 659
+        width: 82
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4431c5c8997f370800000000000000
+      internalID: 8356316461728482491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_tourist_FIXED_43
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 654
+        width: 127
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665567e8ea23db430800000000000000
+      internalID: 3800249385866384742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3aecbd3b00c56044ab0b1d010989c3a9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
