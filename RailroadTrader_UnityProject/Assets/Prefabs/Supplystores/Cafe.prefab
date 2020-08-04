@@ -97,7 +97,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3998775827216348283
 Transform:
   m_ObjectHideFlags: 0
@@ -248,11 +248,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 3, y: 1.5, z: 2}
+  m_Extents: {x: 2.5, y: 1.5, z: 2}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 2.5, y: 1.5, z: 1.5}
+  m_Center: {x: 3, y: 1.5, z: 1.5}
   m_TimeToStationary: 0.5
 --- !u!114 &7619816651177732860
 MonoBehaviour:
@@ -273,8 +273,7 @@ MonoBehaviour:
   NPCEnterPoint: {fileID: 4814570535728479057}
   m_NpcAmount: 0
   totalGuestCount: 0
-  m_BlockedTilesXZ: []
-  BlockedXTiles: 5
+  BlockedXTiles: 6
   BlockedZTiles: 4
   values: {fileID: 11400000, guid: fe6cfd9c0d830e14c8cebc8237f99c8c, type: 2}
   m_Ressources: []

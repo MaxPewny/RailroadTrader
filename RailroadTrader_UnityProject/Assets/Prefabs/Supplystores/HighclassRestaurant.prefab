@@ -182,7 +182,6 @@ MonoBehaviour:
   NPCEnterPoint: {fileID: 6894298823265949392}
   m_NpcAmount: 0
   totalGuestCount: 0
-  m_BlockedTilesXZ: []
   BlockedXTiles: 10
   BlockedZTiles: 4
   values: {fileID: 11400000, guid: acea0b11181d4e645b1012adc65cfb14, type: 2}
@@ -222,7 +221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8397583612144132
 Transform:
   m_ObjectHideFlags: 0

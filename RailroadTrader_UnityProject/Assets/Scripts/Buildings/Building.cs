@@ -6,6 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(GridObject))]
 public class Building : MonoBehaviour
 {
+    [SerializeField]
+    private List<Vector2Int> m_BlockedTilesXZ;
+
     protected FinanceController FC;
     protected RessourceController RC;
 
@@ -18,7 +21,6 @@ public class Building : MonoBehaviour
     public Vector3 m_NpcMovePointOffset { get; protected set; }
     public int m_NpcAmount;
     public int totalGuestCount;
-    public List<Vector2Int> m_BlockedTilesXZ;
     public int BlockedXTiles;
     public int BlockedZTiles;
     //public int curSatisfation { get; protected set; }
@@ -30,7 +32,7 @@ public class Building : MonoBehaviour
 
     private void Awake()
     {
-        WriteBlockedVectors(BlockedXTiles, BlockedZTiles);
+        //WriteBlockedVectors(BlockedXTiles, BlockedZTiles);
         WriteGDValues();
     }
 
@@ -54,33 +56,47 @@ public class Building : MonoBehaviour
         FC = FindObjectOfType<FinanceController>();
         RC = FindObjectOfType<RessourceController>();
         OnInitialize(this);
+        m_BlockedTilesXZ = BlockedTiles();
         SetTileStatus();
     }
 
-
-    protected virtual void WriteBlockedVectors(int x, int z)
+    public virtual List<Vector2Int> BlockedTiles()
     {
-        for (int i = 0; i <= x; i++)
+        List<Vector2Int> blockedTiles = new List<Vector2Int>();
+
+        for (int x = 0; x < BlockedXTiles; x++)
         {
-            for (int j = 0; j < z; j++)
+            for(int z = 0; z < BlockedZTiles; z++)
             {
-                m_BlockedTilesXZ.Add(new Vector2Int(i, j));
+                blockedTiles.Add(new Vector2Int(x, z));
             }
         }
+        return blockedTiles;
     }
+
+    //protected virtual void WriteBlockedVectors(int x, int z)
+    //{
+    //    for (int i = 0; i <= x; i++)
+    //    {
+    //        for (int j = 0; j < z; j++)
+    //        {
+    //            m_BlockedTilesXZ.Add(new Vector2Int(i, j));
+    //        }
+    //    }
+    //}
 
     protected virtual void SetTileStatus(bool blocked = true)
     {
         if (blocked)
         {
-            foreach (GridTile tile in GridManager.Instance.Neighbors(_gridObject.m_CurrentGridTile, true, m_BlockedTilesXZ))
+            foreach (GridTile tile in GridManager.Instance.Neighbors(_gridObject.m_CurrentGridTile, true, BlockedTiles()))
             {
                 tile.AddOccupyingGridObject(_gridObject);
             }
         }
         else
         {
-            foreach (GridTile tile in GridManager.Instance.Neighbors(_gridObject.m_CurrentGridTile, true, m_BlockedTilesXZ))
+            foreach (GridTile tile in GridManager.Instance.Neighbors(_gridObject.m_CurrentGridTile, true, BlockedTiles()))
             {
                 tile.RemoveOccupyingGridObject(_gridObject);
             }

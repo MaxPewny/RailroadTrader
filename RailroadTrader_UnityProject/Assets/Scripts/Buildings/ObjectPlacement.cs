@@ -34,11 +34,6 @@ public class ObjectPlacement : MonoBehaviour
             DetectMouse();
     }
 
-    protected virtual void SetBuildAreas()
-    {
-
-    }
-
     protected virtual void DetectMouse()
     {
         if (Input.GetMouseButtonDown(0))
@@ -46,17 +41,24 @@ public class ObjectPlacement : MonoBehaviour
             if (GridManager.Instance.m_HoveredGridTile != null && !GridManager.Instance.m_HoveredGridTile.IsTileOccupied() && !EventSystem.current.IsPointerOverGameObject())
             {
                 List<GridTile> neighbors = GridManager.Instance.Neighbors(GridManager.Instance.m_HoveredGridTile, true, _blockedTiles);
+                HighlightNeighbours(neighbors, Color.green);
 
-                if (neighbors.Count < _blockedTiles.Count - 1) return;
+                if (neighbors.Count < _blockedTiles.Count - 1)
+                {
+                    HighlightNeighbours(neighbors, Color.red);
+                    return;
+                }
 
                 foreach (GridTile tile in neighbors)
                 {
                     if (tile.IsTileOccupied())
                     {
+                        HighlightNeighbours(neighbors, Color.red);
                         return;
                     }
-                    if (tile.gameObject.GetComponent<BuildSpace>().m_StoreType != m_ObjectPrefab.GetComponent<Building>().m_StoreType) 
+                    if (tile.gameObject.GetComponent<BuildSpace>().m_StoreType != m_ObjectPrefab.GetComponent<Building>().m_StoreType)
                     {
+                        HighlightNeighbours(neighbors, Color.red);
                         return;
                     }
                 }
@@ -69,22 +71,31 @@ public class ObjectPlacement : MonoBehaviour
         }
     }
 
+    private void HighlightNeighbours(List<GridTile> neighbors, Color color)
+    {
+        foreach(GridTile tile in neighbors)
+        {
+            tile.GetComponentInChildren<SpriteRenderer>().color = color;
+        }
+    }
+
     public virtual void ActivateBuildmode(GameObject pPrefab, int pCost) 
     {
         GameManager.Instance.BuildModeActive = BuildModeActivated = true;
+        _blockedTiles = m_ObjectPrefab.GetComponent<Building>().BlockedTiles();
         m_ObjectPrefab = pPrefab;
         tempBuildCost = pCost;
         //Cursor.visible = false;
         m_HighlightCursor.SetActive(true);
         _modelHolder = Instantiate(m_ObjectPrefab.GetComponent<Building>().m_Model, transform);
 
-        for (int i = 0; i <= m_ObjectPrefab.GetComponent<Building>().BlockedXTiles; i++)
-        {
-            for (int j = 0; j < m_ObjectPrefab.GetComponent<Building>().BlockedZTiles; j++)
-            {
-                _blockedTiles.Add(new Vector2Int(i, j));
-            }
-        }
+        //for (int i = 0; i <= m_ObjectPrefab.GetComponent<Building>().BlockedXTiles; i++)
+        //{
+        //    for (int j = 0; j < m_ObjectPrefab.GetComponent<Building>().BlockedZTiles; j++)
+        //    {
+        //        _blockedTiles.Add(new Vector2Int(i, j));
+        //    }
+        //}
         //_modelHolder.GetComponent<MeshRenderer>().material = m_HighlightMat;
     }
 

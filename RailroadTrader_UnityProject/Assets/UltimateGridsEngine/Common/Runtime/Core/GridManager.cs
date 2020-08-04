@@ -208,14 +208,17 @@ public class GridManager : MonoBehaviour {
         return results;
     }
 
-    public virtual List<GridTile> Neighbors(GridTile gridTile, bool ignoresHeight = false, List<Vector2Int> customDirections = null) {
+    public virtual List<GridTile> Neighbors(GridTile gridTile, bool ignoresHeight = false, List<Vector2Int> customDirections = null) 
+    {
         List<GridTile> results = new List<GridTile>();
 
         var directions = customDirections != null ? customDirections : m_DefaultNeighbors;
 
-        foreach (Vector2Int dir in directions) {
+        foreach (Vector2Int dir in directions) 
+        {
             Vector2Int newVector = dir + gridTile.m_GridPosition;
-            if (ExistsTileAtPosition(newVector)) {
+            if (ExistsTileAtPosition(newVector)) 
+            {
                 GridTile targetTile = GetGridTileAtPosition(newVector);
                 if (targetTile != null) {
                     results.Add(targetTile);
