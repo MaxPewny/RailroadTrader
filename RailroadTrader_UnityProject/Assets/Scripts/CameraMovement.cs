@@ -6,7 +6,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField]
     private GameObject CameraRig;
 
-    private enum Direction { up, left, down, right};
+    private enum Direction { up, left, down, right };
     private Direction dir;
 
 
@@ -37,22 +37,25 @@ public class CameraMovement : MonoBehaviour
     {
         if (Input.GetButton("Up") && CanMove(Direction.up))
         {
+            MoveHorizontal(true);
             MoveVertical(true);
         }
         else if (Input.GetButton("Down") && CanMove(Direction.down))
         {
+            MoveHorizontal(false);
             MoveVertical(false);
         }
 
         if (Input.GetButton("Left") && CanMove(Direction.left))
         {
             MoveHorizontal(false);
+            MoveVertical(true);
         }
         else if (Input.GetButton("Right") && CanMove(Direction.right))
         {
             MoveHorizontal(true);
+            MoveVertical(false);
         }
-
     }
 
     private bool CanMove(Direction dir)
@@ -60,44 +63,41 @@ public class CameraMovement : MonoBehaviour
         switch (dir)
         {
             case Direction.up:
-                if (CameraRig.transform.position.z >= borders[(int)dir])
-                {
-                    return false;
-                }
-                return true;
+                if (CameraRig.transform.position.z < upperBorder &&
+                    CameraRig.transform.position.x < rightBorder)
+                    return true;
+                return false;
             case Direction.left:
-                if (CameraRig.transform.position.x <= borders[(int)dir])
-                {
-                    return false;
-                }
-                return true;
+                if (CameraRig.transform.position.x > leftBorder &&
+                    CameraRig.transform.position.z < upperBorder)
+                    return true;
+                return false;
+
             case Direction.down:
-                if (CameraRig.transform.position.z <= borders[(int)dir])
-                {
-                    return false;
-                }
-                return true;
+                if (CameraRig.transform.position.z > lowerBorder &&
+                    CameraRig.transform.position.x > leftBorder)
+                    return true;
+                return false;
             case Direction.right:
-                if (CameraRig.transform.position.x >= borders[(int)dir])
-                {
-                    return false;
-                }
-                return true;
+                if (CameraRig.transform.position.x < rightBorder &&
+                      CameraRig.transform.position.z > lowerBorder)
+                    return true;
+                return false;
 
             default:
                 return false;
         }
     }
 
-    private void MoveHorizontal(bool pos)
+    private void MoveHorizontal(bool right)
     {
-        float move = pos ? speed : -speed;
-        CameraRig.transform.Translate(move, 0, -move);
+        float move = right ? speed : -speed;
+        CameraRig.transform.Translate(move, 0, 0);
     }
 
-    private void MoveVertical(bool pos)
+    private void MoveVertical(bool up)
     {
-        float move = pos ? speed : -speed;
-        CameraRig.transform.Translate(move, 0, move);
+        float move = up ? speed : -speed;
+        CameraRig.transform.Translate(0, 0, move);
     }
 }
