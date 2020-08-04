@@ -1,5 +1,86 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2398507608569702702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2832146106278012265}
+  - component: {fileID: 3475262737537369404}
+  m_Layer: 0
+  m_Name: Sprite_DeparturePlatform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2832146106278012265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2398507608569702702}
+  m_LocalRotation: {x: 0.35355338, y: 0.35355338, z: -0.1464466, w: 0.8535535}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1012411494845934298}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 45, y: 45, z: 0}
+--- !u!212 &3475262737537369404
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2398507608569702702}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 6c1349b946477c046a9806901df60b9a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10.24, y: 10.24}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2502635941548637954
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +191,7 @@ Transform:
   m_LocalScale: {x: 5, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 1482735826439733414}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8898507244179511844
 MeshFilter:
@@ -204,6 +285,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8247989852759442592}
+  - {fileID: 1012411494845934298}
   - {fileID: 4517673584124919903}
   - {fileID: 6039616535208163977}
   m_Father: {fileID: 0}
@@ -261,7 +343,7 @@ MonoBehaviour:
   BlockedXTiles: 5
   BlockedZTiles: 0
   values: {fileID: 11400000, guid: f71d8532430b47140a9571586be1e64a, type: 2}
-  TrainName: Intercity Express
+  TrainName: 
   m_PassangerType: 2
   timeTilArrival: 5
   passedArrivalTime: 0
@@ -303,6 +385,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &5900160483217056080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1012411494845934298}
+  m_Layer: 0
+  m_Name: PlatformDepartureSign
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1012411494845934298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900160483217056080}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.18, y: 5.94, z: -5.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2832146106278012265}
+  m_Father: {fileID: 1482735826439733414}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4186880247780082653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -403,17 +516,17 @@ PrefabInstance:
     - target: {fileID: 6242036708585273532, guid: a025f37611ddc3a4d8c5863c560f936b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.41
+      value: 1.64
       objectReference: {fileID: 0}
     - target: {fileID: 6242036708585273532, guid: a025f37611ddc3a4d8c5863c560f936b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.17
+      value: 0.43000007
       objectReference: {fileID: 0}
     - target: {fileID: 6242036708585273532, guid: a025f37611ddc3a4d8c5863c560f936b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.51
+      value: -15.34
       objectReference: {fileID: 0}
     - target: {fileID: 6242036708585273532, guid: a025f37611ddc3a4d8c5863c560f936b,
         type: 3}
@@ -438,7 +551,7 @@ PrefabInstance:
     - target: {fileID: 6242036708585273532, guid: a025f37611ddc3a4d8c5863c560f936b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6242036708585273532, guid: a025f37611ddc3a4d8c5863c560f936b,
         type: 3}
@@ -454,6 +567,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -16.199001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242036708585273532, guid: a025f37611ddc3a4d8c5863c560f936b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.008300001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242036708585273532, guid: a025f37611ddc3a4d8c5863c560f936b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.009999999
       objectReference: {fileID: 0}
     - target: {fileID: 8385391575227690397, guid: a025f37611ddc3a4d8c5863c560f936b,
         type: 3}
