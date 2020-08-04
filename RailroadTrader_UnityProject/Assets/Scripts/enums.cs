@@ -15,9 +15,9 @@ public enum BuildingLevel
 
 public enum Resource
 {
-    FOOD,
-    BEVERAGE,
-    CARGO,
+    CARGO = 0,
+    FOOD = 1,
+    BEVERAGE = 2,
     STAFF
 }
 

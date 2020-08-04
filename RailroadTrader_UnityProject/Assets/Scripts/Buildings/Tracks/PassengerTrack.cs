@@ -20,8 +20,7 @@ public class PassengerTrack : Building
     private float timeTilDeparture = 10.0f;
     private float trainAnimTime = 1.0f;
     [SerializeField]
-    private Animator anim;
-       
+    private Animator anim;       
 
     private NpcMovement NPCs;
 

@@ -58,7 +58,7 @@ public class SatisfactionController : MonoBehaviour
             return 100;
 
         float percentage = ((float)curSatisfaction / (float)maxSatisfaction) * 100.0f;
-        print("float % = " + percentage);
+        //print("float % = " + percentage);
         return Mathf.RoundToInt(percentage) >= 100 ? 100 : Mathf.RoundToInt(percentage);
     }
 }

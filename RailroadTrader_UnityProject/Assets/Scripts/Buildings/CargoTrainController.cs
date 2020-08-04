@@ -25,10 +25,14 @@ public class CargoTrainController : MonoBehaviour
 
     //public HashSet<Cargo> StoredCargo { get; private set; }
 
-    void Start()
+    private void Awake()
     {
         timeTilArrival = values.CargoTimeTilArrival;
         cargoAmountPerTrack = values.CargoAmountPerTrack;
+    }
+
+    void Start()
+    {
         OrderedCargo = new Dictionary<Resource, int>();
         BuildingManager.OnCargoTrackCountChange += UpdateTrackList;
         inStation = true;

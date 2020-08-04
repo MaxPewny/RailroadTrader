@@ -10,7 +10,7 @@ public class FinanceController : MonoBehaviour
     //int is the number of the month, starting with 1 for the first obv
     private Dictionary<int, FinanceOverview> monthlyFinances = new Dictionary<int, FinanceOverview>();
     private int curFinanceID = 0;
-    private int curYearID = 1;
+    //private int curYearID = 1;
 
     public static event System.Action<int> OnCurrencyValueChange = delegate { };
     public static event System.Action<Passanger, int> OnPassangerSpendMoney = delegate { };
@@ -32,13 +32,20 @@ public class FinanceController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {            
-            IngameTime time = GetCurTime();
-            if (time == null)
-                return;
-            print("FC knows it is currently the "+time.month + ". month");
-        }
+        //if (Input.GetKeyDown(KeyCode.T))
+        //{            
+            
+        //    if (time == null)
+        //        return;
+        //    print("FC knows it is currently the "+time.month + ". month");
+        //}
+    }
+
+
+    private int CurYear()
+    {
+        IngameTime time = GetCurTime();
+        return time.year;
     }
 
     public FinanceOverview CurrentFO()
@@ -58,7 +65,7 @@ public class FinanceController : MonoBehaviour
     public List<FinanceOverview> YearOverview()
     {
         List<FinanceOverview> FOs = new List<FinanceOverview>();
-        int curMonth = curFinanceID / curYearID;
+        int curMonth = curFinanceID / CurYear();
         UpdateMonthlySum();
         for (int i = 1; i <= curMonth; i++)
         {
@@ -104,10 +111,10 @@ public class FinanceController : MonoBehaviour
     public void IncreaseMonthCounterByOne()
     {
         curFinanceID += 1;
-        if (curFinanceID / curYearID > 12)
-        {
-            ++curYearID;
-        }
+        //if (curFinanceID / curYearID > 12)
+        //{
+        //    ++curYearID;
+        //}
         monthlyFinances.Add(curFinanceID, new FinanceOverview());
         UpdateMonthlySum();
     }

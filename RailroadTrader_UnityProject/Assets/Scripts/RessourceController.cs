@@ -47,30 +47,100 @@ public class RessourceController : MonoBehaviour
     {
         CargoTrainController.OnCargoReset += ResetCargoInTracks;
         CargoTrainController.OnOrderArrived += SetCargoInTracksTo;
+        BuildingManager.ListOfAllSupplyStores += RefillAllStores;
+        SupplyStores.OnStoreNeedsRefill += RefillSingleStore;
     }
+
+    private void RefillAllStores(List<SupplyStores> buildStores)
+    {
+        foreach(SupplyStores store in buildStores)
+        {
+            RefillSingleStore(store);
+            //for(int i = 0; i < 3; i++)
+            //{
+            //    int canBeTaken = AvailableAmountInCargo((Resource)i, store.NeededAmount((Resource)i));
+            //    if (!TakeRessourceFromCargo((Resource)i, canBeTaken))
+            //        print("oops, not enough " + ((Resource)i).ToString() + " in cargo! \nneeded: "+canBeTaken+ ", available: "+ _ressourcesInTracks[(Resource)i]);
+            //    else
+            //    {
+            //        AddToShopRessis((Resource)i, canBeTaken);
+            //        store.AddToStock((Resource)i, canBeTaken);
+            //        print(store.gameObject.name + " takes " + canBeTaken + " of " + ((Resource)i).ToString());
+            //    }
+            //}
+        }
+    }
+
+    private void RefillSingleStore(SupplyStores store)
+    {
+        if (store == null)
+            return;
+
+        for (int i = 0; i < 3; i++)
+        {
+            int canBeTaken = AvailableAmountInCargo((Resource)i, store.NeededAmount((Resource)i));
+            if (!TakeRessourceFromCargo((Resource)i, canBeTaken))
+                print("oops, not enough " + ((Resource)i).ToString() + " in cargo! \nneeded: " + canBeTaken + ", available: " + _ressourcesInTracks[(Resource)i]);
+            else
+            {
+                if(store.AddToStock((Resource)i, canBeTaken))
+                {
+                    AddToShopRessis((Resource)i, canBeTaken);
+                    print(store.gameObject.name + " takes " + canBeTaken + " of " + ((Resource)i).ToString());
+                }
+                else
+                    print("none taken from " + ((Resource)i).ToString());
+            }
+        }
+    }
+
+    public int AvailableAmountInCargo(Resource pType, int neededAmount)
+    {
+        if (_ressourcesInTracks[pType] >= neededAmount)
+        {
+            //_ressourcesInTracks[pType] -= neededAmount;
+            return neededAmount;
+        }
+        else if (_ressourcesInTracks[pType] < neededAmount && _ressourcesInTracks[pType] > 0)
+        {
+            int amount = _ressourcesInTracks[pType];
+            //_ressourcesInTracks[pType] -= neededAmount;
+            return amount;
+        }
+        else
+            return 0;
+    }
+
+    public bool TakeRessourceFromCargo(Resource pType, int pAmount)
+    {
+        if (_ressourcesInTracks[pType] < pAmount)
+            return false;
+
+        _ressourcesInTracks[pType] -= pAmount;
+        return true;     
+    }
+
+
 
     private void ResetCargoInTracks()
     {
-        lock (mutex)
-        {
+
             _ressourcesInTracks.Clear();
             foreach (Resource ressource in (Resource[])Enum.GetValues(typeof(Resource)))
             {
                 _ressourcesInTracks.Add(ressource, 0);
             }
-        }
+        
     }
 
     private void SetCargoInTracksTo(Dictionary<Resource, int> newAmount)
     {
-        lock (mutex)
+        ResetCargoInTracks();
+        foreach (KeyValuePair<Resource,int> pair in newAmount)
         {
-            foreach(KeyValuePair<Resource,int> pair in newAmount)
-            {
-                _ressourcesInTracks[pair.Key] = pair.Value;
-            }
-            OnRefillStores();
+            _ressourcesInTracks[pair.Key] = pair.Value;
         }
+        OnRefillStores();        
     }
 
     public void AddPassangersCount(Passanger pType, int pAmount)
@@ -88,31 +158,33 @@ public class RessourceController : MonoBehaviour
         return amount;
     }
 
-    /// <summary>
-    /// Returns pAmount if _ressourcesInTracks count is equal or higher, else returns the available amount
-    /// </summary>
-    /// <param name="pType"></param>
-    /// <param name="pAmount"></param>
-    /// <returns></returns>
-    public int TakeRessourceFromCargo(Resource pType, int pAmount = 1)
-    {
-        lock (mutex)
-        {
-            if (_ressourcesInTracks[pType] >= pAmount)
-            {
-                _ressourcesInTracks[pType] -= pAmount;
-                return pAmount;
-            }
-            else if (_ressourcesInTracks[pType] < pAmount && _ressourcesInTracks[pType] > 0)
-            {
-                int amount = _ressourcesInTracks[pType];
-                _ressourcesInTracks[pType] = 0;
-                return amount;
-            }
-            else
-                return 0;
-        }
-    }
+
+
+    ///// <summary>
+    ///// Returns pAmount if _ressourcesInTracks count is equal or higher, else returns the available amount
+    ///// </summary>
+    ///// <param name="pType"></param>
+    ///// <param name="pAmount"></param>
+    ///// <returns></returns>
+    //public int TakeRessourceFromCargo(Resource pType, int pAmount = 1)
+    //{
+    //    lock (mutex)
+    //    {
+    //        if (_ressourcesInTracks[pType] >= pAmount)
+    //        {
+    //            _ressourcesInTracks[pType] -= pAmount;
+    //            return pAmount;
+    //        }
+    //        else if (_ressourcesInTracks[pType] < pAmount && _ressourcesInTracks[pType] > 0)
+    //        {
+    //            int amount = _ressourcesInTracks[pType];
+    //            _ressourcesInTracks[pType] -= pAmount;
+    //            return amount;
+    //        }
+    //        else
+    //            return 0;
+    //    }
+    //}
 
     public void SetResourceToTrack(Resource pType, int pAmount)
     {
@@ -121,19 +193,17 @@ public class RessourceController : MonoBehaviour
 
     public void SubtractFromShopRessis(Resource pType, int pAmount)
     {
-        lock (mutex)
-        {
-            _ressourcesInShops[pType] -= pAmount;
-            OnShopStockChange(pType, _ressourcesInShops[pType]);
-        }
+        _ressourcesInShops[pType] -= pAmount;
+        OnShopStockChange(pType, _ressourcesInShops[pType]);        
     }
 
     public void AddToShopRessis(Resource pType, int pAmount)
     {
-        lock (mutex)
-        {
-            _ressourcesInShops[pType] += pAmount;
-            OnShopStockChange(pType, _ressourcesInShops[pType]);
-        }
+        _ressourcesInShops[pType] += pAmount;
+        OnShopStockChange(pType, _ressourcesInShops[pType]);
+        
     }
+
+
+
 }

@@ -65,11 +65,16 @@ public class NpcMovement: MonoBehaviour
     //    protected set { _instance = value; }
     //}
 
+    private void Awake()
+    {
+        WriteMovementProbs();        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         _buildingManager = FindObjectOfType<BuildingManager>();
-        WriteMovementProbs();
+        SupplyStores.OnGuestLeft += SpawnNPCLeavingStore;
     }
 
     private void WriteMovementProbs()
@@ -110,6 +115,16 @@ public class NpcMovement: MonoBehaviour
             print(prefab.name+" is going to "+store.building.ToString());
         else
             print(prefab.name+" is going to the exit");
+    }
+
+    protected virtual void SpawnNPCLeavingStore(Passanger type, Transform spawnPoint)
+    {
+        SpawnNpcAndMove(
+            new Vector3(spawnPoint.transform.position.x-1.0f, spawnPoint.transform.position.y, spawnPoint.transform.position.z),
+            new StoreInfo(null, _exitPoint),
+            (int)type
+            );
+        print(type.ToString() + " is leaving shop towards station exit");
     }
 
     protected virtual int GetNPCGender()

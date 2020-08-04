@@ -20,7 +20,6 @@ public class SupplyStores : Building
     //    }
     //}
     public SupplystoreValues values;
-
     public List<BuildingRessource> m_Ressources;
     public List<VisitorStats> m_VisitorStats;
 
@@ -30,7 +29,11 @@ public class SupplyStores : Building
     //[SerializeField]
     private float passedTime;
 
+    private int ResourcesUsedPerCustomer = 1;
+
     public event System.Action<int> OnSatisfactionGain = delegate { };
+    public static event System.Action<SupplyStores> OnStoreNeedsRefill = delegate { };
+    public static event System.Action<Passanger, Transform> OnGuestLeft = delegate { };
     protected override void DestroyBuilding()
     {
         throw new System.NotImplementedException();
@@ -102,7 +105,9 @@ public class SupplyStores : Building
             {
                 --guest.curAmount;
                 --totalGuestCount;
-                print(guest.type.ToString() + " has left");
+                OnGuestLeft(guest.type, NPCEnterPoint);
+                OnStoreNeedsRefill(this);
+                print(guest.type.ToString() + " has left "+ m_Type.ToString());
                 return;
             }
         }
@@ -117,7 +122,7 @@ public class SupplyStores : Building
 
         if (visitor.curAmount < visitor.maxCapacity)
         {
-            ManageRessources(1);
+            UseRessources(ResourcesUsedPerCustomer);
             ++visitor.curAmount;
             ++totalGuestCount;
             return true;
@@ -152,13 +157,7 @@ public class SupplyStores : Building
         return true;
     }
 
-    private void ManageRessources(int amount)
-    {
-        UseRessources(amount);
-        RefillRessources(amount);
-    }
-
-    private void UseRessources(int amount = 1)
+    private void UseRessources(int amount)
     {
         foreach (BuildingRessource ressi in m_Ressources)
         {
@@ -166,47 +165,80 @@ public class SupplyStores : Building
             RC.SubtractFromShopRessis(ressi.type, amount);
         }
     }
-    public void RefillRessources()
-    {
-        foreach (BuildingRessource ressi in m_Ressources)
-        {
-            int amount = ressi.maxCapacity - ressi.curAmount;
-            print(gameObject.name + " needs " + amount + "x " + ressi.type.ToString());
 
-            if (RC.TakeRessourceFromCargo(ressi.type, amount) == amount)
-            {
-                ressi.curAmount += amount;
-                RC.AddToShopRessis(ressi.type, amount);
-                print("refilled "+amount+" of "+ ressi.type.ToString()+" of "+ gameObject.name);
-                //RC.SubtractFromShopRessis(ressi.type, ressi.curAmount);
-            }
-        }
+    public int NeededAmount(Resource ressiType)
+    {
+        BuildingRessource ressi = m_Ressources.FirstOrDefault(r => r.type == ressiType);
+        return Mathf.Abs(ressi.curAmount - ressi.maxCapacity);
     }
 
-    private void RefillRessources(int amount)
+    public bool AddToStock(Resource ressi, int amount)
     {
-        foreach (BuildingRessource ressi in m_Ressources)
+        foreach(BuildingRessource br in m_Ressources)
         {
-            if (RC.TakeRessourceFromCargo(ressi.type, amount) == amount)
+            if (br.type == ressi)
             {
-                ressi.curAmount += amount;
-                RC.AddToShopRessis(ressi.type, amount);
-                //RC.SubtractFromShopRessis(ressi.type, ressi.curAmount);
+                if (br.curAmount < br.maxCapacity)
+                {
+                    br.curAmount += amount;
+                    br.curAmount = br.curAmount > br.maxCapacity ? br.maxCapacity : br.curAmount;
+                    print("added " + amount + " to " + ressi.ToString());
+                    return true;
+                }
+
+                print(ressi.ToString() + " still on max");                
             }
         }
+        return false;
     }
+
+    //public void RefillRessources()
+    //{
+    //    foreach (BuildingRessource ressi in m_Ressources)
+    //    {
+    //        int amount = ressi.maxCapacity - ressi.curAmount;
+    //        print(gameObject.name + " needs " + amount + "x " + ressi.type.ToString());
+
+    //        if (RC.TakeRessourceFromCargo(ressi.type, amount) == amount)
+    //        {
+    //            ressi.curAmount += amount;
+    //            RC.AddToShopRessis(ressi.type, amount);
+    //            print("refilled "+amount+" of "+ ressi.type.ToString()+" of "+ gameObject.name);
+    //            //RC.SubtractFromShopRessis(ressi.type, ressi.curAmount);
+    //        }
+    //    }
+    //}
+
+    //private void RefillRessources(int amount)
+    //{
+    //    foreach (BuildingRessource ressi in m_Ressources)
+    //    {
+    //        int newAmount = RC.TakeRessourceFromCargo(ressi.type, amount);
+
+    //        //if (newAmount < amount)
+    //        //{
+
+    //        //    //RC.SubtractFromShopRessis(ressi.type, ressi.curAmount);
+    //        //}
+    //        //else
+    //        //{
+    //            ressi.curAmount += amount;
+    //            RC.AddToShopRessis(ressi.type, amount);
+    //        //}
+    //    }
+    //}
 
     /// <summary>
     /// Refills the whole inventory to max capacity
     /// </summary>    
-    public void StockUpInventory()
-    {
-        foreach (BuildingRessource ressi in m_Ressources)
-        {
-            if (ressi.curAmount < ressi.maxCapacity)
-                RefillRessources(ressi.maxCapacity - ressi.curAmount);
-        }
-    }
+    //public void StockUpInventory()
+    //{
+    //    foreach (BuildingRessource ressi in m_Ressources)
+    //    {
+    //        if (ressi.curAmount < ressi.maxCapacity)
+    //            RefillRessources(ressi.maxCapacity - ressi.curAmount);
+    //    }
+    //}
 
     protected virtual void ResetCapacity()
     {

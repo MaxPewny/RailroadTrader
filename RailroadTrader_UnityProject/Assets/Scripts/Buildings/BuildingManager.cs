@@ -15,10 +15,19 @@ public class BuildingManager : MonoBehaviour
     public static event System.Action<int> OnUpkeepDue = delegate { };
     public static event System.Action<List<CargoTrack>> OnCargoTrackCountChange = delegate { };
     public static event System.Action<List<SupplyStores>> OnSupplyStoreCountChange = delegate { };
+    public static event System.Action<List<SupplyStores>> ListOfAllSupplyStores = delegate { };
+
+    //public static System.Func<List<SupplyStores>> ListOfAllSupplyStores = delegate { return new List<SupplyStores>();};
+
 
     private void Awake()
     {
         m_Buildings = new List<Building>();
+        WriteGDValues();
+    }
+
+    private void WriteGDValues()
+    {
         maxShopAmount = values.MaxShopAmount;
         waxTrackAmount = values.MaxTrackAmount;
         upkeepPerCargotrack = values.CargoUpkeepCost;
@@ -27,17 +36,21 @@ public class BuildingManager : MonoBehaviour
     private void Start()
     {
         TimeController.OnDayEnd += PayUpkeepCosts;
-        RessourceController.OnRefillStores += RefillAllStores;
+        RessourceController.OnRefillStores += StoresToRefill;
         Building.OnInitialize += AddBuilding;
     }
 
-    private void RefillAllStores()
+    private void StoresToRefill()
     {
-        List<SupplyStores> stores = AllSupplyStores();
-        foreach(SupplyStores store in stores)
-        {
-            store.RefillRessources();
-        }
+        ListOfAllSupplyStores(AllSupplyStores());
+        //ListOfAllSupplyStores = delegate () { return AllSupplyStores(); };
+        //ListOfAllSupplyStores = () => AllSupplyStores();
+
+        //List <SupplyStores> stores = AllSupplyStores();
+        //foreach(SupplyStores store in stores)
+        //{
+        //    store.RefillRessources();
+        //}
     }
 
     public void AddBuilding(Building building)

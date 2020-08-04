@@ -31,12 +31,12 @@ public class Building : MonoBehaviour
     private void Awake()
     {
         WriteBlockedVectors(BlockedXTiles, BlockedZTiles);
+        WriteGDValues();
     }
 
     protected virtual void Start()
     {
         Initialize();
-        WriteGDValues();
     }
 
     protected virtual void Update()

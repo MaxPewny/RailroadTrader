@@ -20,13 +20,15 @@ public class TimeController : MonoBehaviour
     public static event System.Action OnMonthEnd = delegate { };
     public static event System.Action OnYearEnd = delegate { };
 
+    private void Awake()
+    {
+        realTimePerHour = values.RealTimeSecsPerHour;    
+    }
 
     private void Start()
     {
         CurTime = new IngameTime(0, 1, 1, 1);
         OnHourChange(CurTime);
-        realTimePerHour = values.RealTimeSecsPerHour;
-
         FinanceController.GetCurTime += CurrentTime;
     }
 
