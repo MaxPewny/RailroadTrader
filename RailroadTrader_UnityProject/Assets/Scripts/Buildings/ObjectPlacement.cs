@@ -82,8 +82,8 @@ public class ObjectPlacement : MonoBehaviour
     public virtual void ActivateBuildmode(GameObject pPrefab, int pCost) 
     {
         GameManager.Instance.BuildModeActive = BuildModeActivated = true;
-        _blockedTiles = m_ObjectPrefab.GetComponent<Building>().BlockedTiles();
         m_ObjectPrefab = pPrefab;
+        _blockedTiles = m_ObjectPrefab.GetComponent<Building>().BlockedTiles();
         tempBuildCost = pCost;
         //Cursor.visible = false;
         m_HighlightCursor.SetActive(true);

@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cfd3b607ef23114085d4608a9c91dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BlockedTilesXZ: []
   m_StoreType: 1
   m_Type: 2
   m_Model: {fileID: 5597029537591077320}
@@ -180,7 +181,7 @@ MonoBehaviour:
   NPCEnterPoint: {fileID: 5707417937270027003}
   m_NpcAmount: 0
   totalGuestCount: 0
-  BlockedXTiles: 6
+  BlockedXTiles: 5
   BlockedZTiles: 4
   values: {fileID: 11400000, guid: f21d454c221e92545a737455f0d2cfd3, type: 2}
   m_Ressources: []
