@@ -15,6 +15,8 @@ public class BuildMenu : MonoBehaviour
     public BuildOptionValues[] TrackBuildOptions;
     public BuildOptionValues[] ShopBuildOptions;
 
+    public static event System.Action OnBuildModeActivated = delegate { };
+
     void Start()
     {
         for (int i = 0; i < TrackBuildOptions.Length; i++)
@@ -51,6 +53,7 @@ public class BuildMenu : MonoBehaviour
         if (FC.PayBuildingCost(pCost))
         {
             _placement.ActivateBuildmode(pPrefab, pCost);
+            OnBuildModeActivated();
         }
         else
         {

@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe709ca5c00eae348b04a33a0230178a, type: 3}
   m_Name: BusinessTrack
   m_EditorClassIdentifier: 
-  BuildCost: 5
   UpkeepCost: 25
   PassangerType: 2
-  TimeTilArrival: 45
+  TimeTilArrival: 11

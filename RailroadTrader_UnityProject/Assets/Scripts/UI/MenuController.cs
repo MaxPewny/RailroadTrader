@@ -13,6 +13,7 @@ public class MenuController : MonoBehaviour
 
     private void Start()
     {
+        BuildMenu.OnBuildModeActivated += CloseAllMenus;
         OnObjectClicked.OnAnyTileClicked += CloseAllMenus;
         OnObjectClicked.OnCargoTrackClicked += CloseMenusExceptCargo;
         OnObjectClicked.OnPassengerTrackClicked += CloseMenusExceptPTracks;
