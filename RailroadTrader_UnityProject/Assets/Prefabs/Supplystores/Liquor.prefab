@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 1097700374337696882}
   - component: {fileID: 1437609440678030952}
   - component: {fileID: 3595150353728186064}
-  - component: {fileID: -1968892186820261510}
+  - component: {fileID: 5723635763186258247}
   m_Layer: 0
   m_Name: Liquor
   m_TagString: Untagged
@@ -161,7 +161,7 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 2.5, y: 1.5, z: 1.5}
   m_TimeToStationary: 0.5
---- !u!114 &-1968892186820261510
+--- !u!114 &5723635763186258247
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3355206406345901541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f2f28cf2199d247aa7b288a0ccc676, type: 3}
+  m_Script: {fileID: 11500000, guid: 9cfd3b607ef23114085d4608a9c91dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StoreType: 1
@@ -180,27 +180,24 @@ MonoBehaviour:
   NPCEnterPoint: {fileID: 5707417937270027003}
   m_NpcAmount: 0
   totalGuestCount: 0
-  m_BlockedTilesXZ:
-  - {x: 1, y: 0}
-  - {x: 0, y: 1}
-  - {x: 1, y: 1}
+  m_BlockedTilesXZ: []
   BlockedXTiles: 5
   BlockedZTiles: 4
   values: {fileID: 11400000, guid: f21d454c221e92545a737455f0d2cfd3, type: 2}
   m_Ressources: []
   m_VisitorStats:
   - type: 0
-    maxCapacity: 10
-    earningGain: 4
-    satisfactionGain: 2
+    maxCapacity: 0
+    earningGain: 0
+    satisfactionGain: 0
     curAmount: 0
   - type: 1
-    maxCapacity: 10
-    earningGain: 6
-    satisfactionGain: 1
+    maxCapacity: 0
+    earningGain: 0
+    satisfactionGain: 0
     curAmount: 0
   - type: 2
-    maxCapacity: 10
+    maxCapacity: 0
     earningGain: 0
     satisfactionGain: 0
     curAmount: 0
@@ -273,7 +270,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1449139987
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f5c86be6deaac2d4091e05faafd2be5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

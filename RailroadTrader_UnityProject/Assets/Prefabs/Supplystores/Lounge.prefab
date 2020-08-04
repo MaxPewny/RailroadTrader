@@ -68,7 +68,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1449139987
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e4a57e3bed7cbc54889371f92a0e4eb4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1097700374337696882}
   - component: {fileID: 1437609440678030952}
   - component: {fileID: 3595150353728186064}
-  - component: {fileID: -1968892186820261510}
+  - component: {fileID: 1471667726998387557}
   m_Layer: 0
   m_Name: Lounge
   m_TagString: Untagged
@@ -163,7 +163,7 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 6, y: 1.5, z: 1.5}
   m_TimeToStationary: 0.5
---- !u!114 &-1968892186820261510
+--- !u!114 &1471667726998387557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,38 +172,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 3355206406345901541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f2f28cf2199d247aa7b288a0ccc676, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a56732b5ef84b94b8db3b6e8c9d2deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_StoreType: 1
-  m_Type: 5
+  m_Type: 4
   m_Model: {fileID: 770282614301625398}
   UpkeepCost: 200
   NPCEnterPoint: {fileID: 6894298823265949392}
   m_NpcAmount: 0
   totalGuestCount: 0
-  m_BlockedTilesXZ:
-  - {x: 1, y: 0}
-  - {x: 0, y: 1}
-  - {x: 1, y: 1}
+  m_BlockedTilesXZ: []
   BlockedXTiles: 12
   BlockedZTiles: 4
   values: {fileID: 11400000, guid: 1facaaa8e3788824abb081ed881e09dd, type: 2}
   m_Ressources: []
   m_VisitorStats:
   - type: 0
-    maxCapacity: 10
-    earningGain: 13
-    satisfactionGain: 1
+    maxCapacity: 0
+    earningGain: 0
+    satisfactionGain: 0
     curAmount: 0
   - type: 1
-    maxCapacity: 10
-    earningGain: 18
-    satisfactionGain: 3
+    maxCapacity: 0
+    earningGain: 0
+    satisfactionGain: 0
     curAmount: 0
   - type: 2
-    maxCapacity: 10
-    earningGain: 23
+    maxCapacity: 0
+    earningGain: 0
     satisfactionGain: 0
     curAmount: 0
   secondsSpendByNPC: 2
