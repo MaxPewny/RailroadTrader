@@ -48,11 +48,6 @@ public class SupplyStores : Building
         //{
         //    vs.building = m_Type;
         //}
-        foreach(BuildingRessource r in m_Ressources)
-        {
-            r.curAmount = r.maxCapacity;
-            RC.AddToShopRessis(r.type, r.curAmount);
-        }
     }
 
     protected override void Update()
@@ -63,16 +58,29 @@ public class SupplyStores : Building
     }
 
     protected override void WriteGDValues()
-    {
+    {        
+        m_Ressources.Clear();
+        m_VisitorStats.Clear();
         //m_BuildCost = values.BuildCost;
-        UpkeepCost = values.UpkeepCost;
-        m_Ressources = values.Resources;
-        m_VisitorStats = values.VisitorStats;
+        UpkeepCost = values.UpkeepCost;      
         secondsSpendByNPC = values.SecondsSpendByNPC;
+
+        foreach (BuildingRessource ressi in values.Resources)
+        {
+            m_Ressources.Add(ressi.DeppCopy());
+        }
+        foreach (VisitorStats stat in values.VisitorStats)
+        {
+            m_VisitorStats.Add(stat.DeppCopy());
+        }
 
         foreach(VisitorStats vs in m_VisitorStats)
         {
             vs.curAmount = 0;
+        }
+        foreach (BuildingRessource r in m_Ressources)
+        {
+            r.curAmount = r.maxCapacity;
         }
     }
 
@@ -167,8 +175,8 @@ public class SupplyStores : Building
             if (ressi.maxCapacity <= 0)
                 continue;
 
-            ressi.curAmount -= 1;
-            RC.SubtractFromShopRessis(ressi.type, amount);
+            ressi.curAmount -= amount;
+            OnStoreNeedsRefill(this);
         }
     }
 

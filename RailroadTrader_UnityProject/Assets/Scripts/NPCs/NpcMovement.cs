@@ -80,9 +80,9 @@ public class NpcMovement: MonoBehaviour
     private void WriteMovementProbs()
     {
         _movementProbabilities.Clear();
-        _movementProbabilities.Add(values.CommuterVisitValues);
-        _movementProbabilities.Add(values.BusinessVisitValues);
-        _movementProbabilities.Add(values.TouristVisitValues);
+        _movementProbabilities.Add(values.CommuterVisitValues.DeppCopy());
+        _movementProbabilities.Add(values.BusinessVisitValues.DeppCopy());
+        _movementProbabilities.Add(values.TouristVisitValues.DeppCopy());
     }
 
     //private void TrainArrived()
@@ -97,11 +97,26 @@ public class NpcMovement: MonoBehaviour
     {
         OnVisitorSpawn(pPassanger, pNpcCount);
 
-        for (int i = 0; i < pNpcCount; i++)
+        int spawnAmount = UnityEngine.Random.Range(1, 3);
+        for (int i = 0; i < pNpcCount; i+= spawnAmount)
         {
-           //Debug.Log("Iterate");
-            SpawnNpcAndMove(pSpawnPoint, CalculateGoToStore(pPassanger), (int)pPassanger); 
-           yield return new WaitForSeconds(_spawnFrequency);
+            if (spawnAmount < 2)
+            {
+                SpawnNpcAndMove(pSpawnPoint, CalculateGoToStore(pPassanger), (int)pPassanger);
+            }
+            else
+            {
+                SpawnNpcAndMove(pSpawnPoint, CalculateGoToStore(pPassanger), (int)pPassanger);
+                yield return new WaitForSeconds(UnityEngine.Random.Range(0.05f, 0.1f));
+                SpawnNpcAndMove(pSpawnPoint, CalculateGoToStore(pPassanger), (int)pPassanger);
+            }
+            float randomTime = UnityEngine.Random.Range(0.0f, 0.2f);
+            yield return new WaitForSeconds(_spawnFrequency + randomTime);
+
+            if (pNpcCount >= 2)
+                spawnAmount = UnityEngine.Random.Range(1, 3);
+            else
+                spawnAmount = 1;
         }
     }
 
@@ -162,6 +177,8 @@ public class NpcMovement: MonoBehaviour
                     {
                         return new StoreInfo(bakery, bakery.m_NpcMovePoint);
                     }
+                    else
+                        continue;
                 }
 
                 return new StoreInfo(null, _exitPoint);
@@ -175,6 +192,8 @@ public class NpcMovement: MonoBehaviour
                     {
                         return new StoreInfo(cafe, cafe.m_NpcMovePoint);
                     }
+                    else
+                        continue;
                 }
 
                 return new StoreInfo(null, _exitPoint);
@@ -190,6 +209,8 @@ public class NpcMovement: MonoBehaviour
                     {
                         return new StoreInfo(pub, pub.m_NpcMovePoint);
                     }
+                    else
+                        continue;
                 }
 
                 return new StoreInfo(null, _exitPoint);
@@ -203,6 +224,8 @@ public class NpcMovement: MonoBehaviour
                     {
                         return new StoreInfo(bar, bar.m_NpcMovePoint);
                     }
+                    else
+                        continue;
                 }
 
                 return new StoreInfo(null, _exitPoint);
@@ -215,6 +238,8 @@ public class NpcMovement: MonoBehaviour
                     {
                         return new StoreInfo(lounge, lounge.m_NpcMovePoint);
                     }
+                    else
+                        continue;
                 }
 
                 return new StoreInfo(null, _exitPoint);
@@ -230,6 +255,8 @@ public class NpcMovement: MonoBehaviour
                     {
                         return new StoreInfo(restaurant, restaurant.m_NpcMovePoint);
                     }
+                    else
+                        continue;
                 }
 
                 return new StoreInfo(null, _exitPoint);
@@ -243,6 +270,8 @@ public class NpcMovement: MonoBehaviour
                     {
                         return new StoreInfo(restaurant, restaurant.m_NpcMovePoint);
                     }
+                    else
+                        continue;
                 }
 
                 return new StoreInfo(null, _exitPoint);

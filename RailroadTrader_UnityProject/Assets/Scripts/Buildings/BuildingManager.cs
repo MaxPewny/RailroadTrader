@@ -38,6 +38,7 @@ public class BuildingManager : MonoBehaviour
         TimeController.OnDayEnd += PayUpkeepCosts;
         RessourceController.OnRefillStores += StoresToRefill;
         Building.OnInitialize += AddBuilding;
+        RessourceController.ResourceInStock += AmountInSupplystores;
     }
 
     private void StoresToRefill()
@@ -51,6 +52,24 @@ public class BuildingManager : MonoBehaviour
         //{
         //    store.RefillRessources();
         //}
+    }
+
+    private int AmountInSupplystores(Resource ressi)
+    {
+        List<SupplyStores> allStores = AllSupplyStores();
+        int amount = 0;
+
+        foreach(SupplyStores store in allStores)
+        {
+            foreach (BuildingRessource br in store.m_Ressources)
+            {
+                if (br.type == ressi)
+                    amount += br.curAmount;
+                else
+                    continue;
+            }
+        }
+        return amount;
     }
 
     public void AddBuilding(Building building)

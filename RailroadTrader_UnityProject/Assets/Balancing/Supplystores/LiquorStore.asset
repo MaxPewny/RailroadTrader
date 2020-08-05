@@ -13,28 +13,28 @@ MonoBehaviour:
   m_Name: LiquorStore
   m_EditorClassIdentifier: 
   UpkeepCost: 50
-  SecondsSpendByNPC: 10
+  SecondsSpendByNPC: 17
   Resources:
   - type: 0
     maxCapacity: 10
-    curAmount: 10
+    curAmount: 5
   - type: 1
-    maxCapacity: 30
-    curAmount: 30
-  - type: 2
     maxCapacity: 5
+    curAmount: 0
+  - type: 2
+    maxCapacity: 10
     curAmount: 5
   VisitorStats:
   - type: 0
     maxCapacity: 10
     earningGain: 4
     satisfactionGain: 3
-    curAmount: 10
+    curAmount: 0
   - type: 1
-    maxCapacity: 10
+    maxCapacity: 5
     earningGain: 6
     satisfactionGain: 2
-    curAmount: 10
+    curAmount: 2
   - type: 2
     maxCapacity: 0
     earningGain: 0

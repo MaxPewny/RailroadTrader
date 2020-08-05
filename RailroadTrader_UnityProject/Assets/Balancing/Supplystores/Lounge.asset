@@ -13,30 +13,30 @@ MonoBehaviour:
   m_Name: Lounge
   m_EditorClassIdentifier: 
   UpkeepCost: 75
-  SecondsSpendByNPC: 17
+  SecondsSpendByNPC: 30
   Resources:
   - type: 0
-    maxCapacity: 20
-    curAmount: 8
-  - type: 1
-    maxCapacity: 50
-    curAmount: 38
-  - type: 2
     maxCapacity: 15
     curAmount: 3
+  - type: 1
+    maxCapacity: 15
+    curAmount: 5
+  - type: 2
+    maxCapacity: 25
+    curAmount: 13
   VisitorStats:
   - type: 0
-    maxCapacity: 100
+    maxCapacity: 10
     earningGain: 11
     satisfactionGain: 2
-    curAmount: 99
+    curAmount: 3
   - type: 1
-    maxCapacity: 30
+    maxCapacity: 15
     earningGain: 14
     satisfactionGain: 3
-    curAmount: 0
+    curAmount: 2
   - type: 2
-    maxCapacity: 40
+    maxCapacity: 15
     earningGain: 18
     satisfactionGain: 3
-    curAmount: 0
+    curAmount: 5

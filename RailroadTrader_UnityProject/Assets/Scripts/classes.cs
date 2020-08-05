@@ -82,6 +82,12 @@ public class VisitorStats
     [UnityEngine.Tooltip("Currently in this building")]
     [ReadOnly]
     public int curAmount = 0;
+
+    public VisitorStats DeppCopy()
+    {
+        VisitorStats copy = (VisitorStats)this.MemberwiseClone();
+        return copy;
+    }
 }
 
 public class PassengerStats
@@ -107,6 +113,12 @@ public class BuildingRessource
     [UnityEngine.Tooltip("How much the building currently has")]
     [ReadOnly]
     public int curAmount;
+
+    public BuildingRessource DeppCopy()
+    {
+        BuildingRessource copy = (BuildingRessource)this.MemberwiseClone();
+        return copy;
+    }
 
     public BuildingRessource(Resource type, int maxCapacity)
     {
@@ -187,6 +199,12 @@ public class MovementProbabilities
     //public float travelAgencyProb;
     //public float hairSalonProb;
     //public float bankProb;
+
+    public MovementProbabilities DeppCopy()
+    {
+        MovementProbabilities copy = (MovementProbabilities)this.MemberwiseClone();
+        return copy;
+    }
 
     public MovementProbabilities()
     {

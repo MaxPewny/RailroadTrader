@@ -44,6 +44,7 @@ public class CargoOrderMenu : MonoBehaviour
         OnObjectClicked.OnCargoTrackClicked += OpenCargoWindow;
         BuildingManager.OnSupplyStoreCountChange += UpdateStockInShop;
         RessourceController.OnShopStockChange += ChangeStockInShops;
+        //RessourceController.OnShopStockChange += ChangeStockInShops;
         OrderButton.onClick.AddListener(delegate { CheckOrder(); });
 
         WriteCurShopInventory(0, 0, 0);
@@ -82,11 +83,9 @@ public class CargoOrderMenu : MonoBehaviour
                 break;
             case Resource.BEVERAGE:
                 curDrinksInShops.text = amount.ToString();
-
                 break;
             case Resource.CARGO:
                 curCargoInShops.text = amount.ToString();
-
                 break;
             case Resource.STAFF:
                 break;
@@ -99,10 +98,10 @@ public class CargoOrderMenu : MonoBehaviour
     private void UpdateStockInShop(List<SupplyStores> allStores)
     {
         int food = 0;
-        int maxFood = 0;
         int drinks = 0;
-        int maxDrinks = 0;
         int cargo = 0;
+        int maxFood = 0;
+        int maxDrinks = 0;
         int maxCargo = 0;
 
         foreach(SupplyStores s in allStores)

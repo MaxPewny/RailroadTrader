@@ -23,8 +23,8 @@ MonoBehaviour:
     restaurantProb: 0.666
     highRestaurantProb: 0.333
   TouristVisitValues:
-    eatProb: 0.5
-    drinkProb: 0.5
+    eatProb: 0.3
+    drinkProb: 0.35
     bakeryProb: 0.333
     cafeProb: 0.666
     pubProb: 0.2
@@ -33,12 +33,12 @@ MonoBehaviour:
     restaurantProb: 0.333
     highRestaurantProb: 0.666
   BusinessVisitValues:
-    eatProb: 0.5
-    drinkProb: 1
+    eatProb: 0
+    drinkProb: 0.333
     bakeryProb: 0
     cafeProb: 0
     pubProb: 0
     barProb: 0
     loungeProb: 1
-    restaurantProb: 0.33
-    highRestaurantProb: 0.66
+    restaurantProb: 0.333
+    highRestaurantProb: 0.666

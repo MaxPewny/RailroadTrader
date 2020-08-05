@@ -16,25 +16,25 @@ MonoBehaviour:
   SecondsSpendByNPC: 15
   Resources:
   - type: 0
-    maxCapacity: 20
-    curAmount: 17
-  - type: 1
-    maxCapacity: 40
-    curAmount: 37
-  - type: 2
-    maxCapacity: 10
+    maxCapacity: 15
     curAmount: 7
+  - type: 1
+    maxCapacity: 15
+    curAmount: 7
+  - type: 2
+    maxCapacity: 20
+    curAmount: 12
   VisitorStats:
   - type: 0
-    maxCapacity: 100
+    maxCapacity: 10
     earningGain: 6
     satisfactionGain: 2
-    curAmount: 35
+    curAmount: 1
   - type: 1
-    maxCapacity: 30
+    maxCapacity: 15
     earningGain: 10
     satisfactionGain: 3
-    curAmount: 3
+    curAmount: 0
   - type: 2
     maxCapacity: 0
     earningGain: 0

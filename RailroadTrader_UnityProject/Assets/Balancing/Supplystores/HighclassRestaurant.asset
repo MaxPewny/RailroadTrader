@@ -13,30 +13,30 @@ MonoBehaviour:
   m_Name: HighclassRestaurant
   m_EditorClassIdentifier: 
   UpkeepCost: 500
-  SecondsSpendByNPC: 20
+  SecondsSpendByNPC: 40
   Resources:
   - type: 0
-    maxCapacity: 50
-    curAmount: 50
+    maxCapacity: 15
+    curAmount: 0
   - type: 1
-    maxCapacity: 50
-    curAmount: 50
+    maxCapacity: 25
+    curAmount: 18
   - type: 2
-    maxCapacity: 30
-    curAmount: 30
+    maxCapacity: 25
+    curAmount: 10
   VisitorStats:
   - type: 0
-    maxCapacity: 60
+    maxCapacity: 10
     earningGain: 15
     satisfactionGain: 1
-    curAmount: 60
+    curAmount: 0
   - type: 1
-    maxCapacity: 60
+    maxCapacity: 20
     earningGain: 19
     satisfactionGain: 2
-    curAmount: 60
+    curAmount: 11
   - type: 2
-    maxCapacity: 60
+    maxCapacity: 20
     earningGain: 25
     satisfactionGain: 3
-    curAmount: 21
+    curAmount: 1

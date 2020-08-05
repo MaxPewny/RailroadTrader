@@ -13,28 +13,28 @@ MonoBehaviour:
   m_Name: Cafe
   m_EditorClassIdentifier: 
   UpkeepCost: 20
-  SecondsSpendByNPC: 12
+  SecondsSpendByNPC: 20
   Resources:
   - type: 0
-    maxCapacity: 5
-    curAmount: 0
+    maxCapacity: 10
+    curAmount: 5
   - type: 1
-    maxCapacity: 5
-    curAmount: 0
+    maxCapacity: 15
+    curAmount: 10
   - type: 2
     maxCapacity: 5
     curAmount: 0
   VisitorStats:
   - type: 0
-    maxCapacity: 100
+    maxCapacity: 15
     earningGain: 5
     satisfactionGain: 2
-    curAmount: 5
+    curAmount: 0
   - type: 1
-    maxCapacity: 30
+    maxCapacity: 10
     earningGain: 8
     satisfactionGain: 3
-    curAmount: 1
+    curAmount: 2
   - type: 2
     maxCapacity: 0
     earningGain: 0

@@ -13,30 +13,30 @@ MonoBehaviour:
   m_Name: Restaurant
   m_EditorClassIdentifier: 
   UpkeepCost: 200
-  SecondsSpendByNPC: 18
+  SecondsSpendByNPC: 20
   Resources:
   - type: 0
-    maxCapacity: 40
-    curAmount: 40
+    maxCapacity: 20
+    curAmount: 0
   - type: 1
-    maxCapacity: 40
-    curAmount: 40
+    maxCapacity: 20
+    curAmount: 0
   - type: 2
     maxCapacity: 20
-    curAmount: 20
+    curAmount: 0
   VisitorStats:
   - type: 0
-    maxCapacity: 50
+    maxCapacity: 10
     earningGain: 13
     satisfactionGain: 2
-    curAmount: 50
+    curAmount: 10
   - type: 1
-    maxCapacity: 50
+    maxCapacity: 15
     earningGain: 18
     satisfactionGain: 3
-    curAmount: 6
+    curAmount: 8
   - type: 2
-    maxCapacity: 50
+    maxCapacity: 10
     earningGain: 23
     satisfactionGain: 2
-    curAmount: 0
+    curAmount: 7
