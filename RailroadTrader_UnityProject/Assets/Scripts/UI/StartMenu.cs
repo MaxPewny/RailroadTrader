@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class StartMenu : MonoBehaviour
 {
-    public GameObject StartMenuWindow;
     public CanvasGroup FadeScreen;
     [SerializeField]
     private float fadeTime = 1.0f;
 
+    public static event System.Action<bool> OnShowStartMenu = delegate { };
+    public static event System.Action<bool> OnShowIngameUI = delegate { };
+
     public void StartGame()
     {
+        OnShowIngameUI(false);
         StartCoroutine(GameManager.Instance.PrepareGameForStart());
         StartCoroutine(FadeOut());
     }
@@ -29,8 +32,9 @@ public class StartMenu : MonoBehaviour
             yield return null;
         }
 
-        StartMenuWindow.SetActive(false);
+        OnShowStartMenu(false);
         yield return new WaitForSeconds(0.25f);
+        OnShowIngameUI(true);
         StartCoroutine(FadeIn());
     }
 

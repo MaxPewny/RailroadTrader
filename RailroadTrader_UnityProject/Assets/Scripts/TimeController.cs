@@ -19,6 +19,7 @@ public class TimeController : MonoBehaviour
     public static event System.Action OnDayEnd = delegate { };
     public static event System.Action OnMonthEnd = delegate { };
     public static event System.Action OnYearEnd = delegate { };
+    public static event System.Action<bool> OnGamePaused = delegate { };
 
     private void Awake()
     {
@@ -96,5 +97,19 @@ public class TimeController : MonoBehaviour
     public IngameTime CurrentTime()
     {
         return CurTime;
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0.0f;
+        GameManager.Instance.SetGameState(GameState.PAUSED);
+        OnGamePaused(true);
+    }
+
+    public void NormalGameSpeed()
+    {
+        Time.timeScale = 1.0f;
+        GameManager.Instance.SetGameState(GameState.RUNNING);
+        OnGamePaused(false);
     }
 }

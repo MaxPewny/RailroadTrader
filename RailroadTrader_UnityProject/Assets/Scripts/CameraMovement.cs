@@ -9,7 +9,6 @@ public class CameraMovement : MonoBehaviour
     private enum Direction { up, left, down, right };
     private Direction dir;
 
-
     private float[] borders = new float[4];
 
     [SerializeField]
@@ -60,6 +59,9 @@ public class CameraMovement : MonoBehaviour
 
     private bool CanMove(Direction dir)
     {
+        if (GameManager.Instance.State != GameState.RUNNING)
+            return false;
+
         switch (dir)
         {
             case Direction.up:

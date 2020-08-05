@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
+    public GameObject IngameUI;
+    public GameObject StartMenuUI;
+    public GameObject PauseMenu;
+
     public GameObject StationManagementMenu;
     public GameObject CargoOrderMenu;
     public GameObject ShopInfoMenu;
@@ -13,11 +17,16 @@ public class MenuController : MonoBehaviour
 
     private void Start()
     {
-        BuildMenu.OnBuildModeActivated += CloseAllMenus;
         OnObjectClicked.OnAnyTileClicked += CloseAllMenus;
         OnObjectClicked.OnCargoTrackClicked += CloseMenusExceptCargo;
         OnObjectClicked.OnPassengerTrackClicked += CloseMenusExceptPTracks;
         //OnObjectClicked.OnShopClicked
+
+        BuildMenu.OnBuildModeActivated += CloseAllMenus;
+
+        StartMenu.OnShowStartMenu += ShowStartMenu;
+        StartMenu.OnShowIngameUI += ShowIngameUI;
+        TimeController.OnGamePaused += ShowPauseMenu;
     }
 
     private void CloseAllMenus()
@@ -45,5 +54,22 @@ public class MenuController : MonoBehaviour
         CargoOrderMenu.SetActive(false);
         ShopBuildMenu.SetActive(false);
         TrackBuildMenu.SetActive(false);
+    }
+
+    private void ShowStartMenu(bool show)
+    {
+        StartMenuUI.SetActive(show);
+    }
+
+    private void ShowIngameUI(bool show)
+    {
+        IngameUI.SetActive(show);
+    }
+    private void ShowPauseMenu(bool show)
+    {
+        if (show)
+            CloseAllMenus();
+
+        PauseMenu.SetActive(show);
     }
 }
