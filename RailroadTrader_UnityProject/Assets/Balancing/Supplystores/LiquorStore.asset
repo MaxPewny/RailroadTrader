@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9964184369ef7da49bbf23cec711060a, type: 3}
   m_Name: LiquorStore
   m_EditorClassIdentifier: 
-  UpkeepCost: 50
+  UpkeepCost: 25
   SecondsSpendByNPC: 17
   Resources:
   - type: 0
-    maxCapacity: 10
+    maxCapacity: 20
     curAmount: 5
   - type: 1
-    maxCapacity: 5
+    maxCapacity: 10
     curAmount: 0
   - type: 2
-    maxCapacity: 10
+    maxCapacity: 20
     curAmount: 5
   VisitorStats:
   - type: 0
     maxCapacity: 10
-    earningGain: 4
+    earningGain: 10
     satisfactionGain: 3
     curAmount: 0
   - type: 1
     maxCapacity: 5
-    earningGain: 6
+    earningGain: 15
     satisfactionGain: 2
     curAmount: 2
   - type: 2

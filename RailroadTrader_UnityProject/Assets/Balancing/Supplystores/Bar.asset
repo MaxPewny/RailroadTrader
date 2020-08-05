@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9964184369ef7da49bbf23cec711060a, type: 3}
   m_Name: Bar
   m_EditorClassIdentifier: 
-  UpkeepCost: 50
+  UpkeepCost: 35
   SecondsSpendByNPC: 15
   Resources:
   - type: 0
-    maxCapacity: 15
+    maxCapacity: 30
     curAmount: 7
   - type: 1
-    maxCapacity: 15
+    maxCapacity: 30
     curAmount: 7
   - type: 2
-    maxCapacity: 20
+    maxCapacity: 40
     curAmount: 12
   VisitorStats:
   - type: 0
     maxCapacity: 10
-    earningGain: 6
+    earningGain: 12
     satisfactionGain: 2
     curAmount: 1
   - type: 1
     maxCapacity: 15
-    earningGain: 10
+    earningGain: 15
     satisfactionGain: 3
     curAmount: 0
   - type: 2

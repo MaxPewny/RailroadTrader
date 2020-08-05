@@ -12,31 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9964184369ef7da49bbf23cec711060a, type: 3}
   m_Name: Restaurant
   m_EditorClassIdentifier: 
-  UpkeepCost: 200
+  UpkeepCost: 150
   SecondsSpendByNPC: 20
   Resources:
   - type: 0
-    maxCapacity: 20
+    maxCapacity: 40
     curAmount: 0
   - type: 1
-    maxCapacity: 20
+    maxCapacity: 40
     curAmount: 0
   - type: 2
-    maxCapacity: 20
+    maxCapacity: 40
     curAmount: 0
   VisitorStats:
   - type: 0
     maxCapacity: 10
-    earningGain: 13
+    earningGain: 18
     satisfactionGain: 2
     curAmount: 10
   - type: 1
     maxCapacity: 15
-    earningGain: 18
+    earningGain: 25
     satisfactionGain: 3
     curAmount: 8
   - type: 2
     maxCapacity: 10
-    earningGain: 23
+    earningGain: 30
     satisfactionGain: 2
     curAmount: 7

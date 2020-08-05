@@ -17,5 +17,5 @@ MonoBehaviour:
   RealTimeSecsPerHour: 10
   StartMoney: 10000
   CargoUpkeepCost: 10
-  CargoAmountPerTrack: 75
-  CargoTimeTilArrival: 20
+  CargoAmountPerTrack: 150
+  CargoTimeTilArrival: 10

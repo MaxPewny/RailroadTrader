@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9964184369ef7da49bbf23cec711060a, type: 3}
   m_Name: Cafe
   m_EditorClassIdentifier: 
-  UpkeepCost: 20
+  UpkeepCost: 15
   SecondsSpendByNPC: 20
   Resources:
   - type: 0
-    maxCapacity: 10
+    maxCapacity: 20
     curAmount: 5
   - type: 1
-    maxCapacity: 15
+    maxCapacity: 25
     curAmount: 10
   - type: 2
-    maxCapacity: 5
+    maxCapacity: 10
     curAmount: 0
   VisitorStats:
   - type: 0
     maxCapacity: 15
-    earningGain: 5
+    earningGain: 7
     satisfactionGain: 2
     curAmount: 0
   - type: 1
     maxCapacity: 10
-    earningGain: 8
+    earningGain: 12
     satisfactionGain: 3
     curAmount: 2
   - type: 2
