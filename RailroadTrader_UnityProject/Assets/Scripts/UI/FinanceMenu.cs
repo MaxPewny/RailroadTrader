@@ -125,13 +125,13 @@ public class FinanceMenu : MonoBehaviour
             }
             else
             {
-                if (UpkeepGraphs[i].maxValue < FOs[i].monthlyUpkeep)
+                if (UpkeepGraphs[i].maxValue < -FOs[i].monthlyUpkeep)
                 {
                     UpkeepGraphs[i].value = UpkeepGraphs[i].maxValue;
                 }
                 else
                 {
-                    UpkeepGraphs[i].value = FOs[i].monthlyUpkeep;
+                    UpkeepGraphs[i].value = -FOs[i].monthlyUpkeep;
                 }
             }
         }
@@ -169,13 +169,13 @@ public class FinanceMenu : MonoBehaviour
             }
             else
             {
-                if (BuildGraphs[i].maxValue < FOs[i].monthlyBuildCosts)
+                if (BuildGraphs[i].maxValue < -FOs[i].monthlyBuildCosts)
                 {
                     BuildGraphs[i].value = BuildGraphs[i].maxValue;
                 }
                 else
                 {
-                    BuildGraphs[i].value = FOs[i].monthlyBuildCosts;
+                    BuildGraphs[i].value = -FOs[i].monthlyBuildCosts;
                 }
             }
         }
