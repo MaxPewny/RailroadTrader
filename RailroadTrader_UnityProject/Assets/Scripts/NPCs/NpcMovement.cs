@@ -108,7 +108,10 @@ public class NpcMovement: MonoBehaviour
     protected virtual void SpawnNpcAndMove(Vector3 pSpawnPoint, StoreInfo store, int type) 
     {
         GameObject prefab = _npcPrefabs[type + GetNPCGender()];
-        GameObject npc = Instantiate(prefab ,pSpawnPoint, prefab.transform.rotation);
+
+        pSpawnPoint += new Vector3(UnityEngine.Random.Range(-0.5f, 1.0f), 0.0f, 0.0f);
+
+        GameObject npc = Instantiate(prefab, pSpawnPoint, prefab.transform.rotation);
         NpcActor actor = npc.GetComponent<NpcActor>();
         actor.SetTarget(store.position, store.building);
         if (store.building != null)
