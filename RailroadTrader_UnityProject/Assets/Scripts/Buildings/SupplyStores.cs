@@ -148,7 +148,10 @@ public class SupplyStores : Building
     {        
         foreach (BuildingRessource ressi in m_Ressources)
         {
-            if (ressi.curAmount < 1)
+            if (ressi.maxCapacity <= 0)
+                continue;
+
+            if (ressi.curAmount <= 0)
             {
                 print(this.gameObject.name + " has not enough " + ressi.type.ToString()+" to service customers");
                 return false;                
@@ -161,6 +164,9 @@ public class SupplyStores : Building
     {
         foreach (BuildingRessource ressi in m_Ressources)
         {
+            if (ressi.maxCapacity <= 0)
+                continue;
+
             ressi.curAmount -= 1;
             RC.SubtractFromShopRessis(ressi.type, amount);
         }
