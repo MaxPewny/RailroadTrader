@@ -37,6 +37,9 @@ public class TimeController : MonoBehaviour
     {
         if(GameManager.Instance.State == GameState.RUNNING)
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                PauseGame();
+
             CountMinutes();
         }
     }
