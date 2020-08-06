@@ -56,24 +56,28 @@ public class GuestUI : MonoBehaviour
 
     public void WriteGuestOverview(PassengerStats commuter, PassengerStats tourist, PassengerStats business)
     {
-        CommutersCur.text = commuter.curAmount.ToString();
+        CommutersCur.text = commuter.curAmount < 0 ? "0" : commuter.curAmount.ToString();
         CommutersTotal.text = commuter.totalAmount.ToString();
         CommuterSpendings.text = commuter.totalSpendings.ToString();
 
-        TouristsCur.text = tourist.curAmount.ToString();
+        TouristsCur.text = tourist.curAmount < 0 ? "0" : tourist.curAmount.ToString();
         TouristsTotal.text = tourist.totalAmount.ToString();
         TouristSpendings.text = tourist.totalSpendings.ToString();
 
-        BusinessCur.text = business.curAmount.ToString();
+        BusinessCur.text = business.curAmount < 0 ? "0" : business.curAmount.ToString();
         BusinessTotal.text = business.totalAmount.ToString();
         BusinessSpendings.text = business.totalSpendings.ToString();
     }
 
     public void WriteGuestSmallOverview(PassengerStats commuter, PassengerStats tourist, PassengerStats business)
     {
-        CommutersCurO.text = commuter.curAmount.ToString();
-        TouristsCurO.text = tourist.curAmount.ToString();
-        BusinessCurO.text = business.curAmount.ToString();
+        CommutersCurO.text = commuter.curAmount < 0 ? "0" : commuter.curAmount.ToString();
+        TouristsCurO.text = tourist.curAmount < 0 ? "0" : tourist.curAmount.ToString();
+        BusinessCurO.text = business.curAmount < 0 ? "0" : business.curAmount.ToString();
+
+        //CommutersCurO.text = commuter.curAmount.ToString();
+        //TouristsCurO.text = tourist.curAmount.ToString();
+        //BusinessCurO.text = business.curAmount.ToString();
     }
 
     public void WriteSatisfactionSlider(int percentage)
@@ -85,10 +89,10 @@ public class GuestUI : MonoBehaviour
 
     public void WriteGuestToolTip(PassengerStats commuter, PassengerStats tourist, PassengerStats business)
     {
-        CommutersCurTT.text = commuter.curAmount.ToString();
-        TouristsCurTT.text = tourist.curAmount.ToString();
-        BusinessCurTT.text = business.curAmount.ToString();
+        CommutersCurTT.text = commuter.curAmount < 0 ? "0" : commuter.curAmount.ToString();
+        TouristsCurTT.text = tourist.curAmount < 0 ? "0" : tourist.curAmount.ToString();
+        BusinessCurTT.text = business.curAmount < 0 ? "0" : business.curAmount.ToString();
         int total = commuter.curAmount + tourist.curAmount + business.curAmount;
-        VisiterTotalTT.text = total.ToString();
+        VisiterTotalTT.text = total < 0 ? "0" : total.ToString();
     }
 }

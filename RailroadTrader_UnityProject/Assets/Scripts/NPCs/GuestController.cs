@@ -15,6 +15,8 @@ public class GuestController : MonoBehaviour
 
     public static event System.Action<int> OnCurVisiterCountChange = delegate { };
     public static event System.Action<int> OnNewVisitorsArrived = delegate { };
+    public static event System.Action OnSpendingChange = delegate { };
+    public static event System.Action OnVisitorLeftEntered = delegate { };
 
     private void Awake()
     {
@@ -26,30 +28,32 @@ public class GuestController : MonoBehaviour
     private void Start()
     {
         NM.OnVisitorSpawn += UpdateVisitorAmount;
-        NpcActor.OnLeftStation += UpdateCurVisitorCount;
+        NpcActor.OnLeftStation += SubtractLeavingVisitorFromCount;
         FinanceController.OnPassangerSpendMoney += UpdateVisitorSpending;
     }
 
     private void UpdateVisitorSpending(Passanger pType, int moneySpend)
     {
-        Stats(pType).totalSpendings += moneySpend;
+        pStats[(int)pType].totalSpendings += moneySpend;
+        OnSpendingChange();
         //print(pStats[(int)pType].passenger.ToString() + "s spend " + pStats[(int)pType].totalSpendings.ToString() + " € in shops");
     }
 
     private void UpdateVisitorAmount(Passanger pType, int newVisitorCount)
     {
-        PassengerStats stat = Stats(pType);
-        stat.curAmount += newVisitorCount;
-        stat.totalAmount += newVisitorCount;
+        pStats[(int)pType].curAmount += newVisitorCount;
+        pStats[(int)pType].totalAmount += newVisitorCount;
 
         OnNewVisitorsArrived(newVisitorCount);
         OnCurVisiterCountChange(newVisitorCount);
+        OnVisitorLeftEntered();
     }
 
-    private void UpdateCurVisitorCount(Passanger pType)
+    private void SubtractLeavingVisitorFromCount(Passanger pType)
     {
-        --Stats(pType).curAmount;
+        --pStats[(int)pType].curAmount;
         OnCurVisiterCountChange(CurGuestsInStation());
+        OnVisitorLeftEntered();
     }
 
     //private int CurGuestsOf(Passanger pType)

@@ -200,7 +200,7 @@ MonoBehaviour:
   BlockedXTiles: 5
   BlockedZTiles: 1
   values: {fileID: 11400000, guid: 86ddc0b3577c0c64a9352e71cef5e398, type: 2}
-  TrainName: 
+  TrainName: City Train
   m_PassangerType: 0
   timeTilArrival: 5
   passedArrivalTime: 0

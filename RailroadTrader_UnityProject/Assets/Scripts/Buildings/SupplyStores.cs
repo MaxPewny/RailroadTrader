@@ -23,6 +23,8 @@ public class SupplyStores : Building
     public List<BuildingRessource> m_Ressources;
     public List<VisitorStats> m_VisitorStats;
 
+    bool guestInShop = false;
+
     [SerializeField]
     [Tooltip("Seconds til 1 NPC leaves the shop")]
     private float secondsSpendByNPC = 30.0f;
@@ -53,7 +55,7 @@ public class SupplyStores : Building
     protected override void Update()
     {
         base.Update();
-        if (totalGuestCount > 0)
+        if (guestInShop && totalGuestCount > 0)
             RunLeaveTimer();
     }
 
@@ -113,6 +115,13 @@ public class SupplyStores : Building
             {
                 --guest.curAmount;
                 --totalGuestCount;
+
+                if (totalGuestCount <= 0)
+                {
+                    passedTime = 0.0f;
+                    guestInShop = false;
+                }
+
                 OnGuestLeft(guest.type, NPCEnterPoint);
                 OnStoreNeedsRefill(this);
                 print(guest.type.ToString() + " has left "+ m_Type.ToString());
@@ -141,6 +150,7 @@ public class SupplyStores : Building
 
     public virtual void NPCEnters(Passanger passanger)
     {
+        guestInShop = true;
         VisitorStats visitor = VisitorStats(passanger);
         FC.AddShopIncome(visitor.type, visitor.earningGain);
         //FC.UpdateMonthlyRevenue(visitor.earningGain);

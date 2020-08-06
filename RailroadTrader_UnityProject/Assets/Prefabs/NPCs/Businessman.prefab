@@ -267,7 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _destinationReachedTreshold: 2
   sprite: {fileID: 2985705826119400760}
-  pType: 0
+  pType: 2
   anim: {fileID: 4106052837121617263}
 --- !u!1 &5879610648749468291
 GameObject:

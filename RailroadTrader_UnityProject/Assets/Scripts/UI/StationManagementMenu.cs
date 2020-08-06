@@ -27,6 +27,8 @@ public class StationManagementMenu : MonoBehaviour
         TimeController.OnMonthEnd += UpdateAllFinanceMenus;
         TimeController.OnYearEnd += UpdateAllFinanceMenus;
         SatisfactionController.OnSatisfactionPercentageChange += UpdateSatisfactionSliders;
+        GuestController.OnSpendingChange += OnGuestOverview;
+        GuestController.OnVisitorLeftEntered += UpdateAllGuestMenus;
     }
 
     private void UpdateSatisfactionSliders(int percentage)
@@ -39,6 +41,13 @@ public class StationManagementMenu : MonoBehaviour
         OnFinanceToolTip();
         OnOverviewOpened();
         OnFinanceOverviewOpened();
+    }
+
+    private void UpdateAllGuestMenus()
+    {
+        OnGuestOverview();
+        OnGuestTooltip();
+        OnOverviewOpened();
     }
 
     public void OnFinanceToolTip()
